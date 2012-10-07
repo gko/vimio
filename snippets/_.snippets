@@ -12,9 +12,17 @@ snippet "
 	"${1}"
 snippet '
 	'${1}'
-snippet (
-	(${1})
 snippet [
 	[${1}]
+snippet `	
+	`${1:string}`
 snippet {
-	{${1}}
+	{
+		${1:/* code */}
+	}	
+snippet (
+	(${1:/* code */})
+snippet /*
+	/*
+	 * ${1:comment}
+	 */
