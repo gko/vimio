@@ -78,6 +78,7 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
     Bundle 'git://github.com/wavded/vim-stylus.git'
 " Scala
     Bundle 'derekwyatt/vim-scala'
+    Bundle 'gorodinskiy/scala-vim-snippets'
 
 filetype plugin indent on     " required!
 "
