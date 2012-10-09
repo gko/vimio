@@ -138,6 +138,7 @@ else
         let $VIMHOME = $HOME."/vimfiles"
         language messages en
         let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
+        set runtimepath^=~/.vim
         "set clipboard=unnamed
         let g:Powerline_symbols = 'fancy'
     endif

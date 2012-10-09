@@ -11,11 +11,12 @@ if [[ `uname` = "Linux" || `uname` = "Darwin" ]]; then
     cd
     vim +BundleInstall +qall
 else
-    cd
-    rm -rf ./vimfiles
-    rm -rf ./_vimrc
-    rm -rf ./vim-settings
+    cd %USERPROFILE%
+    rm -rf vimfiles
+    rm -rf _vimrc
+    rm -rf vim-settings
     git clone --depth 1 --recursive https://github.com/gorodinskiy/vim-settings.git
-    mv ./vim-settings/_vimrc ./_vimrc
-    mv ./vim-settings ./vimfiles
+    mv vim-settings/_vimrc _vimrc
+    mv vim-settings .vim
+    git clone http://github.com/gmarik/vundle.git .vim/bundle/vundle
 fi
