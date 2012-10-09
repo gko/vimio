@@ -660,7 +660,7 @@ if has("gui_running")
 
     if has("unix") 
         if has("gui_mac") || has("gui_macvim")
-            set guifont=Monaco:h13
+            set guifont=Monaco:h12
             "set clipboard=unnamed
             set macmeta
         else
