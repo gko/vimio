@@ -30,7 +30,7 @@ elseif has("win32") || has("win32s") || has('win64')
     language messages en
     let g:tagbar_ctags_bin='$HOME/vimfiles/bin/ctags.exe'
     "set clipboard=unnamed
-    let g:Powerline_symbols = 'fancy'
+    let g:Powerline_symbols = 'compatible'
 endif
 
 "

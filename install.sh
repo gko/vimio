@@ -20,4 +20,5 @@ else
     mv vim-settings vimfiles
     rm -rf vimfiles/bundle/vundle
     git clone http://github.com/gmarik/vundle.git vimfiles/bundle/vundle
+    echo "Don't forget to do :BundleInstall in vim to install plugins"
 fi
