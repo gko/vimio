@@ -4,8 +4,35 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has("unix") 
+    let $VIMHOME = $HOME."/.vim"
+    let os = substitute(system('uname'), "\n", "", "")
+    let g:clang_use_library=1
+
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+    if os == "Darwin"
+        let g:tagbar_ctags_bin='$HOME/.vim/bin/ctags'
+        "set clipboard=unnamed
+        let g:Powerline_symbols = 'compatible'
+        "let g:clang_library_path=$VIMHOME.'/plugin/clang' 
+    elseif os == "Linux"
+        let g:tagbar_ctags_bin='/usr/bin/ctags'
+        let g:Powerline_symbols = 'compatible'
+        "set clipboard=unnamedplus
+        "let g:Powerline_symbols = 'fancy'
+    endif
+elseif has("win32") || has("win32s") || has('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+    set rtp+=~/vimfiles/bundle/vundle/
+    call vundle#rc('$HOME/vimfiles/bundle/')
+    language messages en
+    let g:tagbar_ctags_bin='$HOME/vimfiles/bin/ctags.exe'
+    "set clipboard=unnamed
+    let g:Powerline_symbols = 'fancy'
+endif
+
 "
 " let Vundle manage Vundle
 " required! 
@@ -114,35 +141,6 @@ filetype plugin indent on     " required!
 " add clang_complete option
     let g:clang_complete_auto=1
     let g:clang_close_preview=1
-
-if has("unix") 
-    let $VIMHOME = $HOME."/.vim"
-    let os = substitute(system('uname'), "\n", "", "")
-    let g:clang_use_library=1
-
-    if os == "Darwin"
-        let g:tagbar_ctags_bin='$HOME/.vim/bin/ctags'
-        "set clipboard=unnamed
-        let g:Powerline_symbols = 'compatible'
-        "let g:clang_library_path=$VIMHOME.'/plugin/clang' 
-    else
-        if os == "Linux"
-            let g:tagbar_ctags_bin='/usr/bin/ctags'
-            let g:Powerline_symbols = 'compatible'
-            "set clipboard=unnamedplus
-            "let g:Powerline_symbols = 'fancy'
-        endif
-    endif
-else
-    if has("win32") || has("win32s") || has('win64')
-        let $VIMHOME = $HOME."/vimfiles"
-        language messages en
-        let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
-        set runtimepath^=~/.vim
-        "set clipboard=unnamed
-        let g:Powerline_symbols = 'fancy'
-    endif
-endif
 
 "encodings
     set encoding=utf8
