@@ -4,7 +4,7 @@
 
 On unix and windows(with unix tools):
 ```
-curl -L https://raw.github.com/gorodinskiy/vim-settings/master/install.sh|sh
+curl -L https://raw.github.com/gorodinskiy/vim-settings/master/install.sh|bash
 ```
 
 ##Features
