@@ -31,10 +31,11 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     mv vim-settings/_vimrc $HOME/.vimrc
     mv vim-settings $HOME/.vim
     cd .vim
+    mv .ctags ../
     chmod +x bin/ctags
+    cd
 
     </dev/tty vim +BundleInstall +qall
-    cd
 
 else
 
