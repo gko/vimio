@@ -16,11 +16,11 @@ fi
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     
     echo -e ""
-    echo -e "$GREEN       _____ "      
-    echo -e "$GREEN/\   /\\_    \/\/\ "  
-    echo -e "$GREEN\ \ / / / /\/    \ " 
-    echo -e "$GREEN \ V /\/ /_/ /\/\ \ "
-    echo -e "$GREEN  \_/\____/\/    \/ "
+    echo -e "$BGREEN       _____ "      
+    echo -e "$BGREEN/\   /\\_    \/\/\ "  
+    echo -e "$BGREEN\ \ / / / /\/    \ " 
+    echo -e "$BGREEN \ V /\/ /_/ /\/\ \ "
+    echo -e "$BGREEN  \_/\____/\/    \/ "
     echo -e "$RESET"
 
     cd
