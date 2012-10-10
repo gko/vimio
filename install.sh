@@ -32,9 +32,9 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     mv vim-settings $HOME/.vim
     cd .vim
     chmod +x bin/ctags
-    cd
 
     </dev/tty vim +BundleInstall +qall
+    cd
 
 else
 
@@ -56,5 +56,6 @@ else
     mv vim-settings vimfiles
     rm -rf vimfiles/bundle/vundle
     git clone http://github.com/gmarik/vundle.git vimfiles/bundle/vundle
+    cd
     
 fi
