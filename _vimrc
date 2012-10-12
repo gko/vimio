@@ -731,7 +731,7 @@ function! BufferIsEmpty()
     endif
 endfunction
 
-let s:cur_split = ""
+let s:cur_split = "2h"
 
 function! Layout(num)
     "making only one visible
@@ -747,7 +747,7 @@ function! Layout(num)
                 sp
                 wincmd w
                 let s:cur_split="2h"
-            elseif s:cur_split=="2h"||s:cur_split=="3"
+            elseif s:cur_split=="2h"
                 vert belowright sb
                 let s:cur_split="2v"
             endif
@@ -761,20 +761,9 @@ function! Layout(num)
             sp
             bprev
             wincmd t
-            let s:cur_split="3"
-        elseif a:num==1
             let s:cur_split="2h"
         else
-            echo "some shit"
-            if s:cur_split=="2v"
-                let s:cur_split="2h"
-                return Layout(2)
-            elseif s:cur_split=="2h"
-                let s:cur_split="2v"
-                return Layout(2)
-            else
-                return Layout(3)
-            endif
+            let s:cur_split="2h"
         endif
 
     endif
