@@ -86,6 +86,9 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
     Bundle 'git://github.com/itspriddle/vim-jquery.git'
     Bundle 'git://github.com/kchmck/vim-coffee-script.git'
     Bundle 'git://github.com/walm/jshint.vim.git'
+    Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
+    Bundle 'git://github.com/teramako/jscomplete-vim.git'
+    Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
 " JSON
     Bundle 'git://github.com/leshill/vim-json.git'
 " PHP
@@ -348,6 +351,11 @@ filetype plugin indent on     " required!
     autocmd BufNewFile *.xsl 0r $VIMHOME/templates/template.xsl
     autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
     autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
+
+    autocmd FileType javascript
+                \ :setl omnifunc=jscomplete#CompleteJS
+
+    let g:node_usejscomplete = 1
 
     autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
