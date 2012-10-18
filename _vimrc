@@ -608,18 +608,18 @@ filetype plugin indent on     " required!
     :cabbrev q q!
 
     :cabbrev ц w
-    :cabbrev у e!
+    :cabbrev у NERDTreeClose<CR>:e!
     :cabbrev й q!
     :cabbrev й!! q!
     :cabbrev цй wq
 
     :cabbrev Ц w
-    :cabbrev У e!
+    :cabbrev У NERDTreeClose<CR>:e!
     :cabbrev Й q!
 
     :cabbrev W w
     :cabbrev Wq wq
-    :cabbrev E e!
+    :cabbrev E NERDTreeClose<CR>:e!
     :cabbrev Q q!
     :cabbrev q!! q!
     :cabbrev qa!! qa!
