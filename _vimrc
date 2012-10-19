@@ -88,7 +88,9 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
     Bundle 'git://github.com/walm/jshint.vim.git'
     Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
     Bundle 'git://github.com/teramako/jscomplete-vim.git'
-    Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
+    "Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
+    Bundle 'git://github.com/guileen/vim-node.git'
+    Bundle 'git://github.com/jamescarr/snipmate-nodejs.git'
 " JSON
     Bundle 'git://github.com/leshill/vim-json.git'
 " PHP
@@ -355,9 +357,9 @@ filetype plugin indent on     " required!
     autocmd FileType javascript
                 \ :setl omnifunc=jscomplete#CompleteJS
 
-    let g:node_usejscomplete = 1
+    "let g:node_usejscomplete = 1
     let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
-    
+    au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 
     autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
