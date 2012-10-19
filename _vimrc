@@ -89,8 +89,7 @@ Bundle 'git://github.com/kien/ctrlp.vim.git'
     Bundle 'git://github.com/jelera/vim-javascript-syntax.git'
     Bundle 'git://github.com/teramako/jscomplete-vim.git'
     "Bundle 'git://github.com/myhere/vim-nodejs-complete.git'
-    Bundle 'git://github.com/guileen/vim-node.git'
-    Bundle 'git://github.com/jamescarr/snipmate-nodejs.git'
+    "Bundle 'git://github.com/guileen/vim-node.git'
 " JSON
     Bundle 'git://github.com/leshill/vim-json.git'
 " PHP
@@ -359,7 +358,6 @@ filetype plugin indent on     " required!
 
     "let g:node_usejscomplete = 1
     let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
-    au FileType javascript set dictionary+=$HOME/.vim/dict/node.dict
 
     autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
@@ -569,7 +567,34 @@ filetype plugin indent on     " required!
     "let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/,$VIMHOME/my_snippets/"
 
 "Autocompl plugin
-    let g:neocomplcache_enable_at_startup = 1
+imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_plugin_completion_length = {
+  \ 'buffer_complete'   : 2,
+  \ 'include_complete'  : 2,
+  \ 'syntax_complete'   : 2,
+  \ 'filename_complete' : 2,
+  \ 'keyword_complete'  : 2,
+  \ 'omni_complete'     : 1
+  \ }
+let g:neocomplcache_min_keyword_length = 3
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_dictionary_filetype_lists = {
+  \ 'default'    : '',
+  \ 'erlang'     : $VIMHOME . '/dict/erlang.dict',
+  \ 'objc'       : $VIMHOME . '/dict/objc.dict',
+  \ 'javascript' : $VIMHOME . '/dict/javascript.dict',
+  \ 'mxml'       : $VIMHOME . '/dict/mxml.dict',
+  \ 'ruby'       : $VIMHOME . '/dict/ruby.dict',
+  \ 'perl'       : $VIMHOME . '/dict/perl.dict',
+  \ 'scheme'     : $VIMHOME . '/dict/gauche.dict',
+  \ 'scala'      : $VIMHOME . '/dict/scala.dict',
+  \ 'int-erl'    : $VIMHOME . '/dict/erlang.dict',
+  \ 'int-irb'    : $VIMHOME . '/dict/ruby.dict',
+  \ 'int-perlsh' : $VIMHOME . '/dict/perl.dict'
+  \ }
 
 "just global tasks file
     "nnoremap <Leader>t :e! $VIMHOME/tasks.md<CR>Go<ESC>o
