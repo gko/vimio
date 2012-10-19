@@ -356,6 +356,8 @@ filetype plugin indent on     " required!
                 \ :setl omnifunc=jscomplete#CompleteJS
 
     let g:node_usejscomplete = 1
+    let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
+    
 
     autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
