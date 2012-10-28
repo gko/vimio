@@ -621,8 +621,8 @@ let g:neocomplcache_dictionary_filetype_lists = {
     "vnoremap <Leader>t <ESC>:e! $VIMHOME/tasks.md<CR>Go<ESC>o
 
 " NERDTree
-    nmap <Esc> :NERDTreeToggle<CR>
-    "nmap <Bs> :NERDTreeToggle<CR>
+    nmap <Esc> :NERDTreeClose<CR>
+    nmap <Bs> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks=1
     let NERDTreeChDirMode=1
     let NERDTreeQuitOnOpen=1
