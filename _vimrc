@@ -4,11 +4,12 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+let mapleader = ","
+
 if has("unix") 
     " ,v
     " Pressing ,v opens the .vimrc in a new tab
     nnoremap <leader>v :on!<CR>:e! $HOME/.vimrc<CR>
-
 
     let $VIMHOME = $HOME."/.vim"
     let os = substitute(system('uname'), "\n", "", "")
@@ -137,6 +138,7 @@ filetype plugin indent on     " required!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
     set background=light
     let g:molokai_original = 1
+    set t_Co=256
     let g:solarized_termcolors=256
 
     try
@@ -145,7 +147,6 @@ filetype plugin indent on     " required!
         colorscheme molokai
     endtry
     
-    let mapleader = ","
 
 " use neocomplcache & clang_complete
 " add neocomplcache option
@@ -341,7 +342,6 @@ filetype plugin indent on     " required!
 
 "backspace
     set backspace=indent,eol,start
-    set t_Co=256
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -361,6 +361,8 @@ filetype plugin indent on     " required!
     autocmd BufNewFile *.xsl 0r $VIMHOME/templates/template.xsl
     autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
     autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
+
+    autocmd BufReadPost *.mhg set syntax=mheg
 
     autocmd FileType javascript
                 \ :setl omnifunc=jscomplete#CompleteJS
@@ -390,6 +392,15 @@ filetype plugin indent on     " required!
 """""""""""""""""""""""""""""""""""""""""""""""""""""
     "cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
     command! W exec 'w !sudo tee % > /dev/null' | e!
+
+nnoremap <Esc>A <up>
+nnoremap <Esc>B <down>
+nnoremap <Esc>C <right>
+nnoremap <Esc>D <left>
+inoremap <Esc>A <up>
+inoremap <Esc>B <down>
+inoremap <Esc>C <right>
+inoremap <Esc>D <left>
 
 "symbols in editing mode
     imap <Leader>>> »
@@ -493,8 +504,12 @@ filetype plugin indent on     " required!
 " Don't skip wrap lines
     noremap j gj
     noremap k gk
-    noremap <Down> gj
-    noremap <Up> gk
+    nnoremap <Down> gj
+    nnoremap <Up> gk
+    vnoremap <Down> gj
+    vnoremap <Up> gk
+    inoremap <Down> <Esc>gja
+    inoremap <Up> <Esc>gka
 
 " n и N
     " results of search always in center 
@@ -606,7 +621,8 @@ let g:neocomplcache_dictionary_filetype_lists = {
     "vnoremap <Leader>t <ESC>:e! $VIMHOME/tasks.md<CR>Go<ESC>o
 
 " NERDTree
-    nmap <Bs> :NERDTreeToggle<CR>
+    nmap <Esc> :NERDTreeToggle<CR>
+    "nmap <Bs> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks=1
     let NERDTreeChDirMode=1
     let NERDTreeQuitOnOpen=1
@@ -742,7 +758,6 @@ if has("gui_running")
     "set cc=80
 endif
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -818,7 +833,7 @@ endfunction
     autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
     autocmd BufEnter * lcd %:p:h
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-    cd $HOME
+    lcd %:p:h
 
 """""""""""""""""""""""""""""""
 " ctags definitions
