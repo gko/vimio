@@ -5,6 +5,11 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 if has("unix") 
+    " ,v
+    " Pressing ,v opens the .vimrc in a new tab
+    nnoremap <leader>v :on!<CR>:e! $HOME/.vimrc<CR>
+
+
     let $VIMHOME = $HOME."/.vim"
     let os = substitute(system('uname'), "\n", "", "")
     let g:clang_use_library=1
@@ -24,6 +29,10 @@ if has("unix")
         "let g:Powerline_symbols = 'fancy'
     endif
 elseif has("win32") || has("win32s") || has('win64')
+    " ,v
+    " Pressing ,v opens the .vimrc in a new tab
+    nnoremap <leader>v :on!<CR>:e! $HOME/_vimrc<CR>
+
     let $VIMHOME = $HOME."/vimfiles"
     set rtp+=~/vimfiles/bundle/vundle/
     call vundle#rc('$HOME/vimfiles/bundle/')
@@ -36,7 +45,7 @@ endif
 "
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Bundle 'https://github.com/gmarik/vundle.git'
 
 Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
@@ -96,13 +105,13 @@ Bundle 'https://github.com/kien/ctrlp.vim.git'
     Bundle 'https://github.com/vim-scripts/php.vim--Garvin.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
-    "Bundle 'https://github.com/fs111/pydoc.vim.git'
+    Bundle 'https://github.com/fs111/pydoc.vim.git'
 " Perl
     Bundle 'https://github.com/petdance/vim-perl.git'
 " Ruby/Rails
-    "Bundle 'https://github.com/vim-ruby/vim-ruby.git'
-    "Bundle 'https://github.com/tpope/vim-rails.git'
-    "Bundle 'https://github.com/tpope/vim-endwise.git'
+    Bundle 'https://github.com/vim-ruby/vim-ruby.git'
+    Bundle 'https://github.com/tpope/vim-rails.git'
+    Bundle 'https://github.com/tpope/vim-endwise.git'
 " Jade
     Bundle 'https://github.com/digitaltoad/vim-jade.git'
 " Stylus
@@ -433,10 +442,6 @@ filetype plugin indent on     " required!
     endfunction
     map <Leader>nm :call ToogleRelativeNumber()<cr>
 
-" ,v
-    " Pressing ,v opens the .vimrc in a new tab
-    nnoremap <leader>v :on!<CR>:e! $HOME/.vimrc<CR>
-
 " ,r
     " replace in all opened buffers http://vim.wikia.com/wiki/VimTip382
     function! Replace()
@@ -559,7 +564,7 @@ filetype plugin indent on     " required!
 ":cabbrev e E
 
 "zen-coding expand abbr
-    "let g:user_zen_expandabbr_key = '<c-e>' 
+    let g:user_zen_expandabbr_key = '<c-e>' 
     let g:use_zen_complete_tag = 1
 
 "snipmate custom key. Safe way
@@ -813,6 +818,7 @@ endfunction
     autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
     autocmd BufEnter * lcd %:p:h
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+    cd $HOME
 
 """""""""""""""""""""""""""""""
 " ctags definitions
