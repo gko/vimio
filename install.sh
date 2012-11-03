@@ -52,11 +52,9 @@ else
     rm -rf vimfiles
     rm -rf _vimrc
     rm -rf vim-settings
-    git clone --depth 1 https://github.com/gorodinskiy/vim-settings.git
+    git clone --depth 1 --recursive https://github.com/gorodinskiy/vim-settings.git
     mv vim-settings/_vimrc _vimrc
     mv vim-settings vimfiles
-    rm -rf vimfiles/bundle/vundle
-    git clone http://github.com/gmarik/vundle.git vimfiles/bundle/vundle
     cd
     
 fi

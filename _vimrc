@@ -486,6 +486,27 @@ inoremap <Esc>D <left>
     nnoremap <S-Left> x<ESC>hP
     nnoremap <S-Right> x<ESC>p
 
+if has("gui_running")
+
+    noremap <C-S-down> :m+<CR>==
+    noremap <C-S-up> :m-2<CR>==
+    inoremap <C-S-Down> <Esc>:m+<CR>==gi
+    inoremap <C-S-Up> <Esc>:m-2<CR>==gi
+    vnoremap <C-S-Down> :m'>+<CR>gv=gv
+    vnoremap <C-S-Up> :m-2<CR>gv=gv
+    vnoremap <C-S-Left> d<ESC>hP`[v`]
+    vnoremap <C-S-Right> d<ESC>p`[v`]
+    nnoremap <C-S-Left> x<ESC>hP
+    nnoremap <C-S-Right> x<ESC>p
+
+    nmap <C-down> }
+    vmap <C-down> }
+    
+    nmap <C-up> {
+    vmap <C-up> {
+
+endif
+
 "wrap with brackets and quotes
     vnoremap ' <ESC>`>a'<ESC>`<i'<ESC>
     vnoremap " <ESC>`>a"<ESC>`<i"<ESC>
@@ -550,16 +571,31 @@ inoremap <Esc>D <left>
     nmap <C-S-Left> :bp!<cr>
     vmap <C-S-Left> <Esc>:bp!<cr>
     imap <C-S-Left> <Esc>:bp!<cr>
+    
+" next buffer
+    nmap <C-S-Right> :bn!<cr>
+    vmap <C-S-Right> <Esc>:bn!<cr>
+    imap <C-S-Right> <Esc>:bn!<cr>
+
+if has("gui_running")
+
+" prev buffer
+    nmap <C-Tab> :bp!<cr>
+    vmap <C-Tab> <Esc>:bp!<cr>
+    imap <C-Tab> <Esc>:bp!<cr>
+    
+" next buffer
+    nmap <C-S-Tab> :bn!<cr>
+    vmap <C-S-Tab> <Esc>:bn!<cr>
+    imap <C-S-Tab> <Esc>:bn!<cr>
+
+endif
 
 " prev tab 
     nmap <Leader>tp :tabprevious<cr>
     vmap <Leader>tp <Esc>:tabprevious<cr>
     imap <Leader>tp <Esc>:tabprevious<cr>
 
-" next buffer
-    nmap <C-S-Right> :bn!<cr>
-    vmap <C-S-Right> <Esc>:bn!<cr>
-    imap <C-S-Right> <Esc>:bn!<cr>
 
 " next tab 
     nmap <Leader>tn :tabnext<cr>
@@ -624,7 +660,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
     nmap <Esc> :NERDTreeClose<CR>
     nmap <Bs> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks=1
-    let NERDTreeChDirMode=1
+    let NERDTreeChDirMode=2
     let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=0
@@ -833,6 +869,8 @@ endfunction
     autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
     autocmd BufEnter * lcd %:p:h
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+    "in case if you don't open a file
+    cd $HOME
     lcd %:p:h
 
 """""""""""""""""""""""""""""""
