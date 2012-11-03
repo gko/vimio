@@ -80,6 +80,7 @@ Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
 Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
 Bundle 'https://github.com/twerth/ir_black.git'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
+Bundle 'https://github.com/plasticboy/vim-markdown.git'
 
 " HTML/HAML
     Bundle 'https://github.com/othree/html5.vim.git'
@@ -107,8 +108,6 @@ Bundle 'https://github.com/kien/ctrlp.vim.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
     Bundle 'https://github.com/fs111/pydoc.vim.git'
-" Perl
-    Bundle 'https://github.com/petdance/vim-perl.git'
 " Ruby/Rails
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
