@@ -726,6 +726,20 @@ let g:neocomplcache_dictionary_filetype_lists = {
     nnoremap <silent> <Leader>q :q<CR>
     vnoremap <silent> <Leader>q :q<CR>
 
+if has("gui_running")
+    nmap <silent> <C-q> :q<CR>
+    vmap <silent> <C-q> :q<CR>
+    imap <silent> <C-q> <ESC>:q<CR>
+
+    nmap <silent> <C-q>a :qa<CR>
+    vmap <silent> <C-q>a :qa<CR>
+    imap <silent> <C-q>a <ESC>:qa<CR>
+
+    nmap <silent> <C-w> :call BufferDelete()<CR>
+    vmap <silent> <C-w> :call BufferDelete()<CR>
+    imap <silent> <C-w> <ESC>:call BufferDelete()<CR>
+endif
+
     nmap <Leader>1 :call Layout(1)<CR>
     nmap <Leader>2 :call Layout(2)<CR>
     nmap <Leader>3 :call Layout(3)<CR>
