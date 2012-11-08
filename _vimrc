@@ -48,6 +48,7 @@ endif
 " required! 
 Bundle 'https://github.com/gmarik/vundle.git'
 
+Bundle 'https://github.com/flazz/vim-colorschemes.git'
 Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
@@ -528,8 +529,8 @@ endif
     nnoremap <Up> gk
     vnoremap <Down> gj
     vnoremap <Up> gk
-    inoremap <Down> <Esc>gja
-    inoremap <Up> <Esc>gka
+    "inoremap <Down> <Esc>gja
+    "inoremap <Up> <Esc>gka
 
 " n и N
     " results of search always in center 
@@ -567,14 +568,14 @@ endif
     nmap <C-b> :CtrlPBuffer<cr>
 
 " prev buffer
-    nmap <C-S-Left> :bp!<cr>
-    vmap <C-S-Left> <Esc>:bp!<cr>
-    imap <C-S-Left> <Esc>:bp!<cr>
+    nmap <Leader>bp :bp!<cr>
+    vmap <Leader>bp <Esc>:bp!<cr>
+    imap <Leader>bp <Esc>:bp!<cr>
     
 " next buffer
-    nmap <C-S-Right> :bn!<cr>
-    vmap <C-S-Right> <Esc>:bn!<cr>
-    imap <C-S-Right> <Esc>:bn!<cr>
+    nmap <Leader>bn :bn!<cr>
+    vmap <Leader>bn <Esc>:bn!<cr>
+    imap <Leader>bn <Esc>:bn!<cr>
 
 if has("gui_running")
 
@@ -658,6 +659,8 @@ let g:neocomplcache_dictionary_filetype_lists = {
 " NERDTree
     nmap <Esc> :NERDTreeClose<CR>
     nmap <Bs> :NERDTreeToggle<CR>
+    nmap <Leader>n :NERDTree<cr>
+    vmap <Leader>n <esc>:NERDTree<cr>
     let NERDTreeShowBookmarks=1
     let NERDTreeChDirMode=2
     let NERDTreeQuitOnOpen=1
@@ -726,13 +729,13 @@ let g:neocomplcache_dictionary_filetype_lists = {
     vnoremap <silent> <Leader>q :q<CR>
 
 if has("gui_running")
-    nmap <silent> <C-q> :q<CR>
-    vmap <silent> <C-q> :q<CR>
-    imap <silent> <C-q> <ESC>:q<CR>
+    nmap <silent> <C-q> :q!<CR>
+    vmap <silent> <C-q> :q!<CR>
+    imap <silent> <C-q> <ESC>:q!<CR>
 
-    nmap <silent> <C-q>a :qa<CR>
-    vmap <silent> <C-q>a :qa<CR>
-    imap <silent> <C-q>a <ESC>:qa<CR>
+    nmap <silent> <C-q>a :qa!<CR>
+    vmap <silent> <C-q>a :qa!<CR>
+    imap <silent> <C-q>a <ESC>:qa!<CR>
 
     nmap <silent> <C-w> :call BufferDelete()<CR>
     vmap <silent> <C-w> :call BufferDelete()<CR>
