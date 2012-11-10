@@ -142,7 +142,11 @@ filetype plugin indent on     " required!
     let g:solarized_termcolors=256
 
     try
-        colorscheme solarized
+        if has("gui_running")
+            colorscheme vanzan_color
+        else
+            colorscheme desert256
+        endif
     catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme molokai
     endtry
