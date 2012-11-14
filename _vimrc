@@ -766,7 +766,7 @@ endif
 "maximize window
 if has("gui_running")
 
-    set background=light
+    "set background=light
     " GUI is running or is about to start.
     " Maximize gvim window.
     set lines=40 columns=160
