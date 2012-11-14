@@ -82,6 +82,7 @@ Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
 Bundle 'https://github.com/twerth/ir_black.git'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
 Bundle 'https://github.com/plasticboy/vim-markdown.git'
+Bundle 'https://github.com/vim-scripts/mheg.git'
 
 " HTML/HAML
     Bundle 'https://github.com/othree/html5.vim.git'
@@ -366,6 +367,7 @@ filetype plugin indent on     " required!
     autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
     autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
 
+    autocmd BufReadPost *.mheg set syntax=mheg
     autocmd BufReadPost *.mhg set syntax=mheg
 
     autocmd FileType javascript
@@ -764,7 +766,7 @@ endif
 "maximize window
 if has("gui_running")
 
-    set background=dark
+    set background=light
     " GUI is running or is about to start.
     " Maximize gvim window.
     set lines=40 columns=160
