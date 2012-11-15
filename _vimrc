@@ -144,7 +144,7 @@ filetype plugin indent on     " required!
 
     try
         "if has("gui_running")
-            colorscheme solarized 
+            colorscheme Tomorrow-Night 
         "else
         "    colorscheme desert256
         "endif
@@ -766,7 +766,7 @@ endif
 "maximize window
 if has("gui_running")
 
-    "set background=light
+    set background=dark
     " GUI is running or is about to start.
     " Maximize gvim window.
     set lines=40 columns=160
