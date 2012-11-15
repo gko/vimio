@@ -137,7 +137,7 @@ filetype plugin indent on     " required!
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
-    set background=light
+    set background=dark
     let g:molokai_original = 1
     set t_Co=256
     let g:solarized_termcolors=256
@@ -766,7 +766,7 @@ endif
 "maximize window
 if has("gui_running")
 
-    set background=dark
+    "set background=dark
     " GUI is running or is about to start.
     " Maximize gvim window.
     set lines=40 columns=160
