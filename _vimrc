@@ -83,7 +83,7 @@ Bundle 'https://github.com/twerth/ir_black.git'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
 Bundle 'https://github.com/plasticboy/vim-markdown.git'
 Bundle 'https://github.com/vim-scripts/mheg.git'
-Bundle 'https://github.com/daylerees/colour-schemes'
+Bundle 'https://github.com/gorodinskiy/colour-schemes'
 
 " HTML/HAML
     Bundle 'https://github.com/othree/html5.vim.git'
