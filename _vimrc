@@ -145,7 +145,7 @@ filetype plugin indent on     " required!
 
     try
         "if has("gui_running")
-            colorscheme Tomorrow-Night 
+            colorscheme Tomorrow-Night-Bright
         "else
         "    colorscheme desert256
         "endif
@@ -669,7 +669,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
     nmap <Leader>n :NERDTree<cr>
     vmap <Leader>n <esc>:NERDTree<cr>
     let NERDTreeShowBookmarks=1
-    let NERDTreeChDirMode=2
+    "let NERDTreeChDirMode=2
     let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=0
@@ -709,6 +709,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
     :cabbrev bd call BufferDelete() 
     :cabbrev qa qa!
     :cabbrev q q!
+    :cabbrev Cd CD
 
     :cabbrev ц w
     :cabbrev у NERDTreeClose<CR>:e!
@@ -835,37 +836,37 @@ endif
 " This is useful to accumulate results from successive operations.
 " Global function that can be called from other scripts.
 function! GoScratch()
-  let done = 0
-  for i in range(1, winnr('$'))
-    execute i . 'wincmd w'
-    if &buftype == 'nofile'
-      let done = 1
-      break
+    let done = 0
+    for i in range(1, winnr('$'))
+        execute i . 'wincmd w'
+        if &buftype == 'nofile'
+            let done = 1
+            break
+        endif
+    endfor
+    if !done
+        new
+        setlocal buftype=nofile bufhidden=hide noswapfile
     endif
-  endfor
-  if !done
-    new
-    setlocal buftype=nofile bufhidden=hide noswapfile
-  endif
 endfunction
 
 " Append match, with line number as prefix if wanted.
 function! s:Matcher(hits, match, linenums, subline)
-  if !empty(a:match)
-    let prefix = a:linenums ? printf('%3d  ', a:subline) : ''
-    call add(a:hits, prefix . a:match)
-  endif
-  return a:match
+    if !empty(a:match)
+        let prefix = a:linenums ? printf('%3d  ', a:subline) : ''
+        call add(a:hits, prefix . a:match)
+    endif
+    return a:match
 endfunction
 
 " Append line numbers for lines in match to given list.
 function! s:MatchLineNums(numlist, match)
-  let newlinecount = len(substitute(a:match, '\n\@!.', '', 'g'))
-  if a:match =~ "\n$"
-    let newlinecount -= 1  " do not copy next line after newline
-  endif
-  call extend(a:numlist, range(line('.'), line('.') + newlinecount))
-  return a:match
+    let newlinecount = len(substitute(a:match, '\n\@!.', '', 'g'))
+    if a:match =~ "\n$"
+        let newlinecount -= 1  " do not copy next line after newline
+    endif
+    call extend(a:numlist, range(line('.'), line('.') + newlinecount))
+    return a:match
 endfunction
 
 " Return list of matches for given pattern in given range.
@@ -874,35 +875,35 @@ endfunction
 " Work on a copy of buffer so unforeseen problems don't change it.
 " Global function that can be called from other scripts.
 function! GetMatches(line1, line2, pattern, wholelines, linenums)
-  let savelz = &lazyredraw
-  set lazyredraw
-  let lines = getline(1, line('$'))
-  new
-  setlocal buftype=nofile bufhidden=delete noswapfile
-  silent put =lines
-  1d
-  let hits = []
-  let sub = a:line1 . ',' . a:line2 . 's/' . escape(a:pattern, '/')
-  if a:wholelines
-    let numlist = []  " numbers of lines containing a match
-    let rep = '/\=s:MatchLineNums(numlist, submatch(0))/e'
-  else
-    let rep = '/\=s:Matcher(hits, submatch(0), a:linenums, line("."))/e'
-  endif
-  silent execute sub . rep . (&gdefault ? '' : 'g')
-  close
-  if a:wholelines
-    let last = 0  " number of last copied line, to skip duplicates
-    for lnum in numlist
-      if lnum > last
-        let last = lnum
-        let prefix = a:linenums ? printf('%3d  ', lnum) : ''
-        call add(hits, prefix . getline(lnum))
-      endif
-    endfor
-  endif
-  let &lazyredraw = savelz
-  return hits
+    let savelz = &lazyredraw
+    set lazyredraw
+    let lines = getline(1, line('$'))
+    new
+    setlocal buftype=nofile bufhidden=delete noswapfile
+    silent put =lines
+    1d
+    let hits = []
+    let sub = a:line1 . ',' . a:line2 . 's/' . escape(a:pattern, '/')
+    if a:wholelines
+        let numlist = []  " numbers of lines containing a match
+        let rep = '/\=s:MatchLineNums(numlist, submatch(0))/e'
+    else
+        let rep = '/\=s:Matcher(hits, submatch(0), a:linenums, line("."))/e'
+    endif
+    silent execute sub . rep . (&gdefault ? '' : 'g')
+    close
+    if a:wholelines
+        let last = 0  " number of last copied line, to skip duplicates
+        for lnum in numlist
+            if lnum > last
+                let last = lnum
+                let prefix = a:linenums ? printf('%3d  ', lnum) : ''
+                call add(hits, prefix . getline(lnum))
+            endif
+        endfor
+    endif
+    let &lazyredraw = savelz
+    return hits
 endfunction
 
 " Copy search matches to a register or a scratch buffer.
@@ -910,25 +911,25 @@ endfunction
 " Works with multiline matches. Works with a range (default is whole file).
 " Search pattern is given in argument, or is the last-used search pattern.
 function! s:CopyMatches(bang, line1, line2, args, wholelines)
-  let l = matchlist(a:args, '^\%(\([a-zA-Z"*+-]\)\%($\|\s\+\)\)\?\(.*\)')
-  let reg = empty(l[1]) ? '+' : l[1]
-  let pattern = empty(l[2]) ? @/ : l[2]
-  let hits = GetMatches(a:line1, a:line2, pattern, a:wholelines, a:bang)
-  let msg = 'No non-empty matches'
-  if !empty(hits)
-    if reg == '-'
-      call GoScratch()
-      normal! G0m'
-      silent put =hits
-      " Jump to first line of hits and scroll to middle.
-      ''+1normal! zz
-    else
-      execute 'let @' . reg . ' = join(hits, "\n") . "\n"'
+    let l = matchlist(a:args, '^\%(\([a-zA-Z"*+-]\)\%($\|\s\+\)\)\?\(.*\)')
+    let reg = empty(l[1]) ? '+' : l[1]
+    let pattern = empty(l[2]) ? @/ : l[2]
+    let hits = GetMatches(a:line1, a:line2, pattern, a:wholelines, a:bang)
+    let msg = 'No non-empty matches'
+    if !empty(hits)
+        if reg == '-'
+            call GoScratch()
+            normal! G0m'
+            silent put =hits
+            " Jump to first line of hits and scroll to middle.
+            ''+1normal! zz
+        else
+            execute 'let @' . reg . ' = join(hits, "\n") . "\n"'
+        endif
+        let msg = 'Number of matches: ' . len(hits)
     endif
-    let msg = 'Number of matches: ' . len(hits)
-  endif
-  redraw  " so message is seen
-  echo msg
+    redraw  " so message is seen
+    echo msg
 endfunction
 command! -bang -nargs=? -range=% CopyMatches call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 0)
 command! -bang -nargs=? -range=% CopyLines call s:CopyMatches(<bang>0, <line1>, <line2>, <q-args>, 1)
@@ -999,10 +1000,43 @@ function! Layout(num)
 
 endfunction
 
+" taken from https://github.com/carlhuda/janus
+" Utility functions to create file commands
+function! s:CommandCabbr(abbreviation, expansion)
+    execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
+endfunction
+
+function! s:FileCommand(name, ...)
+    if exists("a:1")
+        let funcname = a:1
+    else
+        let funcname = a:name
+    endif
+
+    execute 'command! -nargs=* -complete=file ' . a:name . ' :call ' . funcname . '(<f-args>)'
+endfunction
+
+function! s:DefineCommand(name, destination)
+    call s:FileCommand(a:destination)
+    call s:CommandCabbr(a:name, a:destination)
+endfunction
+
+" Public NERDTree-aware versions of builtin functions
+function! CD(...)
+    if exists("a:1")
+        execute "cd ".fnameescape(a:1)
+    else
+        execute "cd"
+    endif
+    NERDTree
+endfunction
+
+" Define the NERDTree-aware aliases
+call s:DefineCommand("cd", "CD")
 
 " Auto change the directory to the current file I'm working on
     "autocmd VimResized * :wincmd h<CR>:wincmd k<CR>:call Layout(0)<CR> 
-    autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
+    "autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
     autocmd BufEnter * lcd %:p:h
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     "in case if you don't open a file
