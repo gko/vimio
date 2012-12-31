@@ -398,7 +398,7 @@ filetype plugin indent on     " required!
 " Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""
     "cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
-    command! W exec 'w !sudo tee % > /dev/null' | e!
+    command! sudo exec 'w !sudo tee % > /dev/null' | e!
 
 nnoremap <Esc>A <up>
 nnoremap <Esc>B <down>
