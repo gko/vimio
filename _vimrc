@@ -706,7 +706,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
 "everything
     :cabbrev e NERDTreeClose<CR>:e!
     :cabbrev t tabedit!
-    :cabbrev bd call BufferDelete() 
+    :cabbrev bd :ene!<CR>:bw #<CR> 
     :cabbrev qa qa!
     :cabbrev q q!
     :cabbrev Cd CD
@@ -729,8 +729,8 @@ let g:neocomplcache_dictionary_filetype_lists = {
     :cabbrev qa!! qa!
 
 "buffers
-    nnoremap <silent> <Leader>bd :call BufferDelete()<CR>
-    vnoremap <silent> <Leader>bd :call BufferDelete()<CR>
+    nnoremap <silent> <Leader>bd :ene!<CR>:bw #<CR>
+    vnoremap <silent> <Leader>bd :ene!<CR>:bw #<CR>
     nnoremap <silent> <Leader>qa :qa<CR>
     vnoremap <silent> <Leader>qa :qa<CR>
     nnoremap <silent> <Leader>q :q<CR>
@@ -745,9 +745,9 @@ if has("gui_running")
     vmap <silent> <C-q>a :qa!<CR>
     imap <silent> <C-q>a <ESC>:qa!<CR>
 
-    nmap <silent> <C-w> :call BufferDelete()<CR>
-    vmap <silent> <C-w> :call BufferDelete()<CR>
-    imap <silent> <C-w> <ESC>:call BufferDelete()<CR>
+    nmap <silent> <C-w> :ene!<CR>:bw #<CR>
+    vmap <silent> <C-w> :ene!<CR>:bw #<CR>
+    imap <silent> <C-w> <ESC>:ene!<CR>:bw #<CR>
 endif
 
     nmap <Leader>1 :call Layout(1)<CR>
