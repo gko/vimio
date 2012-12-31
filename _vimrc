@@ -1037,7 +1037,7 @@ call s:DefineCommand("cd", "CD")
 " Auto change the directory to the current file I'm working on
     "autocmd VimResized * :wincmd h<CR>:wincmd k<CR>:call Layout(0)<CR> 
     "autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
-    autocmd BufEnter * lcd %:p:h
+    "autocmd BufEnter * lcd %:p:h
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     "in case if you don't open a file
     cd $HOME
