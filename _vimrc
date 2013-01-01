@@ -143,15 +143,15 @@ filetype plugin indent on     " required!
     set t_Co=256
     let g:solarized_termcolors=256
 
-    try
-        "if has("gui_running")
-            colorscheme Tomorrow-Night-Bright
-        "else
-        "    colorscheme desert256
-        "endif
-    catch /^Vim\%((\a\+)\)\=:E185/
+    "try
+        ""if has("gui_running")
+            "colorscheme Tomorrow-Night-Bright
+        ""else
+        ""    colorscheme desert256
+        ""endif
+    "catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme molokai
-    endtry
+    "endtry
     
 
 " use neocomplcache & clang_complete
