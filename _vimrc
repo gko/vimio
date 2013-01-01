@@ -48,7 +48,7 @@ endif
 " required! 
 Bundle 'https://github.com/gmarik/vundle.git'
 
-Bundle 'https://github.com/flazz/vim-colorschemes.git'
+"Bundle 'https://github.com/flazz/vim-colorschemes.git'
 Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
