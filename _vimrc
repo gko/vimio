@@ -111,6 +111,7 @@ Bundle 'https://github.com/gorodinskiy/colour-schemes'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
     Bundle 'https://github.com/fs111/pydoc.vim.git'
+    Bundle 'https://github.com/davidhalter/jedi-vim.git'
 " Ruby/Rails
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
@@ -671,7 +672,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
     vmap <Leader>n <esc>:NERDTree<cr>
     let NERDTreeShowBookmarks=1
     "let NERDTreeChDirMode=2
-    let NERDTreeQuitOnOpen=1
+    "let NERDTreeQuitOnOpen=1
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=0
     let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ? for help' text.
