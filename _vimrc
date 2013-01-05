@@ -980,14 +980,18 @@ function! Layout(num)
                 wincmd w
                 let s:cur_split="2h"
             elseif s:cur_split=="2h"
-                vert belowright sb
+                "vert belowright sb
+                vsplit
+                wincmd w
                 let s:cur_split="2v"
             endif
 
             bnext
             wincmd t
         elseif a:num==3
-            vert belowright sb
+            "vert belowright sb
+            vsplit
+            wincmd w
             bnext
             bnext
             sp
