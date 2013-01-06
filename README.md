@@ -4,9 +4,7 @@
 
 On unix and windows(with bash which can be installed with [git](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git)):
 
-    ```
     curl -L https://raw.github.com/gorodinskiy/vim-settings/master/install.sh|bash
-    ```
 
 ##Shortcuts
 
