@@ -110,9 +110,13 @@ Bundle 'https://github.com/gorodinskiy/colour-schemes'
     Bundle 'https://github.com/vim-scripts/php.vim--Garvin.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
-    Bundle 'https://github.com/fs111/pydoc.vim.git'
-    Bundle 'https://github.com/davidhalter/jedi-vim.git'
-    Bundle 'https://github.com/klen/python-mode.git'
+    if has('python')
+        Bundle 'https://github.com/davidhalter/jedi-vim.git'
+        Bundle 'https://github.com/klen/python-mode.git'
+    else
+        Bundle 'https://github.com/fs111/pydoc.vim.git'
+    endif
+
 " Ruby/Rails
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
