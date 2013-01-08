@@ -113,6 +113,7 @@ Bundle 'https://github.com/gorodinskiy/colour-schemes'
     if has('python')
         Bundle 'https://github.com/davidhalter/jedi-vim.git'
         Bundle 'https://github.com/klen/python-mode.git'
+        let g:jedi#auto_vim_configuration = 0
     else
         Bundle 'https://github.com/fs111/pydoc.vim.git'
     endif
@@ -513,19 +514,15 @@ if has("gui_running")
     nnoremap <C-S-Left> x<ESC>hP
     nnoremap <C-S-Right> x<ESC>p
 
-    nmap <C-down> }
-    vmap <C-down> }
-    
-    nmap <C-up> {
-    vmap <C-up> {
-
 endif
 
 "wrap with brackets and quotes
-    vnoremap ' <ESC>`>a'<ESC>`<i'<ESC>
-    vnoremap " <ESC>`>a"<ESC>`<i"<ESC>
-    vnoremap ( <ESC>`>a)<ESC>`<i(<ESC>
-    vnoremap [ <ESC>`>a]<ESC>`<i[<ESC>
+    vnoremap ' <ESC>`>a'<ESC>`<i'<ESC>`>ll<ESC>
+    vnoremap " <ESC>`>a"<ESC>`<i"<ESC>`>ll<ESC>
+    vnoremap ( <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
+    vnoremap ) <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
+    vnoremap [ <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
+    vnoremap ] <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
 
 "save
     nmap <C-s> :w<CR>
@@ -1096,3 +1093,4 @@ let g:tagbar_type_scala = {
         \ 'm:methods'
     \ ]
 \ }
+set fillchars=""
