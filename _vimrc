@@ -84,8 +84,6 @@ Bundle 'https://github.com/nanotech/jellybeans.vim'
 Bundle 'https://github.com/tangphillip/SunburstVIM.git'
 Bundle 'https://github.com/vim-scripts/Wombat.git'
 Bundle 'https://github.com/sjl/badwolf.git'
-Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-Bundle 'https://github.com/tomasr/molokai.git'
 Bundle 'https://github.com/zaiste/Atom.git'
 Bundle 'https://github.com/w0ng/vim-hybrid.git'
 
@@ -157,7 +155,7 @@ filetype plugin indent on     " required!
 
     try
         "if has("gui_running")
-            colorscheme hybrid
+            colorscheme badwolf
         ""else
         ""    colorscheme desert256
         ""endif
@@ -220,7 +218,6 @@ filetype plugin indent on     " required!
 "hate modelines
     set modelines=0
     set nomodeline
-    set nobackup
     set nowritebackup
 
     set ruler
@@ -230,7 +227,7 @@ filetype plugin indent on     " required!
     set nobackup       "no backup files
     set nowritebackup  "only in case you don't want a backup file while editing
     set noswapfile     "no swap files
-    set backupdir=$HOME/tmp
+    "set backupdir=$HOME/tmp
 
 "line numbers
     set number
@@ -437,8 +434,12 @@ inoremap <Esc>D <left>
     vnoremap <Leader>a gg0vGG$
 
 " < >
-    vnoremap < <gv
-    vnoremap > >gv
+    vnoremap << <gv
+    vnoremap >> >gv
+
+" { }
+    vnoremap {{ {
+    vnoremap }} }
 
 " paste and select
     xnoremap p pgvy
@@ -528,6 +529,10 @@ endif
     vnoremap ) <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
     vnoremap [ <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
     vnoremap ] <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
+    vnoremap { <ESC>`>a}<ESC>`<i{<ESC>`>ll<ESC>
+    vnoremap } <ESC>`>a}<ESC>`<i{<ESC>`>ll<ESC>
+    vnoremap < <ESC>`>a><ESC>`<i<<ESC>`>ll<ESC>
+    vnoremap > <ESC>`>a><ESC>`<i<<ESC>`>ll<ESC>
 
 "save
     nmap <C-s> :w<CR>
@@ -1012,6 +1017,9 @@ function! Layout(num)
     endif
 
 endfunction
+
+"autocmd winresize * lcd %:p:h
+autocmd WinResize * let s:cur_split="2h"
 
 " taken from https://github.com/carlhuda/janus
 " Utility functions to create file commands
