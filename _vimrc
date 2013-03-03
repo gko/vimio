@@ -1018,9 +1018,6 @@ function! Layout(num)
 
 endfunction
 
-"autocmd winresize * lcd %:p:h
-autocmd WinResize * let s:cur_split="2h"
-
 " taken from https://github.com/carlhuda/janus
 " Utility functions to create file commands
 function! s:CommandCabbr(abbreviation, expansion)
