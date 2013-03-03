@@ -48,18 +48,14 @@ endif
 " required! 
 Bundle 'https://github.com/gmarik/vundle.git'
 
-"Bundle 'https://github.com/flazz/vim-colorschemes.git'
+"General stuff
 Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/mattn/zencoding-vim.git'
 Bundle 'https://github.com/tpope/vim-git.git'
-Bundle 'https://github.com/vim-ruby/vim-ruby.git'
 Bundle 'https://github.com/dterei/VimCobaltColourScheme.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
-Bundle 'https://github.com/vim-scripts/Wombat.git'
-Bundle 'https://github.com/tpope/vim-rails.git'
-Bundle 'https://github.com/tangphillip/SunburstVIM.git'
 Bundle 'https://github.com/garbas/vim-snipmate.git'
 Bundle 'https://github.com/tomtom/tlib_vim.git'
 Bundle 'https://github.com/honza/snipmate-snippets.git'
@@ -68,22 +64,30 @@ Bundle 'https://github.com/lepture/vim-velocity.git'
 Bundle 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
 Bundle 'https://github.com/Shougo/neocomplcache.git'
 Bundle 'https://github.com/Shougo/neosnippet'
-Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-Bundle 'https://github.com/nanotech/jellybeans.vim'
-Bundle 'https://github.com/jpo/vim-railscasts-theme.git'
-Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
 Bundle 'https://github.com/mikewest/vimroom.git'
 Bundle 'https://github.com/Lokaltog/vim-powerline.git'
 Bundle 'https://github.com/majutsushi/tagbar.git'
 "Bundle 'https://github.com/hallettj/jslint.vim.git'
 Bundle 'https://github.com/Rip-Rip/clang_complete.git'
 Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
-Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
-Bundle 'https://github.com/twerth/ir_black.git'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
 Bundle 'https://github.com/plasticboy/vim-markdown.git'
 Bundle 'https://github.com/vim-scripts/mheg.git'
-Bundle 'https://github.com/gorodinskiy/colour-schemes'
+
+"Colorschemes
+Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
+Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
+Bundle 'https://github.com/jpo/vim-railscasts-theme.git'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+Bundle 'https://github.com/twerth/ir_black.git'
+Bundle 'https://github.com/nanotech/jellybeans.vim'
+Bundle 'https://github.com/tangphillip/SunburstVIM.git'
+Bundle 'https://github.com/vim-scripts/Wombat.git'
+Bundle 'https://github.com/sjl/badwolf.git'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+Bundle 'https://github.com/tomasr/molokai.git'
+Bundle 'https://github.com/zaiste/Atom.git'
+Bundle 'https://github.com/w0ng/vim-hybrid.git'
 
 " HTML/HAML
     Bundle 'https://github.com/othree/html5.vim.git'
@@ -113,6 +117,7 @@ Bundle 'https://github.com/gorodinskiy/colour-schemes'
     if has('python')
         Bundle 'https://github.com/davidhalter/jedi-vim.git'
         Bundle 'https://github.com/klen/python-mode.git'
+        let g:pymode_rope = 0
         let g:jedi#auto_vim_configuration = 0
     else
         Bundle 'https://github.com/fs111/pydoc.vim.git'
@@ -150,15 +155,15 @@ filetype plugin indent on     " required!
     set t_Co=256
     let g:solarized_termcolors=256
 
-    "try
-        ""if has("gui_running")
-            "colorscheme Tomorrow-Night-Bright
+    try
+        "if has("gui_running")
+            colorscheme hybrid
         ""else
         ""    colorscheme desert256
         ""endif
-    "catch /^Vim\%((\a\+)\)\=:E185/
+    catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme molokai
-    "endtry
+    endtry
     
 
 " use neocomplcache & clang_complete
