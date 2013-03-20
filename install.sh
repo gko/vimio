@@ -26,10 +26,10 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     cd
     rm -rf $HOME/.vim
     rm -rf $HOME/.vimrc
-    rm -rf vim-settings
-    git clone --depth 1 --recursive https://github.com/gorodinskiy/vim-settings.git
-    mv vim-settings/_vimrc $HOME/.vimrc
-    mv vim-settings $HOME/.vim
+    rm -rf vimio
+    git clone --depth 1 --recursive https://github.com/gorodinskiy/vimio.git
+    mv vimio/_vimrc $HOME/.vimrc
+    mv vimio $HOME/.vim
     cd .vim
     mv .ctags ../
     chmod +x bin/ctags
@@ -51,10 +51,10 @@ else
     cd
     rm -rf vimfiles
     rm -rf _vimrc
-    rm -rf vim-settings
-    git clone --depth 1 --recursive https://github.com/gorodinskiy/vim-settings.git
-    mv vim-settings/_vimrc _vimrc
-    mv vim-settings vimfiles
+    rm -rf vimio
+    git clone --depth 1 --recursive https://github.com/gorodinskiy/vimio.git
+    mv vimio/_vimrc _vimrc
+    mv vimio vimfiles
     mv vimfiles/.ctags ./
     cd
     
