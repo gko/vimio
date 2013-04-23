@@ -131,7 +131,7 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/wavded/vim-stylus.git'
 " Scala
     Bundle 'https://github.com/derekwyatt/vim-scala.git'
-    Bundle 'https://github.com/gorodinskiy/scala-vim-snippets.git'
+    "Bundle 'https://github.com/gorodinskiy/scala-vim-snippets.git'
 
 filetype plugin indent on     " required!
 "
