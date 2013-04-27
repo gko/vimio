@@ -56,8 +56,8 @@ Bundle 'https://github.com/mattn/zencoding-vim.git'
 Bundle 'https://github.com/tpope/vim-git.git'
 Bundle 'https://github.com/dterei/VimCobaltColourScheme.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
-Bundle 'https://github.com/garbas/vim-snipmate.git'
-Bundle 'https://github.com/tomtom/tlib_vim.git'
+"Bundle 'https://github.com/garbas/vim-snipmate.git'
+"Bundle 'https://github.com/tomtom/tlib_vim.git'
 Bundle 'https://github.com/honza/vim-snippets.git'
 Bundle 'https://github.com/scrooloose/nerdcommenter'
 Bundle 'https://github.com/lepture/vim-velocity.git'
@@ -643,39 +643,60 @@ endif
     nmap <Leader>rr :call ReloadAllSnippets()<CR>
     "let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/,$VIMHOME/my_snippets/"
 
-"Autocompl plugin
-imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+"
+"
+"neosnippet plugin
+"
+"
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_plugin_completion_length = {
-  \ 'buffer_complete'   : 2,
-  \ 'include_complete'  : 2,
-  \ 'syntax_complete'   : 2,
-  \ 'filename_complete' : 2,
-  \ 'keyword_complete'  : 2,
-  \ 'omni_complete'     : 1
-  \ }
-let g:neocomplcache_min_keyword_length = 3
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_dictionary_filetype_lists = {
-  \ 'default'    : '',
-  \ 'erlang'     : $VIMHOME . '/dict/erlang.dict',
-  \ 'objc'       : $VIMHOME . '/dict/objc.dict',
-  \ 'javascript' : $VIMHOME . '/dict/javascript.dict',
-  \ 'mxml'       : $VIMHOME . '/dict/mxml.dict',
-  \ 'ruby'       : $VIMHOME . '/dict/ruby.dict',
-  \ 'perl'       : $VIMHOME . '/dict/perl.dict',
-  \ 'scheme'     : $VIMHOME . '/dict/gauche.dict',
-  \ 'scala'      : $VIMHOME . '/dict/scala.dict',
-  \ 'int-erl'    : $VIMHOME . '/dict/erlang.dict',
-  \ 'int-irb'    : $VIMHOME . '/dict/ruby.dict',
-  \ 'int-perlsh' : $VIMHOME . '/dict/perl.dict'
-  \ }
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 
-"just global tasks file
-    "nnoremap <Leader>t :e! $VIMHOME/tasks.md<CR>Go<ESC>o
-    "vnoremap <Leader>t <ESC>:e! $VIMHOME/tasks.md<CR>Go<ESC>o
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory=$VIMHOME.'/bundle/vim-snippets/snippets'
+
+"let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_plugin_completion_length = {
+  "\ 'buffer_complete'   : 2,
+  "\ 'include_complete'  : 2,
+  "\ 'syntax_complete'   : 2,
+  "\ 'filename_complete' : 2,
+  "\ 'keyword_complete'  : 2,
+  "\ 'omni_complete'     : 1
+  "\ }
+"let g:neocomplcache_min_keyword_length = 3
+"let g:neocomplcache_min_syntax_length = 3
+"let g:neocomplcache_dictionary_filetype_lists = {
+  "\ 'default'    : '',
+  "\ 'erlang'     : $VIMHOME . '/dict/erlang.dict',
+  "\ 'objc'       : $VIMHOME . '/dict/objc.dict',
+  "\ 'javascript' : $VIMHOME . '/dict/javascript.dict',
+  "\ 'mxml'       : $VIMHOME . '/dict/mxml.dict',
+  "\ 'ruby'       : $VIMHOME . '/dict/ruby.dict',
+  "\ 'perl'       : $VIMHOME . '/dict/perl.dict',
+  "\ 'scheme'     : $VIMHOME . '/dict/gauche.dict',
+  "\ 'scala'      : $VIMHOME . '/dict/scala.dict',
+  "\ 'int-erl'    : $VIMHOME . '/dict/erlang.dict',
+  "\ 'int-irb'    : $VIMHOME . '/dict/ruby.dict',
+  "\ 'int-perlsh' : $VIMHOME . '/dict/perl.dict'
+  "\ }
 
 " NERDTree
     nmap <Esc> :NERDTreeClose<CR>
