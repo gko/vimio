@@ -672,7 +672,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory=$VIMHOME.'/bundle/vim-snippets/snippets'
 
-"let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 "let g:neocomplcache_plugin_completion_length = {
   "\ 'buffer_complete'   : 2,
   "\ 'include_complete'  : 2,
