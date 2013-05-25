@@ -154,11 +154,11 @@ filetype plugin indent on     " required!
     let g:solarized_termcolors=256
 
     try
-        "if has("gui_running")
+        if has("gui_running")
             colorscheme badwolf
-        ""else
-        ""    colorscheme desert256
-        ""endif
+        else
+            colorscheme molokai
+        endif
     catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme molokai
     endtry
@@ -818,7 +818,7 @@ if has("gui_running")
         else
             let os = substitute(system('uname'), "\n", "", "")
             if os == "Linux"
-                set guifont=Monospace\ 10
+                set guifont=Droid\ Sans\ Mono\ 10
                 "set clipboard=unnamedplus
             endif
         endif
