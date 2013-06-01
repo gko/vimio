@@ -758,10 +758,15 @@ let g:neocomplcache_enable_at_startup = 1
 
     :cabbrev W w
     :cabbrev Wq wq
+    :cabbrev WQ wq
+    :cabbrev wQ wq
     :cabbrev E NERDTreeClose<CR>:e!
     :cabbrev Q q!
     :cabbrev q!! q!
     :cabbrev qa!! qa!
+    :cabbrev qA qa!
+    :cabbrev Qa qa!
+    :cabbrev QA qa!
 
 "buffers
     nnoremap <silent> <Leader>bd :ene!<CR>:bw #<CR>
