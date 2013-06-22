@@ -113,8 +113,8 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
     if has('python')
-        Bundle 'https://github.com/davidhalter/jedi-vim.git'
         Bundle 'https://github.com/klen/python-mode.git'
+        Bundle 'https://github.com/davidhalter/jedi-vim.git'
         let g:pymode_rope = 0
         let g:jedi#auto_vim_configuration = 0
     else
@@ -125,6 +125,8 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
     Bundle 'https://github.com/tpope/vim-endwise.git'
+"Dart
+    Bundle 'https://github.com/dart-lang/dart-vim-plugin.git'
 " Jade
     Bundle 'https://github.com/digitaltoad/vim-jade.git'
 " Stylus
