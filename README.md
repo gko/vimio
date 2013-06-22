@@ -116,6 +116,9 @@ Some of shortcuts(`Leader` key is comma):
  * [vim-rails.git](https://github.com/tpope/vim-rails.git)
  * [vim-endwise.git](https://github.com/tpope/vim-endwise.git)
 
+* Dart
+ * [dart-vim-plugin.git](https://github.com/dart-lang/dart-vim-plugin.git)
+
 * Jade
  * [vim-jade.git](https://github.com/digitaltoad/vim-jade.git)
 
