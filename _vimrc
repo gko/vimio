@@ -62,14 +62,10 @@ Bundle 'https://github.com/tpope/vim-vividchalk.git'
 Bundle 'https://github.com/honza/vim-snippets.git'
 Bundle 'https://github.com/scrooloose/nerdcommenter'
 Bundle 'https://github.com/lepture/vim-velocity.git'
-Bundle 'https://github.com/Shougo/neocomplcache.git'
-Bundle 'https://github.com/Shougo/neosnippet'
 Bundle 'https://github.com/mikewest/vimroom.git'
 Bundle 'https://github.com/Lokaltog/vim-powerline.git'
 Bundle 'https://github.com/majutsushi/tagbar.git'
 "Bundle 'https://github.com/hallettj/jslint.vim.git'
-Bundle 'https://github.com/Rip-Rip/clang_complete.git'
-Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
 Bundle 'https://github.com/kien/ctrlp.vim.git'
 Bundle 'https://github.com/plasticboy/vim-markdown.git'
 Bundle 'https://github.com/vim-scripts/mheg.git'
@@ -113,14 +109,21 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
     if has('python')
+        Bundle 'https://github.com/SirVer/ultisnips.git'
         Bundle 'https://github.com/klen/python-mode.git'
         Bundle 'https://github.com/davidhalter/jedi-vim.git'
         let g:pymode_rope = 0
         let g:jedi#auto_vim_configuration = 0
     else
+        Bundle 'https://github.com/Shougo/neosnippet'
         Bundle 'https://github.com/fs111/pydoc.vim.git'
     endif
 
+    Bundle 'https://github.com/Shougo/neocomplcache.git'
+    Bundle 'https://github.com/Rip-Rip/clang_complete.git'
+    Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
+    "Bundle 'https://github.com/Valloric/YouCompleteMe.git'
+ 
 " Ruby/Rails
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
@@ -156,11 +159,11 @@ filetype plugin indent on     " required!
     let g:solarized_termcolors=256
 
     try
-        if has("gui_running")
-            colorscheme badwolf
-        else
-            colorscheme molokai
-        endif
+        "if has("gui_running")
+            colorscheme Tomorrow
+        "else
+            "colorscheme molokai
+        "endif
     catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme molokai
     endtry
