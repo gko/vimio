@@ -52,7 +52,7 @@ Bundle 'https://github.com/gmarik/vundle.git'
 Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
-Bundle 'https://github.com/mattn/zencoding-vim.git'
+Bundle 'https://github.com/mattn/emmet-vim.git'
 Bundle 'https://github.com/tpope/vim-git.git'
 Bundle 'https://github.com/dterei/VimCobaltColourScheme.git'
 Bundle 'https://github.com/tpope/vim-vividchalk.git'
@@ -642,8 +642,8 @@ endif
 ":cabbrev e E
 
 "zen-coding expand abbr
-    let g:user_zen_expandabbr_key = '<c-e>' 
-    let g:use_zen_complete_tag = 1
+    let g:user_emmet_expandabbr_key = '<c-e>' 
+    let g:use_emmet_complete_tag = 1
 
 "snipmate custom key. Safe way
     nmap <Leader>rr :call ReloadAllSnippets()<CR>
