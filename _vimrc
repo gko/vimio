@@ -110,15 +110,15 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 " Python/Django
     if has('python')
-        Bundle 'https://github.com/SirVer/ultisnips.git'
+        "Bundle 'https://github.com/SirVer/ultisnips.git'
         Bundle 'https://github.com/klen/python-mode.git'
         Bundle 'https://github.com/davidhalter/jedi-vim.git'
         let g:pymode_rope = 0
         let g:jedi#auto_vim_configuration = 0
     else
-        Bundle 'https://github.com/Shougo/neosnippet'
         Bundle 'https://github.com/fs111/pydoc.vim.git'
     endif
+    Bundle 'https://github.com/Shougo/neosnippet'
 
     Bundle 'https://github.com/Shougo/neocomplcache.git'
     Bundle 'https://github.com/Rip-Rip/clang_complete.git'
