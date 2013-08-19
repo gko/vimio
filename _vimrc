@@ -91,7 +91,8 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/gregsexton/MatchTag.git'
 " CSS/LESS
     Bundle 'https://github.com/hail2u/vim-css3-syntax.git'
-    Bundle 'https://github.com/ap/vim-css-color.git'
+    "Bundle 'https://github.com/ap/vim-css-color.git'
+    Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
     Bundle 'https://github.com/groenewege/vim-less.git'
 " JavaScript
     Bundle 'https://github.com/pangloss/vim-javascript.git'
