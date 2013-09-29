@@ -140,5 +140,6 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
 
 source $VIMHOME/settings/functions.vim
 source $VIMHOME/settings/shortcuts.vim
+source $VIMHOME/settings/filespecific.vim
 source $VIMHOME/settings/overall.vim
 source $VIMHOME/settings/ctags.vim
