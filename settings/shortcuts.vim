@@ -28,6 +28,10 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 nnoremap <Leader>a gg0vGG$
 vnoremap <Leader>a gg0vGG$
 
+" < >
+vnoremap < <gv
+vnoremap > >gv
+
 " paste and select
 xnoremap p pgvy
 xnoremap P Pgvy
