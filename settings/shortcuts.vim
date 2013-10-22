@@ -390,4 +390,5 @@ nmap <Leader>3 :call Layout(3)<CR>
 "imap <Leader><Right> <ESC>:bnext!<CR>
 "imap <Leader><Left> <ESC>:bprev!<CR>
 
+nnoremap <F4> :GundoToggle<CR>
 nmap <F5> :TagbarToggle<CR>

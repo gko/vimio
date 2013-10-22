@@ -2,19 +2,22 @@
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on     " required!
-set background=dark
+set background=light
 let g:molokai_original = 1
 set t_Co=256
 let g:solarized_termcolors=256
 
 try
     "if has("gui_running")
-        colorscheme Tomorrow
+        colorscheme badwolf
+        let g:airline_theme="badwolf"
     "else
         "colorscheme molokai
+        "let g:airline_theme="molokai"
     "endif
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme molokai
+    let g:airline_theme="molokai"
 endtry
 
 " use neocomplcache & clang_complete
@@ -163,8 +166,25 @@ set noshowmatch " don't show pair <> в HTML
 set laststatus=2
 
 "Powerline
-let g:Powerline_cache_enabled = 0
-let g:Powerline_symbols = 'compatible'
+"let g:Powerline_cache_enabled = 0
+"let g:Powerline_symbols = 'compatible'
+" airline
+if !exists("g:airline_symbols")
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+"let g:airline_theme="powerlineish"
+" let g:airline_section_warning = airline#section#create([ "syntastic" ])
+let g:airline_powerline_fonts = 0
+"let g:airline#extensions#branch#empty_message  =  "No SCM"
+"let g:airline#extensions#whitespace#enabled    =  0
+"let g:airline#extensions#syntastic#enabled     =  1
+let g:airline#extensions#tabline#enabled       =  1
+"let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
+"let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
+"let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
 
 "set paste
 set nopaste
