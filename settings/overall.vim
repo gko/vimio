@@ -9,8 +9,8 @@ let g:solarized_termcolors=256
 
 try
     "if has("gui_running")
-        colorscheme badwolf
-        let g:airline_theme="badwolf"
+        colorscheme solarized
+        let g:airline_theme="solarized"
     "else
         "colorscheme molokai
         "let g:airline_theme="molokai"
@@ -258,7 +258,7 @@ if has("gui_running")
         else
             let os = substitute(system('uname'), "\n", "", "")
             if os == "Linux"
-                set guifont=Droid\ Sans\ Mono\ 10
+                set guifont=Anonymous\ Pro\ 10
                 "set clipboard=unnamedplus
             endif
         endif

@@ -32,6 +32,13 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     mv vim-settings $HOME/.vim
     cd .vim
     mv .ctags ../
+
+    #copy fonts for Linux only
+    if [[ "$osname" == "Linux" ]]; then
+        mkdir -p ~/.fonts/
+        cp fonts/* ~/.fonts/
+    fi
+
     chmod +x bin/ctags
     cd
 
