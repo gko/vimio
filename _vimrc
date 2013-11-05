@@ -101,7 +101,7 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/kchmck/vim-coffee-script.git'
     Bundle 'https://github.com/walm/jshint.vim.git'
     Bundle 'https://github.com/jelera/vim-javascript-syntax.git'
-    Bundle 'https://github.com/teramako/jscomplete-vim.git'
+    "Bundle 'https://github.com/teramako/jscomplete-vim.git'
     "Bundle 'https://github.com/myhere/vim-nodejs-complete.git'
     "Bundle 'https://github.com/guileen/vim-node.git'
 " JSON

@@ -258,7 +258,7 @@ if has("gui_running")
         else
             let os = substitute(system('uname'), "\n", "", "")
             if os == "Linux"
-                set guifont=Anonymous\ Pro\ 10
+                set guifont=Anonymous\ Pro\ 11
                 "set clipboard=unnamedplus
             endif
         endif
