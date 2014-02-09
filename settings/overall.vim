@@ -9,8 +9,8 @@ let g:solarized_termcolors=256
 
 try
     "if has("gui_running")
-        colorscheme solarized
-        let g:airline_theme="solarized"
+        colorscheme badwolf
+        let g:airline_theme="badwolf"
     "else
         "colorscheme molokai
         "let g:airline_theme="molokai"
