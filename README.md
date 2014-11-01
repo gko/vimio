@@ -8,39 +8,38 @@ On unix and windows(with bash which can be installed with [git](https://code.goo
 
 ##Shortcuts
 
-Some of shortcuts(`Leader` key is comma):
+Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 ###Terminal mode
-
- * `Shift`+`Up`/`Down` moves line/selection above/below current previous/next line
- * `Shift`+`Left`/`Right` moves character/selection to left/right
- * `Leader`+`1`/`2`/`3` opens emacs like one, two(toggle vertical/horizontal), three split layout
- * `Backspace` toggles Nerd Tree
- * `F5` toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
- * when in select mode `'`, `"`, `(` wraps selection accordingly + snippets(i.e. `'`+`TAB`)
- * `Ctrl`+`s` saves file, `Ctrl`+`a` selects all
- * `Leader`+`bd` closes current buffer,`Leader`+`q` closes split, `Leader`+`qa` quits vim
- * `Ctrl` + `Left/Right/Bottom/Top` moves around splits
- * `Ctrl` + `Shift` + `Left/Right` next/previous buffer
- * `Ctrl` + `e` [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
- * `Leader` + `s` in both select and normal mode search and replace
+ * <kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
+ * <kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
+ * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like one, two(toggle vertical/horizontal), three split layout
+ * <kbd>Backspace</kbd> toggles Nerd Tree
+ * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
+ * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly + snippets(i.e. <kbd>'</kbd>+<kbd>TAB</kbd>)
+ * <kbd>Ctrl</kbd>+<kbd>s</kbd> saves file, <kbd>Ctrl</kbd>+<kbd>a</kbd> selects all
+ * <kbd>Leader</kbd>+<kbd>bd</kbd> closes current buffer,<kbd>Leader</kbd>+<kbd>q</kbd> closes split, <kbd>Leader</kbd>+<kbd>qa</kbd> quits vim
+ * <kbd>Ctrl</kbd> + <kbd>Left/Right/Bottom/Top</kbd> moves around splits
+ * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left/Right</kbd> next/previous buffer
+ * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
+ * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
 
 ###GUI mode specific
- * `Ctrl``Shift`+`Up`/`Down` moves line/selection above/below current previous/next line
- * `Ctrl``Shift`+`Left`/`Right` moves character/selection to left/right
- * `Leader`+`1`/`2`/`3` opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
- * `Backspace` toggles Nerd Tree
- * `F5` toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
- * when in select mode `'`, `"`, `(` wraps selection accordingly + snippets(i.e. `'`+`TAB`)
- * `Ctrl`+`s` saves file, `Leader`+`a` selects all
- * `Ctrl` + `b` currently opened buffers
- * `Ctrl` + `p` go to any file in folder
- * `Ctrl`+`w` closes current buffer, `Ctrl`+`q` closes split, `Ctrl`+`qa` quits vim
- * `Ctrl` + `Left/Right/Bottom/Top` moves around splits
- * `Ctrl` + `Tab` next buffer
- * `Ctrl` + `Shift` + `Tab` previous buffer
- * `Ctrl` + `e` [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
- * `Leader` + `s` in both select and normal mode search and replace
+ * <kbd>Ctrl</kbd><kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
+ * <kbd>Ctrl</kbd><kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
+ * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
+ * <kbd>Backspace</kbd> toggles Nerd Tree
+ * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
+ * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly + snippets(i.e. <kbd>'</kbd>+<kbd>TAB</kbd>)
+ * <kbd>Ctrl</kbd>+<kbd>s</kbd> saves file, <kbd>Leader</kbd>+<kbd>a</kbd> selects all
+ * <kbd>Ctrl</kbd> + <kbd>b</kbd> currently opened buffers
+ * <kbd>Ctrl</kbd> + <kbd>p</kbd> go to any file in folder
+ * <kbd>Ctrl</kbd>+<kbd>w</kbd> closes current buffer, <kbd>Ctrl</kbd>+<kbd>q</kbd> closes split, <kbd>Ctrl</kbd>+<kbd>qa</kbd> quits vim
+ * <kbd>Ctrl</kbd> + <kbd>Left/Right/Bottom/Top</kbd> moves around splits
+ * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> next buffer
+ * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> previous buffer
+ * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
+ * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
 
 ##List of plugins
 
@@ -128,3 +127,4 @@ Some of shortcuts(`Leader` key is comma):
 * Scala
  * [vim-scala.git](https://github.com/derekwyatt/vim-scala.git)
  * [scala-vim-snippets.git](https://github.com/gorodinskiy/scala-vim-snippets.git)
+

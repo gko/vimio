@@ -72,6 +72,8 @@ Bundle 'https://github.com/plasticboy/vim-markdown.git'
 Bundle 'https://github.com/vim-scripts/mheg.git'
 
 "Colorschemes
+Bundle 'https://github.com/reedes/vim-colors-pencil'
+Bundle 'https://github.com/chriskempson/base16-vim'
 Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
 Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
 Bundle 'https://github.com/jpo/vim-railscasts-theme.git'
