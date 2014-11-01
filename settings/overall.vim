@@ -2,7 +2,7 @@
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on     " required!
-set background=light
+set background=dark
 let g:molokai_original = 1
 set t_Co=256
 let g:solarized_termcolors=256
