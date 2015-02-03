@@ -21,6 +21,10 @@ autocmd BufReadPost *.mhg set syntax=mheg
 autocmd FileType javascript
             \ :setl omnifunc=jscomplete#CompleteJS
 
+let g:javascript_conceal=1
+let g:javascript_conceal_function   = "ƒ"
+let g:javascript_conceal_null       = "ø"
+
 "let g:node_usejscomplete = 1
 let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
 
