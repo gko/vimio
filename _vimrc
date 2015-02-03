@@ -92,11 +92,13 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     "Bundle 'https://github.com/tyru/operator-html-escape.vim.git'
     Bundle 'https://github.com/tpope/vim-haml.git'
     Bundle 'https://github.com/gregsexton/MatchTag.git'
+
 " CSS/LESS
     Bundle 'https://github.com/hail2u/vim-css3-syntax.git'
     "Bundle 'https://github.com/ap/vim-css-color.git'
     Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
     Bundle 'https://github.com/groenewege/vim-less.git'
+
 " JavaScript
     Bundle 'https://github.com/pangloss/vim-javascript.git'
     Bundle 'https://github.com/itspriddle/vim-jquery.git'
@@ -106,11 +108,14 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     "Bundle 'https://github.com/teramako/jscomplete-vim.git'
     "Bundle 'https://github.com/myhere/vim-nodejs-complete.git'
     "Bundle 'https://github.com/guileen/vim-node.git'
+
 " JSON
     Bundle 'https://github.com/leshill/vim-json.git'
+
 " PHP
     Bundle 'https://github.com/vim-scripts/php.vim--Garvin.git'
     Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
+
 " Python/Django
     if has('python')
         "Bundle 'https://github.com/SirVer/ultisnips.git'
@@ -124,6 +129,7 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/Shougo/neosnippet'
 
     Bundle 'https://github.com/Shougo/neocomplcache.git'
+    Bundle 'https://github.com/Shougo/neosnippet-snippets'
     Bundle 'https://github.com/Rip-Rip/clang_complete.git'
     Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
     "Bundle 'https://github.com/Valloric/YouCompleteMe.git'
@@ -132,12 +138,16 @@ Bundle 'https://github.com/w0ng/vim-hybrid.git'
     Bundle 'https://github.com/vim-ruby/vim-ruby.git'
     Bundle 'https://github.com/tpope/vim-rails.git'
     Bundle 'https://github.com/tpope/vim-endwise.git'
+
 "Dart
     Bundle 'https://github.com/dart-lang/dart-vim-plugin.git'
+
 " Jade
     Bundle 'https://github.com/digitaltoad/vim-jade.git'
+
 " Stylus
     Bundle 'https://github.com/wavded/vim-stylus.git'
+
 " Scala
     Bundle 'https://github.com/derekwyatt/vim-scala.git'
     "Bundle 'https://github.com/gorodinskiy/scala-vim-snippets.git'
