@@ -77,7 +77,8 @@ set nomodeline
 set nowritebackup
 
 set ruler
-set cursorline
+"set cursorline
+set lazyredraw
 
 "backups
 set nobackup       "no backup files
