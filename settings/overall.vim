@@ -272,7 +272,7 @@ if has("gui_running")
     endif
 
     "hide menu,toolbar,scrollbar
-    set guioptions+=m  "remove menu bar
+    set guioptions-=m  "remove menu bar
     set guioptions-=T  "remove toolbar
 
     set guioptions+=LIRrb
