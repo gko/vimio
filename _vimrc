@@ -29,6 +29,8 @@ if has("unix")
         "let g:Powerline_symbols = 'fancy'
     endif
 elseif has("win32") || has("win32s") || has('win64')
+    autocmd BufRead * silent! :%s/$//
+
     " ,v
     " Pressing ,v opens the .vimrc in a new tab
     nnoremap <leader>v :on!<CR>:e! $HOME/_vimrc<CR>
