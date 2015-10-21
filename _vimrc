@@ -16,8 +16,8 @@ if has("unix")
     let os = substitute(system('uname'), "\n", "", "")
     let g:clang_use_library=1
 
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    set rtp+=~/.vim/bundle/Vundle.vim/
+    call vundle#begin()
 
     if os == "Darwin"
         let g:tagbar_ctags_bin='$HOME/.vim/bin/ctags'
@@ -36,8 +36,8 @@ elseif has("win32") || has("win32s") || has('win64')
     nnoremap <leader>v :on!<CR>:e! $HOME/_vimrc<CR>
 
     let $VIMHOME = $HOME."/vimfiles"
-    set rtp+=~/vimfiles/bundle/vundle/
-    call vundle#rc('$HOME/vimfiles/bundle/')
+    set rtp+=~/vimfiles/bundle/Vundle.vim/
+    call vundle#begin()
     language messages en
     let g:tagbar_ctags_bin='$HOME/vimfiles/bin/ctags.exe'
     "set clipboard=unnamed
@@ -47,112 +47,115 @@ endif
 "
 " let Vundle manage Vundle
 " required! 
-Bundle 'https://github.com/gmarik/vundle.git'
+Plugin 'VundleVim/Vundle.vim'
 
 "General stuff
-Bundle 'https://github.com/Lokaltog/vim-easymotion.git'
-Bundle 'https://github.com/vim-scripts/TaskList.vim.git'
-Bundle 'https://github.com/scrooloose/nerdtree.git'
-Bundle 'https://github.com/mattn/emmet-vim.git'
-Bundle 'https://github.com/tpope/vim-git.git'
-Bundle 'https://github.com/dterei/VimCobaltColourScheme.git'
-Bundle 'https://github.com/tpope/vim-vividchalk.git'
-"Bundle 'https://github.com/garbas/vim-snipmate.git'
-"Bundle 'https://github.com/tomtom/tlib_vim.git'
-"Bundle 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
-Bundle 'https://github.com/honza/vim-snippets.git'
-Bundle 'https://github.com/scrooloose/nerdcommenter'
-Bundle 'https://github.com/lepture/vim-velocity.git'
-Bundle 'https://github.com/mikewest/vimroom.git'
-"Bundle 'https://github.com/Lokaltog/vim-powerline.git'
-Bundle 'https://github.com/bling/vim-airline'
-Bundle 'https://github.com/sjl/gundo.vim'
-Bundle 'https://github.com/majutsushi/tagbar.git'
-"Bundle 'https://github.com/hallettj/jslint.vim.git'
-Bundle 'https://github.com/kien/ctrlp.vim.git'
-Bundle 'https://github.com/plasticboy/vim-markdown.git'
-Bundle 'https://github.com/vim-scripts/mheg.git'
+Plugin 'https://github.com/Lokaltog/vim-easymotion.git'
+Plugin 'https://github.com/vim-scripts/TaskList.vim.git'
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/mattn/emmet-vim.git'
+Plugin 'https://github.com/tpope/vim-git.git'
+Plugin 'https://github.com/dterei/VimCobaltColourScheme.git'
+Plugin 'https://github.com/tpope/vim-vividchalk.git'
+"Plugin 'https://github.com/garbas/vim-snipmate.git'
+"Plugin 'https://github.com/tomtom/tlib_vim.git'
+"Plugin 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
+Plugin 'https://github.com/honza/vim-snippets.git'
+Plugin 'https://github.com/scrooloose/nerdcommenter'
+Plugin 'https://github.com/lepture/vim-velocity.git'
+Plugin 'https://github.com/mikewest/vimroom.git'
+"Plugin 'https://github.com/Lokaltog/vim-powerline.git'
+Plugin 'https://github.com/bling/vim-airline'
+Plugin 'https://github.com/sjl/gundo.vim'
+Plugin 'https://github.com/majutsushi/tagbar.git'
+"Plugin 'https://github.com/hallettj/jslint.vim.git'
+Plugin 'https://github.com/kien/ctrlp.vim.git'
+Plugin 'https://github.com/plasticboy/vim-markdown.git'
+Plugin 'https://github.com/vim-scripts/mheg.git'
 
 "Colorschemes
-Bundle 'https://github.com/reedes/vim-colors-pencil'
-Bundle 'https://github.com/chriskempson/base16-vim'
-Bundle 'https://github.com/trapd00r/neverland-vim-theme.git'
-Bundle 'https://github.com/chriskempson/vim-tomorrow-theme.git'
-Bundle 'https://github.com/jpo/vim-railscasts-theme.git'
-Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-Bundle 'https://github.com/twerth/ir_black.git'
-Bundle 'https://github.com/nanotech/jellybeans.vim'
-"Bundle 'https://github.com/tangphillip/SunburstVIM.git'
-Bundle 'https://github.com/vim-scripts/Wombat.git'
-Bundle 'https://github.com/sjl/badwolf.git'
-Bundle 'https://github.com/zaiste/Atom.git'
-Bundle 'https://github.com/w0ng/vim-hybrid.git'
+Plugin 'https://github.com/reedes/vim-colors-pencil'
+Plugin 'https://github.com/chriskempson/base16-vim'
+Plugin 'https://github.com/trapd00r/neverland-vim-theme.git'
+Plugin 'https://github.com/chriskempson/vim-tomorrow-theme.git'
+Plugin 'https://github.com/jpo/vim-railscasts-theme.git'
+Plugin 'https://github.com/altercation/vim-colors-solarized.git'
+Plugin 'https://github.com/twerth/ir_black.git'
+Plugin 'https://github.com/nanotech/jellybeans.vim'
+"Plugin 'https://github.com/tangphillip/SunburstVIM.git'
+Plugin 'https://github.com/vim-scripts/Wombat.git'
+Plugin 'https://github.com/sjl/badwolf.git'
+Plugin 'https://github.com/zaiste/Atom.git'
+Plugin 'https://github.com/w0ng/vim-hybrid.git'
 
 " HTML/HAML
-    Bundle 'https://github.com/othree/html5.vim.git'
-    Bundle 'https://github.com/hokaccha/vim-html5validator.git'
-    "Bundle 'https://github.com/tyru/operator-html-escape.vim.git'
-    Bundle 'https://github.com/tpope/vim-haml.git'
-    Bundle 'https://github.com/gregsexton/MatchTag.git'
+    Plugin 'https://github.com/othree/html5.vim.git'
+    Plugin 'https://github.com/hokaccha/vim-html5validator.git'
+    "Plugin 'https://github.com/tyru/operator-html-escape.vim.git'
+    Plugin 'https://github.com/tpope/vim-haml.git'
+    Plugin 'https://github.com/gregsexton/MatchTag.git'
 
 " CSS/LESS
-    Bundle 'https://github.com/hail2u/vim-css3-syntax.git'
-    "Bundle 'https://github.com/ap/vim-css-color.git'
-    Bundle 'https://github.com/gorodinskiy/vim-coloresque.git'
-    Bundle 'https://github.com/groenewege/vim-less.git'
+    Plugin 'https://github.com/hail2u/vim-css3-syntax.git'
+    "Plugin 'https://github.com/ap/vim-css-color.git'
+    Plugin 'https://github.com/gorodinskiy/vim-coloresque.git'
+    Plugin 'https://github.com/groenewege/vim-less.git'
 
 " JavaScript
-    Bundle 'https://github.com/pangloss/vim-javascript.git'
-    Bundle 'https://github.com/itspriddle/vim-jquery.git'
-    Bundle 'https://github.com/kchmck/vim-coffee-script.git'
-    Bundle 'https://github.com/walm/jshint.vim.git'
-    Bundle 'https://github.com/jelera/vim-javascript-syntax.git'
-    "Bundle 'https://github.com/teramako/jscomplete-vim.git'
-    "Bundle 'https://github.com/myhere/vim-nodejs-complete.git'
-    "Bundle 'https://github.com/guileen/vim-node.git'
+    Plugin 'othree/yajs.vim'
+    "Plugin 'https://github.com/pangloss/vim-javascript.git'
+    "Plugin 'https://github.com/itspriddle/vim-jquery.git'
+    Plugin 'https://github.com/kchmck/vim-coffee-script.git'
+    Plugin 'https://github.com/walm/jshint.vim.git'
+    "Plugin 'https://github.com/jelera/vim-javascript-syntax.git'
+    "Plugin 'https://github.com/teramako/jscomplete-vim.git'
+    "Plugin 'https://github.com/myhere/vim-nodejs-complete.git'
+    "Plugin 'https://github.com/guileen/vim-node.git'
 
 " JSON
-    Bundle 'https://github.com/leshill/vim-json.git'
+    Plugin 'https://github.com/leshill/vim-json.git'
 
 " PHP
-    Bundle 'https://github.com/vim-scripts/php.vim--Garvin.git'
-    Bundle 'https://github.com/2072/PHP-Indenting-for-VIm.git'
+    Plugin 'https://github.com/vim-scripts/php.vim--Garvin.git'
+    Plugin 'https://github.com/2072/PHP-Indenting-for-VIm.git'
 
 " Python/Django
     if has('python')
-        "Bundle 'https://github.com/SirVer/ultisnips.git'
-        Bundle 'https://github.com/klen/python-mode.git'
-        Bundle 'https://github.com/davidhalter/jedi-vim.git'
+        "Plugin 'https://github.com/SirVer/ultisnips.git'
+        Plugin 'https://github.com/klen/python-mode.git'
+        Plugin 'https://github.com/davidhalter/jedi-vim.git'
         let g:pymode_rope = 0
         let g:jedi#auto_vim_configuration = 0
     else
-        Bundle 'https://github.com/fs111/pydoc.vim.git'
+        Plugin 'https://github.com/fs111/pydoc.vim.git'
     endif
-    Bundle 'https://github.com/Shougo/neosnippet'
+    Plugin 'https://github.com/Shougo/neosnippet'
 
-    Bundle 'https://github.com/Shougo/neocomplcache.git'
-    Bundle 'https://github.com/Shougo/neosnippet-snippets'
-    Bundle 'https://github.com/Rip-Rip/clang_complete.git'
-    Bundle 'https://github.com/Shougo/neocomplcache-clang_complete.git'
-    "Bundle 'https://github.com/Valloric/YouCompleteMe.git'
+    Plugin 'https://github.com/Shougo/neocomplcache.git'
+    Plugin 'https://github.com/Shougo/neosnippet-snippets'
+    Plugin 'https://github.com/Rip-Rip/clang_complete.git'
+    Plugin 'https://github.com/Shougo/neocomplcache-clang_complete.git'
+    "Plugin 'https://github.com/Valloric/YouCompleteMe.git'
  
 " Ruby/Rails
-    Bundle 'https://github.com/vim-ruby/vim-ruby.git'
-    Bundle 'https://github.com/tpope/vim-rails.git'
-    Bundle 'https://github.com/tpope/vim-endwise.git'
+    Plugin 'https://github.com/vim-ruby/vim-ruby.git'
+    Plugin 'https://github.com/tpope/vim-rails.git'
+    Plugin 'https://github.com/tpope/vim-endwise.git'
 
 "Dart
-    Bundle 'https://github.com/dart-lang/dart-vim-plugin.git'
+    Plugin 'https://github.com/dart-lang/dart-vim-plugin.git'
 
 " Jade
-    Bundle 'https://github.com/digitaltoad/vim-jade.git'
+    Plugin 'https://github.com/digitaltoad/vim-jade.git'
 
 " Stylus
-    Bundle 'https://github.com/wavded/vim-stylus.git'
+    Plugin 'https://github.com/wavded/vim-stylus.git'
 
 " Scala
-    Bundle 'https://github.com/derekwyatt/vim-scala.git'
-    "Bundle 'https://github.com/gorodinskiy/scala-vim-snippets.git'
+    Plugin 'https://github.com/derekwyatt/vim-scala.git'
+    "Plugin 'https://github.com/gorodinskiy/scala-vim-snippets.git'
+
+call vundle#end()
 
 source $VIMHOME/settings/functions.vim
 source $VIMHOME/settings/shortcuts.vim
