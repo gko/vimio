@@ -286,7 +286,7 @@ if has("gui_running")
     "set guioptions-=l  "remove left-hand scroll bar
     "cursor
     set guicursor=n-v-c:hor15-Cursor-blinkon1000-blinkoff1000
-    set guicursor+=i:hor5-Cursor-blinkon1000-blinkoff1000
+    set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
     "set cursorline
 
     "if line is bigger than 80 characters it's highlighted 
