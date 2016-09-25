@@ -12,7 +12,7 @@ if has("unix")
     set rtp+=~/.vim/bundle/Vundle.vim/
 elseif has("win32") || has("win32s") || has('win64')
     let $VIMHOME = $HOME."/vimfiles"
-    set rtp+=~/vimfiles/bundle/Vundle.vim/
+    set rtp+=~/.vim/bundle/Vundle.vim/
 endif
 
 call vundle#begin()
