@@ -128,8 +128,8 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * [vim-scala.git](https://github.com/derekwyatt/vim-scala.git)
  * [scala-vim-snippets.git](https://github.com/gorodinskiy/scala-vim-snippets.git)
 
- ## License
+## License
 
- [MIT](http://opensource.org/licenses/MIT)
+[MIT](http://opensource.org/licenses/MIT)
 
- Copyright (c) 2012-2016 Konstantin Gorodinskiy
+Copyright (c) 2012-2016 Konstantin Gorodinskiy
