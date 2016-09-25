@@ -113,9 +113,13 @@ Plugin 'w0ng/vim-hybrid.git'
     endif
 
 " C/C++
-    Plugin 'Rip-Rip/clang_complete.git'
-    Plugin 'Shougo/neocomplcache-clang_complete.git'
+    "Plugin 'Rip-Rip/clang_complete.git'
+    "Plugin 'Shougo/neocomplcache-clang_complete.git'
     "Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+    Plugin 'justmao945/vim-clang'
+
+" Go
+    Plugin 'fatih/vim-go'
 
 " Ruby/Rails
     Plugin 'vim-ruby/vim-ruby.git'
@@ -137,8 +141,8 @@ Plugin 'w0ng/vim-hybrid.git'
 call vundle#end()
 
 source $VIMHOME/settings/os.vim
+source $VIMHOME/settings/overall.vim
 source $VIMHOME/settings/functions.vim
 source $VIMHOME/settings/shortcuts.vim
 source $VIMHOME/settings/filespecific.vim
-source $VIMHOME/settings/overall.vim
 source $VIMHOME/settings/ctags.vim
