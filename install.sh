@@ -57,13 +57,12 @@ else
 
     cd
     rm -rf vimfiles
-    rm -rf .vim
     rm -rf _vimrc
     rm -rf vim-settings
     git clone --depth 1 -b dev --recursive https://github.com/gko/vimio.git vim-settings
     mv vim-settings/_vimrc _vimrc
-    mv vim-settings .vim
-    mv .vim/.ctags ./
+    mv vim-settings vimfiles
+    mv vimfiles/.ctags ./
     cd
 
 fi
