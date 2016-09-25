@@ -14,11 +14,11 @@ else
 fi
 
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
-    
+
     echo -e ""
-    echo -e "$BGREEN       _____ "      
-    echo -e "$BGREEN/\   /\\_    \/\/\ "  
-    echo -e "$BGREEN\ \ / / / /\/    \ " 
+    echo -e "$BGREEN       _____ "
+    echo -e "$BGREEN/\   /\\_    \/\/\ "
+    echo -e "$BGREEN\ \ / / / /\/    \ "
     echo -e "$BGREEN \ V /\/ /_/ /\/\ \ "
     echo -e "$BGREEN  \_/\____/\/    \/ "
     echo -e "$RESET"
@@ -27,7 +27,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     rm -rf $HOME/.vim
     rm -rf $HOME/.vimrc
     rm -rf vim-settings
-    git clone --depth 1 --recursive https://github.com/gorodinskiy/vimio.git vim-settings
+    git clone --depth 1 -b dev --recursive https://github.com/gko/vimio.git vim-settings
     mv vim-settings/_vimrc $HOME/.vimrc
     mv vim-settings $HOME/.vim
     cd .vim
@@ -47,9 +47,9 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
 else
 
     echo ""
-    echo "       _____ "      
-    echo "/\   /\\_    \/\/\ "  
-    echo "\ \ / / / /\/    \ " 
+    echo "       _____ "
+    echo "/\   /\\_    \/\/\ "
+    echo "\ \ / / / /\/    \ "
     echo " \ V /\/ /_/ /\/\ \ "
     echo "  \_/\____/\/    \/ "
     echo ""
@@ -60,10 +60,10 @@ else
     rm -rf .vim
     rm -rf _vimrc
     rm -rf vim-settings
-    git clone --depth 1 --recursive https://github.com/gorodinskiy/vimio.git vim-settings
+    git clone --depth 1 -b dev --recursive https://github.com/gko/vimio.git vim-settings
     mv vim-settings/_vimrc _vimrc
     mv vim-settings .vim
     mv .vim/.ctags ./
     cd
-    
+
 fi
