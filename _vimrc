@@ -9,12 +9,11 @@ let mapleader = ","
 
 if has("unix")
     let $VIMHOME = $HOME."/.vim"
-    set rtp+=~/.vim/bundle/Vundle.vim/
 elseif has("win32") || has("win32s") || has('win64')
     let $VIMHOME = $HOME."/vimfiles"
-    set rtp+=~/vimfiles/bundle/Vundle.vim/
 endif
 
+let &runtimepath .= ',' . expand($VIMHOME . '/bundle/Vundle.vim')
 call vundle#rc(expand($VIMHOME . '/bundle'))
 call vundle#begin()
 
