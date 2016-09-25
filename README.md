@@ -4,7 +4,7 @@
 
 On unix and windows(with bash which can be installed with [git](http://msysgit.github.io/)):
 
-    curl -L https://raw.github.com/gorodinskiy/vimio/master/install.sh|bash
+    curl -L https://raw.github.com/gorodinskiy/vimio/dev/install.sh|bash
 
 ##Shortcuts
 
