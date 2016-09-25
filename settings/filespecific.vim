@@ -28,6 +28,20 @@ let g:javascript_conceal_null       = "ø"
 "let g:node_usejscomplete = 1
 let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
 
+let g:syntastic_mode_map = { 'mode': 'passive' }
+							" \ 'active_filetypes': [],
+                            " \ 'passive_filetypes': ['python', 'ruby', 'scala', 'java', 'javascript', 'sass'] }
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
 autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 "if has("autocmd")

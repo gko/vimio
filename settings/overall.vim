@@ -9,8 +9,8 @@ let g:solarized_termcolors=256
 
 try
     "if has("gui_running")
-    colorscheme badwolf
-    let g:airline_theme="badwolf"
+    colorscheme nova
+    let g:airline_theme="base16"
     "else
         "colorscheme molokai
         "let g:airline_theme="molokai"
@@ -40,10 +40,18 @@ set langmenu=en_US.UTF-8
       "\ endif
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-"tabstop
-set smartindent
-set tabstop=4
+"set smartindent
+set cindent
+"set smartindent
+set smarttab
+"spaces
+set expandtab
+set tabstop=8
 set shiftwidth=4
+set softtabstop=0
+"tab
+"set tabstop=2
+"set noexpandtab
 
 "show hidden
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -131,27 +139,6 @@ if version >= 700
     menu Spell.Next\ Wrong\ Word<Tab>]s ]s
 endif
 
-" Folding 
-" za - open/close current scope.
-" {zR, zM} - {open, close} all scopes.
-" from https://github.com/sjl/dotfiles/blob/master/vim/.vimrc
-function! MyFoldText()
-    let line = getline(v:foldstart)
-
-    let nucolwidth = &fdc + &number * &numberwidth
-    let windowwidth = winwidth(0) - nucolwidth - 3
-    let foldedlinecount = v:foldend - v:foldstart
-
-    " expand tabs into spaces
-    let onetab = strpart(' ', 0, &tabstop)
-    let line = substitute(line, '\t', onetab, 'g')
-
-    let line = strpart(line, 0, windowwidth - 2 - len(foldedlinecount))
-    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
-    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
-endfunction
-set foldtext=MyFoldText()
-
 set foldcolumn=0        " line width for folding 
 set foldmethod=indent   " folding with indents
 set foldnestmax=10      " depth
@@ -220,9 +207,6 @@ set ttyfast
 set gdefault
 
 syntax on
-set smarttab
-set autoindent
-set expandtab
 
 "disable annoying bell and epileptic flash
 set noerrorbells visualbell t_vb=
@@ -265,7 +249,7 @@ if has("gui_running")
         endif
     else
         if has("gui_win32") || has("gui_win32s")
-            set guifont=Consolas:h10
+            set guifont=Consolas:h11
             let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
             "set clipboard=unnamed
             "source $VIMRUNTIME/mswin.vim

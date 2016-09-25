@@ -205,6 +205,9 @@ function! s:DefineCommand(name, destination)
     call s:CommandCabbr(a:name, a:destination)
 endfunction
 
+" grep
+"command! -nargs=+ Grep execute 'silent grep! -snr -m 100 <args>' | copen 20
+
 " Public NERDTree-aware versions of builtin functions
 function! CD(...)
     if exists("a:1")
@@ -218,3 +221,24 @@ endfunction
 " Define the NERDTree-aware aliases
 call s:DefineCommand("cd", "CD")
 
+" Folding 
+" za - open/close current scope.
+" {zR, zM} - {open, close} all scopes.
+" from https://github.com/sjl/dotfiles/blob/master/vim/.vimrc
+function! MyFoldText()
+    let line = getline(v:foldstart)
+
+    let nucolwidth = &fdc + &number * &numberwidth
+    let windowwidth = winwidth(0) - nucolwidth - 3
+    let foldedlinecount = v:foldend - v:foldstart
+
+    " expand tabs into spaces
+    let onetab = strpart(' ', 0, &tabstop)
+    let line = substitute(line, '\t', onetab, 'g')
+
+    let line = strpart(line, 0, windowwidth - 2 - len(foldedlinecount))
+    let fillcharcount = windowwidth - len(line) - len(foldedlinecount)
+    return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction
+
+set foldtext=MyFoldText()
