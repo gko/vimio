@@ -1,6 +1,4 @@
-" © Copyright 2016 Konstantin Gorodinskiy(mail[at]konstantin.io).
-" All Rights Reserved.
-" Do What The Fuck You Want To Public License, Version 2,
+" Konstantin Gorodinskiy(mail[at]konstantin.io)
 
 set nocompatible
 filetype off
