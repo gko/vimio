@@ -32,7 +32,7 @@ let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
 let g:syntastic_mode_map = {
     \ 'mode': 'active',
     \ 'active_filetypes': ['javascript'],
-    \ 'passive_filetypes': ['ruby', 'scala', 'java', 'sass']
+    \ 'passive_filetypes': ['python', 'ruby', 'scala', 'java', 'sass']
     \ }
 
 set statusline+=%#warningmsg#
