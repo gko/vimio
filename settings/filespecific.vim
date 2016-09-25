@@ -14,6 +14,7 @@ autocmd BufNewFile *.xml 0r $VIMHOME/templates/template.xml
 autocmd BufNewFile *.xsl 0r $VIMHOME/templates/template.xsl
 autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
 autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
+autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
 
 autocmd BufReadPost *.mheg set syntax=mheg
 autocmd BufReadPost *.mhg set syntax=mheg
