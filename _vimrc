@@ -10,6 +10,8 @@ let mapleader = ","
 if has("unix")
     let $VIMHOME = $HOME."/.vim"
 elseif has("win32") || has("win32s") || has('win64')
+    " TODO neovim
+    " FIXME cmd not working in vim 8 at least
     let $VIMHOME = $HOME."/vimfiles"
 endif
 
