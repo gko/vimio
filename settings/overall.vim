@@ -40,18 +40,30 @@ set langmenu=en_US.UTF-8
       "\ endif
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+
+"Don’t add empty newlines at the end of files
+"this has to go before expandtab
+set binary
+set noeol
+
 "set smartindent
 set cindent
-"set smartindent
-set smarttab
-"spaces
+" set smartindent
+
+" Spaces
+
+" set expandtab
+" set et
+" set invexpandtab
 set expandtab
-set tabstop=8
+set tabstop=4
 set shiftwidth=4
-set softtabstop=0
-"tab
-"set tabstop=2
-"set noexpandtab
+set softtabstop=4
+
+" Tab
+" set tabstop=4
+" set noexpandtab
+" set smarttab
 
 "show hidden
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -85,7 +97,8 @@ set nomodeline
 set nowritebackup
 
 set ruler
-"set cursorline
+" this lowers the perf a lot
+" set cursorline
 set lazyredraw
 
 "backups
@@ -176,10 +189,6 @@ let g:airline#extensions#tabline#enabled       =  1
 
 "set paste
 set nopaste
-
-"Don’t add empty newlines at the end of files
-set binary
-set noeol
 
 "Make vim more useful
 set nocompatible

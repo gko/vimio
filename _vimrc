@@ -2,8 +2,8 @@
 " All Rights Reserved.
 " Do What The Fuck You Want To Public License, Version 2,
 
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible
+filetype off
 
 let mapleader = ","
 
@@ -48,6 +48,12 @@ Plugin 'kien/ctrlp.vim.git'
 Plugin 'plasticboy/vim-markdown.git'
 Plugin 'vim-scripts/mheg.git'
 Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mileszs/ack.vim'
+Plugin 'dkprice/vim-easygrep'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'Shougo/neocomplcache.git'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/neosnippet'
 
 "Colorschemes
 Plugin 'reedes/vim-colors-pencil'
@@ -65,11 +71,6 @@ Plugin 'vim-scripts/Wombat.git'
 Plugin 'sjl/badwolf.git'
 Plugin 'zaiste/Atom.git'
 Plugin 'w0ng/vim-hybrid.git'
-"Plugin 'mileszs/ack.vim'
-Plugin 'dkprice/vim-easygrep'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'Shougo/neocomplcache.git'
-Plugin 'Shougo/neosnippet-snippets'
 
 " HTML/HAML
     Plugin 'othree/html5.vim.git'
@@ -112,7 +113,6 @@ Plugin 'Shougo/neosnippet-snippets'
     else
         Plugin 'fs111/pydoc.vim.git'
     endif
-    Plugin 'Shougo/neosnippet'
 
 " C/C++
     Plugin 'Rip-Rip/clang_complete.git'
