@@ -15,6 +15,7 @@ elseif has("win32") || has("win32s") || has('win64')
     set rtp+=~/vimfiles/bundle/Vundle.vim/
 endif
 
+call vundle#rc(expand($VIMHOME . '/bundle'))
 call vundle#begin()
 
 "
