@@ -69,6 +69,7 @@ Plugin 'vim-scripts/Wombat.git'
 Plugin 'sjl/badwolf.git'
 Plugin 'zaiste/Atom.git'
 Plugin 'w0ng/vim-hybrid.git'
+Plugin 'morhetz/gruvbox'
 
 " HTML/HAML
     Plugin 'othree/html5.vim.git'

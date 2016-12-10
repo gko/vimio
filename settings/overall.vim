@@ -9,8 +9,9 @@ let g:solarized_termcolors=256
 
 try
     "if has("gui_running")
-    colorscheme nova
-    let g:airline_theme="base16"
+    colorscheme gruvbox
+    "let g:gruvbox_contrast_light = 'hard'
+    let g:airline_theme="gruvbox"
     "else
         "colorscheme molokai
         "let g:airline_theme="molokai"
@@ -56,9 +57,9 @@ set cindent
 " set et
 " set invexpandtab
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Tab
 " set tabstop=4
@@ -81,9 +82,6 @@ set mousehide
 
 "Don’t reset cursor to start of line when moving around.
 set nostartofline
-
-"Don’t show the intro message when starting vim
-set shortmess=atI
 
 "Show the filename in the window titlebar
 set title
@@ -195,8 +193,8 @@ set nocompatible
 
 "Enhance command-line completion
 set wildmenu
-"set wildmode=list:longest,full " Автодополнение на манер zsh
-set wildmenu " Саджест по <tab> в командной строке
+"set wildmode=list:longest,full " zsh-like autocomplete
+set wildmenu " Suggest on <tab> in command line
              " When 'wildmenu' is on, command-line completion operates in an enhanced
              " mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,
              " the possible matches are shown just above the command line, with the
@@ -226,6 +224,9 @@ endif
 "backspace
 set backspace=indent,eol,start
 
+"Don’t show the intro message when starting vim
+set shortmess=I
+
 " Auto change the directory to the current file I'm working on
 "autocmd VimResized * :wincmd h<CR>:wincmd k<CR>:call Layout(0)<CR> 
 "autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
@@ -252,7 +253,7 @@ if has("gui_running")
         else
             let os = substitute(system('uname'), "\n", "", "")
             if os == "Linux"
-                set guifont=Anonymous\ Pro\ 11
+                set guifont=Anonymous\ Pro\ 12
                 "set clipboard=unnamedplus
             endif
         endif
