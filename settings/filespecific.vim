@@ -19,15 +19,15 @@ autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
 autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
 autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
 
-autocmd FileType javascript
-    \ :setl omnifunc=jscomplete#CompleteJS
+"autocmd FileType javascript
+    "\ :setl omnifunc=jscomplete#CompleteJS
 
 let g:javascript_conceal=1
 let g:javascript_conceal_function   = "ƒ"
 let g:javascript_conceal_null       = "ø"
 
 "let g:node_usejscomplete = 1
-let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
+"let g:jscomplete_use = ['dom', 'moz', 'xpcom', 'es6th']
 
 let g:syntastic_mode_map = {
     \ 'mode': 'active',
