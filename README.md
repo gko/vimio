@@ -1,16 +1,16 @@
-#Vim Settings
+# Vim Settings
 
-##Installation
+## Installation
 
 On unix and windows(with bash which can be installed with [git](http://msysgit.github.io/)):
 
     curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 
-##Shortcuts
+## Shortcuts
 
 Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
-###Terminal mode
+### Terminal mode
  * <kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
  * <kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
  * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like one, two(toggle vertical/horizontal), three split layout
@@ -24,7 +24,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
  * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
 
-###GUI mode specific
+### GUI mode specific
  * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
  * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
  * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
@@ -41,7 +41,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
  * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
 
-##List of plugins
+## List of plugins
 
 * General
  * [vim-easymotion.git](https://github.com/Lokaltog/vim-easymotion.git)
