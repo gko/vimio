@@ -2,28 +2,18 @@
 " Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on     " required!
-set background=dark
+set background=light
 let g:molokai_original = 1
 set t_Co=256
 let g:solarized_termcolors=256
 
 try
-    "if has("gui_running")
-    colorscheme gruvbox
-    "let g:gruvbox_contrast_light = 'hard'
-    let g:airline_theme="gruvbox"
-    "else
-        "colorscheme molokai
-        "let g:airline_theme="molokai"
-    "endif
+  colorscheme clear_colors_light
+  "let g:airline_theme="clear_colors_light"
 catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme molokai
-    let g:airline_theme="molokai"
+  colorscheme molokai
+  let g:airline_theme="molokai"
 endtry
-
-" use neocomplcache & clang_complete
-" add neocomplcache option
-"let g:neocomplcache_force_overwrite_completefunc=1
 
 " add clang_complete option
 let g:clang_complete_auto=1
@@ -34,13 +24,8 @@ set encoding=utf8
 set fileencodings=utf8,cp1251
 set termencoding=utf-8
 set langmenu=en_US.UTF-8
-"autocmd BufReadPost * nested
-      "\ if !exists('b:reload_dos') && &ff=='unix' && (0 < search('\r$', 'nc')) |
-      "\   let b:reload_dos = 1 |
-      "\   %s/
-      "\ endif
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Don’t add empty newlines at the end of files
 "this has to go before expandtab
@@ -51,23 +36,18 @@ set noeol
 set cindent
 " set smartindent
 
-" Spaces
-
-" set expandtab
-" set et
-" set invexpandtab
-set expandtab
-set tabstop=2
 set shiftwidth=2
-set softtabstop=2
+" Spaces
+"set expandtab
+"set tabstop=2
+"set softtabstop=2
 
 " Tab
-" set tabstop=4
-" set noexpandtab
-" set smarttab
-
-"show hidden
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set tabstop=2
+set noexpandtab
+"set smarttab
+set shiftwidth=2
+set softtabstop=2
 
 " Search
 set incsearch   " Moving cursor to text being search while typing 
@@ -108,13 +88,13 @@ set noswapfile     "no swap files
 "line numbers
 set number
 
-"set scrolloff=999       " focus mode like in Writer app http://www.iawriter.com/
 set showtabline=1
-"set list                " display unprintable characters
 set wrap                " line breaking (http://vimcasts.org/episodes/soft-wrapping-text/)
+
 "if version >= 703
-"    set colorcolumn=80 " 80 column 
+"  set colorcolumn=80 " 80 column 
 "end
+
 set textwidth=80
 set formatoptions-=o    " dont continue comments when pushing o/O
 set linebreak           " line breaking without breaking word 
@@ -124,30 +104,30 @@ set path=.,,**
 
 " tab symbol and end of line symbol 
 if has('multi_byte')
-    if version >= 700
-        set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
-    else
-        set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:_
-    endif
+  if version >= 700
+    set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
+  else
+    set listchars=tab:»\ ,trail:·,extends:>,precedes:<,nbsp:_
+  endif
 endif
 
 " Symbol at the begining of line when its broken 
 if has("linebreak")
-      let &sbr = nr2char(8618).' '  " Show ↪ at the beginning of wrapped lines
+  let &sbr = nr2char(8618).' '  " Show ↪ at the beginning of wrapped lines
 endif
 
 " Spell checking 
 if version >= 700
-    set spell spelllang= 
-    set nospell " by default 
-    menu Spell.off :setlocal spell spelllang= <cr>
-    menu Spell.Russian+English :setlocal spell spelllang=ru,en <cr>
-    menu Spell.Russian :setlocal spell spelllang=ru <cr>
-    menu Spell.English :setlocal spell spelllang=en <cr>
-    menu Spell.-SpellControl- :
-    menu Spell.Word\ Suggest<Tab>z= z=
-    menu Spell.Previous\ Wrong\ Word<Tab>[s [s
-    menu Spell.Next\ Wrong\ Word<Tab>]s ]s
+  set spell spelllang= 
+  set nospell " by default 
+  menu Spell.off :setlocal spell spelllang= <cr>
+  menu Spell.Russian+English :setlocal spell spelllang=ru,en <cr>
+  menu Spell.Russian :setlocal spell spelllang=ru <cr>
+  menu Spell.English :setlocal spell spelllang=en <cr>
+  menu Spell.-SpellControl- :
+  menu Spell.Word\ Suggest<Tab>z= z=
+  menu Spell.Previous\ Wrong\ Word<Tab>[s [s
+  menu Spell.Next\ Wrong\ Word<Tab>]s ]s
 endif
 
 set foldcolumn=0        " line width for folding 
@@ -164,26 +144,20 @@ set noshowmatch " don't show pair <> в HTML
 "status line
 set laststatus=2
 
-"Powerline
-"let g:Powerline_cache_enabled = 0
-"let g:Powerline_symbols = 'compatible'
-" airline
+"Airline
 if !exists("g:airline_symbols")
   let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-"let g:airline_theme="powerlineish"
-" let g:airline_section_warning = airline#section#create([ "syntastic" ])
+set laststatus=2
+let g:airline_theme='base16'
 let g:airline_powerline_fonts = 0
-"let g:airline#extensions#branch#empty_message  =  "No SCM"
-"let g:airline#extensions#whitespace#enabled    =  0
-"let g:airline#extensions#syntastic#enabled     =  1
-let g:airline#extensions#tabline#enabled       =  1
-"let g:airline#extensions#tabline#tab_nr_type   =  1 " tab number
-"let g:airline#extensions#tabline#fnamecollapse =  1 " /a/m/model.rb
-"let g:airline#extensions#hunks#non_zero_only   =  1 " git gutter
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '░'
+"" Disable powerline arrows and setting blank seperators creates a rectangular box
+"let g:airline_left_sep = '█▓░'
+"let g:airline_right_sep = '░▓█'
 
 "set paste
 set nopaste
@@ -195,11 +169,11 @@ set nocompatible
 set wildmenu
 "set wildmode=list:longest,full " zsh-like autocomplete
 set wildmenu " Suggest on <tab> in command line
-             " When 'wildmenu' is on, command-line completion operates in an enhanced
-             " mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,
-             " the possible matches are shown just above the command line, with the
-             " first match highlighted (overwriting the status line, if there is
-             " one).
+" When 'wildmenu' is on, command-line completion operates in an enhanced
+" mode.  On pressing 'wildchar' (usually <Tab>) to invoke completion,
+" the possible matches are shown just above the command line, with the
+" first match highlighted (overwriting the status line, if there is
+" one).
 set wildignore+=.hg,.git,.svn " Version control
 set wildignore+=*.DS_Store    " OSX bullshit
 set wildignore+=*.pyc         " Python byte code
@@ -218,72 +192,69 @@ syntax on
 "disable annoying bell and epileptic flash
 set noerrorbells visualbell t_vb=
 if has('autocmd')
-    autocmd GUIEnter * set visualbell t_vb=
+  autocmd GUIEnter * set visualbell t_vb=
 endif
 
 "backspace
 set backspace=indent,eol,start
 
 "Don’t show the intro message when starting vim
-set shortmess=I
+"set shortmess=I
 
-" Auto change the directory to the current file I'm working on
-"autocmd VimResized * :wincmd h<CR>:wincmd k<CR>:call Layout(0)<CR> 
-"autocmd cursorhold * if exists("b:NERDTreeType") | NERDTreeClose | endif
-"autocmd BufEnter * lcd %:p:h
+" search using ack if available
+if executable('ack')
+  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column 
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
+command! -bang -nargs=* -complete=file -bar Grep silent! grep! <args>
+set wildignore+=*/node_modules/*,*/vendor/*
+
+autocmd QuickFixCmdPost *grep* cwindow
+
+"close nerdtree if I open file
+autocmd bufnew * :ccl
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "in case if you don't open a file
 cd $HOME
 lcd %:p:h
 
-"maximize window
 if has("gui_running")
-    "set background=dark
-    " GUI is running or is about to start.
-    " Maximize gvim window.
-    set lines=40 columns=160
-    set linespace=2
-    set numberwidth=3
+  " Maximize gvim window.
+  set lines=40 columns=160
+  set linespace=2
+  set numberwidth=3
 
-    if has("unix") 
-        if has("gui_mac") || has("gui_macvim")
-            set guifont=Monaco:h12
-            "set clipboard=unnamed
-            set macmeta
-        else
-            let os = substitute(system('uname'), "\n", "", "")
-            if os == "Linux"
-                set guifont=Anonymous\ Pro\ 12
-                "set clipboard=unnamedplus
-            endif
-        endif
+  if has("unix") 
+    if has("gui_mac") || has("gui_macvim")
+      set guifont=Monaco:h12
+      set macmeta
     else
-        if has("gui_win32") || has("gui_win32s")
-            set guifont=Consolas:h11
-            let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
-            "set clipboard=unnamed
-            "source $VIMRUNTIME/mswin.vim
-        endif
+      let os = substitute(system('uname'), "\n", "", "")
+      if os == "Linux"
+        set guifont=Anonymous\ Pro\ 12
+        "set clipboard=unnamedplus
+      endif
     endif
+  else
+    if has("gui_win32") || has("gui_win32s")
+      set guifont=Consolas:h11
+      let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
+    endif
+  endif
 
-    "hide menu,toolbar,scrollbar
-    set guioptions-=m  "remove menu bar
-    set guioptions-=T  "remove toolbar
+  "hide menu,toolbar,scrollbar
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
 
-    set guioptions+=LIRrb
-    set guioptions-=LIRrb
-    "set guioptions-=b
-    set guioptions+=LIRlb
-    set guioptions-=LIRlb
+  set guioptions+=LIRrb
+  set guioptions-=LIRrb
+  set guioptions+=LIRlb
+  set guioptions-=LIRlb
 
-    "set guioptions-=r  "remove right-hand scroll bar
-    "set guioptions-=l  "remove left-hand scroll bar
-    "cursor
-    set guicursor=n-v-c:hor15-Cursor-blinkon1000-blinkoff1000
-    set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
-    "set cursorline
-
-    "if line is bigger than 80 characters it's highlighted 
-    "match ErrorMsg '\%>80v.\+'
-    "set cc=80
+  "cursor
+  set guicursor=n-v-c:hor15-Cursor-blinkon1000-blinkoff1000
+  set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
+  "set cursorline
 endif

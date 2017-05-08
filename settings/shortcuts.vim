@@ -118,31 +118,31 @@ xnoremap P Pgvy
 " vim 7.3 required
 let g:relativenumber = 0
 function! ToogleRelativeNumber()
-    if g:relativenumber == 0
-        let g:relativenumber = 1
-        set norelativenumber
-        set number
-        echo "Show line numbers"
-    elseif g:relativenumber == 1
-        let g:relativenumber = 2
-        set nonumber
-        set relativenumber
-        echo "Show relative line numbers"
-    else
-        let g:relativenumber = 0
-        set nonumber
-        set norelativenumber
-        echo "Show no line numbers"
-    endif
+  if g:relativenumber == 0
+    let g:relativenumber = 1
+    set norelativenumber
+    set number
+    echo "Show line numbers"
+  elseif g:relativenumber == 1
+    let g:relativenumber = 2
+    set nonumber
+    set relativenumber
+    echo "Show relative line numbers"
+  else
+    let g:relativenumber = 0
+    set nonumber
+    set norelativenumber
+    echo "Show no line numbers"
+  endif
 endfunction
 map <Leader>nm :call ToogleRelativeNumber()<cr>
 
 " ,r
 " replace in all opened buffers http://vim.wikia.com/wiki/VimTip382
 function! Replace()
-    let s:word = input("Replace " . expand('<cword>') . " with:")
-    :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
-    :unlet! s:word
+  let s:word = input("Replace " . expand('<cword>') . " with:")
+  :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
+  :unlet! s:word
 endfunction
 map <Leader>r :call Replace()<CR>
 
@@ -171,18 +171,16 @@ nnoremap <S-Left> x<ESC>hP
 nnoremap <S-Right> x<ESC>p
 
 if has("gui_running")
-
-    noremap <C-S-down> :m+<CR>==
-    noremap <C-S-up> :m-2<CR>==
-    inoremap <C-S-Down> <Esc>:m+<CR>==gi
-    inoremap <C-S-Up> <Esc>:m-2<CR>==gi
-    vnoremap <C-S-Down> :m'>+<CR>gv=gv
-    vnoremap <C-S-Up> :m-2<CR>gv=gv
-    vnoremap <C-S-Left> d<ESC>hP`[v`]
-    vnoremap <C-S-Right> d<ESC>p`[v`]
-    nnoremap <C-S-Left> x<ESC>hP
-    nnoremap <C-S-Right> x<ESC>p
-
+  noremap <C-S-down> :m+<CR>==
+  noremap <C-S-up> :m-2<CR>==
+  inoremap <C-S-Down> <Esc>:m+<CR>==gi
+  inoremap <C-S-Up> <Esc>:m-2<CR>==gi
+  vnoremap <C-S-Down> :m'>+<CR>gv=gv
+  vnoremap <C-S-Up> :m-2<CR>gv=gv
+  vnoremap <C-S-Left> d<ESC>hP`[v`]
+  vnoremap <C-S-Right> d<ESC>p`[v`]
+  nnoremap <C-S-Left> x<ESC>hP
+  nnoremap <C-S-Right> x<ESC>p
 endif
 
 "wrap with brackets and quotes
@@ -258,17 +256,15 @@ vmap <Leader>bn <Esc>:bn!<cr>
 imap <Leader>bn <Esc>:bn!<cr>
 
 if has("gui_running")
+  " prev buffer
+  nmap <C-Tab> :bp!<cr>
+  vmap <C-Tab> <Esc>:bp!<cr>
+  imap <C-Tab> <Esc>:bp!<cr>
 
-" prev buffer
-    nmap <C-Tab> :bp!<cr>
-    vmap <C-Tab> <Esc>:bp!<cr>
-    imap <C-Tab> <Esc>:bp!<cr>
-    
-" next buffer
-    nmap <C-S-Tab> :bn!<cr>
-    vmap <C-S-Tab> <Esc>:bn!<cr>
-    imap <C-S-Tab> <Esc>:bn!<cr>
-
+  " next buffer
+  nmap <C-S-Tab> :bn!<cr>
+  vmap <C-S-Tab> <Esc>:bn!<cr>
+  imap <C-S-Tab> <Esc>:bn!<cr>
 endif
 
 " prev tab 
@@ -286,14 +282,6 @@ imap <Leader>tn <Esc>:tabnext<cr>
 nnoremap <Leader>u gUiw
 inoremap <Leader>u <esc>gUiwea
 
-" <Esc><Esc>
-" Clear the search highlight in Normal mode
-"nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
-
-"template to redefine stuff
-":command -nargs=+ E :tabe <args>"
-":cabbrev e E
-
 "zen-coding expand abbr
 let g:user_emmet_expandabbr_key = '<c-e>' 
 let g:use_emmet_complete_tag = 1
@@ -308,21 +296,21 @@ nmap <Leader>rr :call ReloadAllSnippets()<CR>
 "
 "
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k>  <Plug>(neosnippet_expand_or_jump)
+smap <C-k>  <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>  o<Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
-    set conceallevel=2 concealcursor=i
+  set conceallevel=2 concealcursor=i
 endif
 
 " Enable snipMate compatibility feature.
@@ -332,30 +320,6 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#snippets_directory=$VIMHOME.'/bundle/vim-snippets/snippets'
 
 let g:neocomplcache_enable_at_startup = 1
-"let g:neocomplcache_plugin_completion_length = {
-  "\ 'buffer_complete'   : 2,
-  "\ 'include_complete'  : 2,
-  "\ 'syntax_complete'   : 2,
-  "\ 'filename_complete' : 2,
-  "\ 'keyword_complete'  : 2,
-  "\ 'omni_complete'     : 1
-  "\ }
-"let g:neocomplcache_min_keyword_length = 3
-"let g:neocomplcache_min_syntax_length = 3
-"let g:neocomplcache_dictionary_filetype_lists = {
-  "\ 'default'    : '',
-  "\ 'erlang'     : $VIMHOME . '/dict/erlang.dict',
-  "\ 'objc'       : $VIMHOME . '/dict/objc.dict',
-  "\ 'javascript' : $VIMHOME . '/dict/javascript.dict',
-  "\ 'mxml'       : $VIMHOME . '/dict/mxml.dict',
-  "\ 'ruby'       : $VIMHOME . '/dict/ruby.dict',
-  "\ 'perl'       : $VIMHOME . '/dict/perl.dict',
-  "\ 'scheme'     : $VIMHOME . '/dict/gauche.dict',
-  "\ 'scala'      : $VIMHOME . '/dict/scala.dict',
-  "\ 'int-erl'    : $VIMHOME . '/dict/erlang.dict',
-  "\ 'int-irb'    : $VIMHOME . '/dict/ruby.dict',
-  "\ 'int-perlsh' : $VIMHOME . '/dict/perl.dict'
-  "\ }
 
 " NERDTree
 nmap <Esc> :NERDTreeClose<CR>
@@ -363,7 +327,6 @@ nmap <Bs> :NERDTreeToggle<CR>
 nmap <Leader>n :NERDTree<cr>
 vmap <Leader>n <esc>:NERDTree<cr>
 let NERDTreeShowBookmarks=1
-"let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=0
@@ -371,34 +334,8 @@ let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ?
 let NERDTreeDirArrows=1 " Tells the NERD tree to use arrows instead of + ~ chars when displaying directories.
 let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 
-"In case u wanna open Nerdtree right away and put cursor to editor
-"autocmd VimEnter * NERDTree | wincmd l 
-
-"autocmd VimEnter * wincmd p
-"mapping Nerdtree
-"nmap <F3> :call NERDTreeToggleCurDir()<CR>
-"vmap <F3> :call NERDTreeToggleCurDir()<CR> 
-"imap <F3> :call NERDTreeToggleCurDir()<CR> 
-
-"nmap <F2> :NERDTree<CR>
-"vmap <F2> :NERDTree<CR> 
-"imap <F2> :NERDTree<CR> 
-
-"let NERDTreeDirArrows=1
-"let NERDTreeMinimalUI=1
-"let NERDTreeChDirMode = 1
-""let NERDTreeWinSize=20
-"let NERDTreeHighlightCursorline=1
-
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"func! NERDTreeToggleCurDir()
-    "if (exists("b:NERDTreeType")) | NERDTreeClose | else | execute "NERDTree ".fnamemodify(".",":p") | endif
-"endfunction
-
-"so that we are not asked everytime to save 
-"everything
-:cabbrev e NERDTreeClose<CR>:e!
+" everything
+":cabbrev e NERDTreeClose<CR>:e!
 :cabbrev t tabedit!
 :cabbrev bd :ene!<CR>:bw #<CR> 
 :cabbrev qa qa!
@@ -406,20 +343,20 @@ let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
 :cabbrev Cd CD
 
 :cabbrev ц w
-:cabbrev у NERDTreeClose<CR>:e!
+":cabbrev у NERDTreeClose<CR>:e!
 :cabbrev й q!
 :cabbrev й!! q!
 :cabbrev цй wq
 
 :cabbrev Ц w
-:cabbrev У NERDTreeClose<CR>:e!
+":cabbrev У NERDTreeClose<CR>:e!
 :cabbrev Й q!
 
 :cabbrev W w
 :cabbrev Wq wq
 :cabbrev WQ wq
 :cabbrev wQ wq
-:cabbrev E NERDTreeClose<CR>:e!
+":cabbrev E NERDTreeClose<CR>:e!
 :cabbrev Q q!
 :cabbrev q!! q!
 :cabbrev qa!! qa!
@@ -436,31 +373,22 @@ nnoremap <silent> <Leader>q :q<CR>
 vnoremap <silent> <Leader>q :q<CR>
 
 if has("gui_running")
-    nmap <silent> <C-q> :q!<CR>
-    vmap <silent> <C-q> :q!<CR>
-    imap <silent> <C-q> <ESC>:q!<CR>
+  nmap <silent> <C-q> :q!<CR>
+  vmap <silent> <C-q> :q!<CR>
+  imap <silent> <C-q> <ESC>:q!<CR>
 
-    nmap <silent> <C-q>a :qa!<CR>
-    vmap <silent> <C-q>a :qa!<CR>
-    imap <silent> <C-q>a <ESC>:qa!<CR>
+  nmap <silent> <C-q>a :qa!<CR>
+  vmap <silent> <C-q>a :qa!<CR>
+  imap <silent> <C-q>a <ESC>:qa!<CR>
 
-    nmap <silent> <C-w> :ene!<CR>:bw #<CR>
-    vmap <silent> <C-w> :ene!<CR>:bw #<CR>
-    imap <silent> <C-w> <ESC>:ene!<CR>:bw #<CR>
+  nmap <silent> <C-w> :ene!<CR>:bw #<CR>
+  vmap <silent> <C-w> :ene!<CR>:bw #<CR>
+  imap <silent> <C-w> <ESC>:ene!<CR>:bw #<CR>
 endif
 
 nmap <Leader>1 :call Layout(1)<CR>
 nmap <Leader>2 :call Layout(2)<CR>
 nmap <Leader>3 :call Layout(3)<CR>
-"nmap <Leader>m :make<CR>
-
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"nmap <Leader><Right> :bnext!<CR>
-"nmap <Leader><Left> :bprev!<CR>
-"vmap <Leader><Right> <ESC>:bnext!<CR>
-"vmap <Leader><Left> <ESC>:bprev!<CR>
-"imap <Leader><Right> <ESC>:bnext!<CR>
-"imap <Leader><Left> <ESC>:bprev!<CR>
 
 nnoremap <F4> :GundoToggle<CR>
 nmap <F5> :TagbarToggle<CR>
