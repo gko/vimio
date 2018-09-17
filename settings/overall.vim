@@ -11,8 +11,7 @@ let g:solarized_termcolors=256
 try
   colorscheme snow
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme molokai
-  let g:airline_theme="molokai"
+  colorscheme default
 endtry
 
 " add clang_complete option
