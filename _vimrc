@@ -5,160 +5,116 @@ filetype off
 
 let mapleader = ","
 
-if has("unix")
-    let $VIMHOME = $HOME."/.vim"
-elseif has("win32") || has("win32s") || has('win64')
-    " TODO neovim
-    " FIXME cmd not working in vim 8 at least
-    let $VIMHOME = $HOME."/vimfiles"
-endif
-
-let &runtimepath .= ',' . expand($VIMHOME . '/bundle/Vundle.vim')
-call vundle#rc(expand($VIMHOME . '/bundle'))
-call vundle#begin()
-
-"
-" let Vundle manage Vundle
-" required!
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 "General stuff
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Lokaltog/vim-easymotion.git'
-Plugin 'vim-scripts/TaskList.vim.git'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'mattn/emmet-vim.git'
-Plugin 'tpope/vim-git.git'
-"Plugin 'garbas/vim-snipmate.git'
-"Plugin 'tomtom/tlib_vim.git'
-"Plugin 'MarcWeber/vim-addon-mw-utils.git'
-Plugin 'honza/vim-snippets.git'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'lepture/vim-velocity.git'
-"Plugin 'mikewest/vimroom.git'
-"Plugin 'Lokaltog/vim-powerline.git'
-"Plugin 'bling/vim-airline'
-Plugin 'sjl/gundo.vim'
-Plugin 'majutsushi/tagbar.git'
-"Plugin 'hallettj/jslint.vim.git'
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'plasticboy/vim-markdown.git'
-Plugin 'vim-scripts/mheg.git'
-Plugin 'mustache/vim-mustache-handlebars'
-"Plugin 'mileszs/ack.vim'
-Plugin 'dkprice/vim-easygrep'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'sbdchd/neoformat.git'
-Plugin 'Shougo/neocomplcache.git'
-Plugin 'Shougo/neosnippet-snippets'
-Plugin 'Shougo/neosnippet'
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-git'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'vim-scripts/mheg', { 'for': 'mheg'}
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
+Plug 'junegunn/fzf.vim'
 
 "Colorschemes
-  Plugin 'AlxHnr/clear_colors'
-  Plugin 'fxn/vim-monochrome'
-  Plugin 'arcticicestudio/nord-vim'
-  Plugin 'rhysd/vim-color-spring-night'
-  Plugin 'dterei/VimCobaltColourScheme.git'
-  Plugin 'tpope/vim-vividchalk.git'
-  Plugin 'reedes/vim-colors-pencil'
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'trapd00r/neverland-vim-theme.git'
-  Plugin 'chriskempson/vim-tomorrow-theme.git'
-  Plugin 'jpo/vim-railscasts-theme.git'
-  Plugin 'altercation/vim-colors-solarized.git'
-  "Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'twerth/ir_black.git'
-  Plugin 'nanotech/jellybeans.vim'
-  Plugin 'trevordmiller/nova-vim'
-  "Plugin 'tangphillip/SunburstVIM.git'
-  Plugin 'vim-scripts/Wombat.git'
-  Plugin 'sjl/badwolf.git'
-  Plugin 'zaiste/Atom.git'
-  Plugin 'w0ng/vim-hybrid.git'
-  Plugin 'morhetz/gruvbox'
+	Plug 'AlxHnr/clear_colors'
+	Plug 'w0ng/vim-hybrid'
+  Plug 'fxn/vim-monochrome'
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'rhysd/vim-color-spring-night'
+  Plug 'dterei/VimCobaltColourScheme'
+  Plug 'tpope/vim-vividchalk'
+  Plug 'reedes/vim-colors-pencil'
+  Plug 'chriskempson/base16-vim'
+  Plug 'trapd00r/neverland-vim-theme'
+  Plug 'chriskempson/vim-tomorrow-theme'
+  Plug 'jpo/vim-railscasts-theme'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'twerth/ir_black'
+  Plug 'nanotech/jellybeans.vim'
+  Plug 'trevordmiller/nova-vim'
+  Plug 'vim-scripts/Wombat'
+  Plug 'sjl/badwolf'
+  Plug 'zaiste/Atom'
+  Plug 'morhetz/gruvbox'
+	Plug 'kristijanhusak/vim-hybrid-material'
+	Plug 'nightsense/snow'
 
 " HTML/HAML
-  Plugin 'othree/html5.vim.git'
-  Plugin 'hokaccha/vim-html5validator.git'
-  "Plugin 'tyru/operator-html-escape.vim.git'
-  Plugin 'tpope/vim-haml.git'
-  Plugin 'gregsexton/MatchTag.git'
+  Plug 'othree/html5.vim', { 'for': 'html' }
+  Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
+  Plug 'tpope/vim-haml', { 'for':  'haml' }
+  Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
 " CSS/LESS
-  Plugin 'hail2u/vim-css3-syntax.git'
-  "Plugin 'ap/vim-css-color.git'
-  Plugin 'gorodinskiy/vim-coloresque.git'
-  Plugin 'groenewege/vim-less.git'
+  Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+  Plug 'gko/vim-coloresque', { 'for': ['css', 'scss', 'sass', 'stylus'] }
+  Plug 'groenewege/vim-less', { 'for':  'less' }
 
 " JavaScript
-  "Plugin 'othree/yajs.vim'
-  Plugin 'pangloss/vim-javascript.git'
-  "Plugin 'itspriddle/vim-jquery.git'
-  Plugin 'kchmck/vim-coffee-script.git'
-  "Plugin 'walm/jshint.vim.git'
-  "Plugin 'jelera/vim-javascript-syntax.git'
-  "Plugin 'teramako/jscomplete-vim.git'
-  "Plugin 'myhere/vim-nodejs-complete.git'
-  "Plugin 'guileen/vim-node.git'
+  Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
+	Plug 'prettier/vim-prettier', {
+				\ 'do': 'yarn install',
+				\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Typescript
-  Plugin 'leafgarland/typescript-vim'
-  Plugin 'Quramy/tsuquyomi'
+  Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+  Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
+
 
 " JSON
-  Plugin 'https://github.com/leshill/vim-json.git'
+  Plug 'https://github.com/leshill/vim-json', { 'for': ['json'] }
 
 " PHP
-  Plugin 'vim-scripts/php.vim--Garvin.git'
-  Plugin '2072/PHP-Indenting-for-VIm.git'
+  Plug 'vim-scripts/php.vim--Garvin', { 'for': ['php'] }
+  Plug '2072/PHP-Indenting-for-VIm', { 'for': ['php'] }
+
 
 " Python/Django
-  if has('python')
-    "Plugin 'https://github.com/SirVer/ultisnips.git'
-    Plugin 'klen/python-mode.git'
-    Plugin 'davidhalter/jedi-vim.git'
-    let g:pymode_rope = 0
-    let g:jedi#auto_vim_configuration = 0
-  else
-    Plugin 'fs111/pydoc.vim.git'
-  endif
+	Plug 'klen/python-mode', { 'for': ['python'] }
+	Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 
 " C/C++
-  "Plugin 'Rip-Rip/clang_complete.git'
-  "Plugin 'Shougo/neocomplcache-clang_complete.git'
-  "Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-  Plugin 'justmao945/vim-clang'
+  Plug 'justmao945/vim-clang', { 'for': ['c', 'c++'] }
 
 " Go
-  Plugin 'fatih/vim-go'
+  Plug 'fatih/vim-go', { 'for': ['go'] }
+
 
 " Ruby/Rails
-  Plugin 'vim-ruby/vim-ruby.git'
-  Plugin 'tpope/vim-rails.git'
-  Plugin 'tpope/vim-endwise.git'
+  Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+  Plug 'tpope/vim-rails', { 'for': ['ruby'] }
 
 " Dart
-  Plugin 'dart-lang/dart-vim-plugin.git'
+  Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
 
 " Jade
-  Plugin 'digitaltoad/vim-jade.git'
+  Plug 'digitaltoad/vim-jade', { 'for': ['pug'] }
 
 " Stylus
-  Plugin 'wavded/vim-stylus.git'
+  Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
 
 " Scala
-  Plugin 'derekwyatt/vim-scala.git'
+  Plug 'derekwyatt/vim-scala', { 'for': ['scala'] }
 
 " Java
-  Plugin 'artur-shaik/vim-javacomplete2'
+  Plug 'artur-shaik/vim-javacomplete2', { 'for': ['java'] }
+	
+call plug#end()
 
-call vundle#end()
-let g:typescript_compiler_options = '-t ES6'
+"let g:typescript_compiler_options = '-t ES6'
 
-source $VIMHOME/settings/os.vim
-source $VIMHOME/settings/overall.vim
-source $VIMHOME/settings/functions.vim
-source $VIMHOME/settings/shortcuts.vim
-source $VIMHOME/settings/filespecific.vim
-source $VIMHOME/settings/ctags.vim
+source ~/.vim/settings/os.vim
+source ~/.vim/settings/overall.vim
+source ~/.vim/settings/functions.vim
+source ~/.vim/settings/shortcuts.vim
+source ~/.vim/settings/filespecific.vim
+source ~/.vim/settings/ctags.vim
