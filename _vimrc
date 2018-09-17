@@ -21,6 +21,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 "Colorschemes
