@@ -11,7 +11,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
 	rm -rf $HOME/.vimrc > /dev/null
 	rm -rf vimio > /dev/null
 	echo "⚙️  downloading latest version"
-	git clone --depth 1 -b  --recursive https://github.com/gko/vimio.git vimio > /dev/null
+	git clone --depth 1 -b TECH_moveToVimPlug --recursive https://github.com/gko/vimio.git vimio > /dev/null
 	echo "⚡️ installing..."
 	mv vimio/_vimrc ~/.vimrc > /dev/null
 	mv vimio ~/.vim > /dev/null
