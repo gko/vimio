@@ -56,29 +56,6 @@ nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['javascript', 'python', 'ruby', 'scala', 'java', 'sass']
-    \ }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-
-autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-
-"hi ColorColumn ctermbg=black guibg=#212121
-"let g:vimroom_guibackground="#1d1f21"
-"let g:AutoPairsMapCR = 0
-
-let g:netrw_ftp_cmd="ftp -p"
 set history=1000 " store lots of :cmdline history
 
 "for TOhtml function
