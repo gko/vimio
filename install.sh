@@ -20,7 +20,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
 	cp vimio/_vimrc ~/.vimrc > /dev/null
 	mv vimio/_vimrc vimio/init.vim
 	mv vimio ~/.vim > /dev/null
-	mkdir ~/.config
+	mkdir -p ~/.config
 	ln -s ~/.vim ~/.config/nvim
 
 	cd .vim > /dev/null
