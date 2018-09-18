@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n "You're about to install «vimio». It will delete all your vim files‼️ "
+echo "You're about to install «vimio». It will delete all your vim files‼️ "
 read -p "Proceed(y/n)❓" answer
 
 if ! [[ "$answer" =~ [yY] ]]; then
