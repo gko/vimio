@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "You're about to install «vimio». It will delete all your vim files‼️ "
-read -p "Proceed(y/n)❓" answer
+read -p "Proceed(y/n)❓" answer </dev/tty
 
 if ! [[ "$answer" =~ [yY] ]]; then
 	exit 0;
@@ -27,7 +27,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
 	cp vimio/_vimrc ~/.vimrc > /dev/null
 	mv vimio/_vimrc vimio/init.vim
 	mv vimio ~/.vim > /dev/null
-	mkdir -p ~/.config
+	mkdir ~/.config
 	ln -s ~/.vim ~/.config/nvim
 
 	cd .vim > /dev/null
