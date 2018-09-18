@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo -n "You're about to install «vimio». It will delete all your vim files‼️
+Proceed(y/n)❓"
+read answer
+
+if ! [[ "$answer" =~ [yY] ]]; then
+	exit 0;
+fi
+
 # Check OS
 osname=$(uname -s)
 
