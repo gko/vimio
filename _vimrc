@@ -67,45 +67,48 @@ call plug#begin()
 				\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Typescript
-	Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
-	Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
+	Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+	Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " JSON
-	Plug 'leshill/vim-json', { 'for': ['json'] }
+	Plug 'leshill/vim-json', { 'for': 'json' }
 
 " PHP
-	Plug 'vim-scripts/php.vim--Garvin', { 'for': ['php'] }
-	Plug '2072/PHP-Indenting-for-VIm', { 'for': ['php'] }
+	Plug 'vim-scripts/php.vim--Garvin', { 'for': 'php' }
+	Plug '2072/PHP-Indenting-for-VIm', { 'for': 'php' }
 
 
 " Python/Django
-	Plug 'klen/python-mode', { 'for': ['python'] }
-	Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
+	Plug 'klen/python-mode', { 'for': 'python' }
+	Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " C/C++
 	Plug 'justmao945/vim-clang', { 'for': ['c', 'c++'] }
 
 " Go
-	Plug 'fatih/vim-go', { 'for': ['go'] }
+	Plug 'fatih/vim-go', { 'for': 'go' }
 
 " Ruby/Rails
-	Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
-	Plug 'tpope/vim-rails', { 'for': ['ruby'] }
+	Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+	Plug 'tpope/vim-rails', { 'for': 'ruby' }
 
 " Dart
-	Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
+	Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 
 " Jade
-	Plug 'digitaltoad/vim-jade', { 'for': ['pug'] }
+	Plug 'digitaltoad/vim-jade', { 'for': 'pug' }
 
 " Stylus
-	Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
+	Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 
 " Scala
-	Plug 'derekwyatt/vim-scala', { 'for': ['scala'] }
+	Plug 'derekwyatt/vim-scala', { 'for': 'scala'] }
 
 " Java
-	Plug 'artur-shaik/vim-javacomplete2', { 'for': ['java'] }
+	Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+
+" Rust
+	Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 	
 call plug#end()
 

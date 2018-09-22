@@ -148,6 +148,9 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * Java
 	* [artur-shaik/vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
 
+ * Rust
+	* [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
