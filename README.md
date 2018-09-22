@@ -61,7 +61,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 	* [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown)
 	* [vim-scripts/mheg](https://github.com/vim-scripts/mheg)
 	* [mustache/vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
-	* [SirVer/ultisnips' | * [honza/vim-snippets](https://github.com/SirVer/ultisnips' | * [honza/vim-snippets)
+	* [SirVer/ultisnips](https://github.com/SirVer/ultisnips)
 	* [editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 	* [janko-m/vim-test](https://github.com/janko-m/vim-test)
 	* [/usr/local/opt/fzf](https://github.com//usr/local/opt/fzf)
@@ -93,59 +93,59 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 	* [nightsense/snow](https://github.com/nightsense/snow)
 
  * HTML/HAML
-  * [othree/html5.vim](https://github.com/othree/html5.vim)
-  * [hokaccha/vim-html5validator](https://github.com/hokaccha/vim-html5validator)
-  * [tpope/vim-haml](https://github.com/tpope/vim-haml)
-  * [gregsexton/MatchTag](https://github.com/gregsexton/MatchTag)
+	* [othree/html5.vim](https://github.com/othree/html5.vim)
+	* [hokaccha/vim-html5validator](https://github.com/hokaccha/vim-html5validator)
+	* [tpope/vim-haml](https://github.com/tpope/vim-haml)
+	* [gregsexton/MatchTag](https://github.com/gregsexton/MatchTag)
 
  * CSS/LESS
-  * [hail2u/vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
-  * [gko/vim-coloresque](https://github.com/gko/vim-coloresque)
-  * [groenewege/vim-less](https://github.com/groenewege/vim-less)
+	* [hail2u/vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
+	* [gko/vim-coloresque](https://github.com/gko/vim-coloresque)
+	* [groenewege/vim-less](https://github.com/groenewege/vim-less)
 
  * JavaScript
-  * [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript)
+	* [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript)
 	* [prettier/vim-prettier](https://github.com/prettier/vim-prettier)
 
  * Typescript
-  * [leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim)
-  * [Quramy/tsuquyomi](https://github.com/Quramy/tsuquyomi)
+	* [leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim)
+	* [Quramy/tsuquyomi](https://github.com/Quramy/tsuquyomi)
 
  * JSON
-  * [https://github.com/leshill/vim-json](https://github.com/https://github.com/leshill/vim-json)
+	* [leshill/vim-json](https://github.com/leshill/vim-json)
 
  * PHP
-  * [vim-scripts/php.vim--Garvin](https://github.com/vim-scripts/php.vim--Garvin)
-  * [2072/PHP-Indenting-for-VIm](https://github.com/2072/PHP-Indenting-for-VIm)
+	* [vim-scripts/php.vim--Garvin](https://github.com/vim-scripts/php.vim--Garvin)
+	* [2072/PHP-Indenting-for-VIm](https://github.com/2072/PHP-Indenting-for-VIm)
 
  * Python/Django
 	* [klen/python-mode](https://github.com/klen/python-mode)
 	* [davidhalter/jedi-vim](https://github.com/davidhalter/jedi-vim)
 
  * C/C++
-  * [justmao945/vim-clang](https://github.com/justmao945/vim-clang)
+	* [justmao945/vim-clang](https://github.com/justmao945/vim-clang)
 
  * Go
-  * [fatih/vim-go](https://github.com/fatih/vim-go)
+	* [fatih/vim-go](https://github.com/fatih/vim-go)
 
  * Ruby/Rails
-  * [vim-ruby/vim-ruby](https://github.com/vim-ruby/vim-ruby)
-  * [tpope/vim-rails](https://github.com/tpope/vim-rails)
+	* [vim-ruby/vim-ruby](https://github.com/vim-ruby/vim-ruby)
+	* [tpope/vim-rails](https://github.com/tpope/vim-rails)
 
  * Dart
-  * [dart-lang/dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
+	* [dart-lang/dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
 
  * Jade
-  * [digitaltoad/vim-jade](https://github.com/digitaltoad/vim-jade)
+	* [digitaltoad/vim-jade](https://github.com/digitaltoad/vim-jade)
 
  * Stylus
-  * [wavded/vim-stylus](https://github.com/wavded/vim-stylus)
+	* [wavded/vim-stylus](https://github.com/wavded/vim-stylus)
 
  * Scala
-  * [derekwyatt/vim-scala](https://github.com/derekwyatt/vim-scala)
+	* [derekwyatt/vim-scala](https://github.com/derekwyatt/vim-scala)
 
  * Java
-  * [artur-shaik/vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
+	* [artur-shaik/vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
 
 ## License
 
