@@ -1,5 +1,7 @@
 # Vim Settings
 
+![screenshot](https://raw.github.com/gko/vimio/master/screenshot.png)
+
 ## Prerequisites
 
 In order to get all features you might want to install following packages:
