@@ -322,10 +322,7 @@ let g:neosnippet#snippets_directory=$VIMHOME.'/bundle/vim-snippets/snippets'
 let g:neocomplcache_enable_at_startup = 1
 
 " NERDTree
-nmap <Esc> :NERDTreeClose<CR>
-nmap <Bs> :NERDTreeToggle<CR>
-nmap <Leader>n :NERDTree<cr>
-vmap <Leader>n <esc>:NERDTree<cr>
+map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1

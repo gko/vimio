@@ -7,12 +7,11 @@ let g:molokai_original = 1
 set t_Co=256
 let g:solarized_termcolors=256
 
+" set colorscheme
 try
-  colorscheme clear_colors_light
-  "let g:airline_theme="clear_colors_light"
+  colorscheme snow
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme molokai
-  let g:airline_theme="molokai"
+  colorscheme default
 endtry
 
 " add clang_complete option
@@ -36,17 +35,18 @@ set noeol
 set cindent
 " set smartindent
 
-" Spaces
-set expandtab
-set tabstop=2
-set softtabstop=2
 set shiftwidth=2
+" Spaces
+"set expandtab
+"set tabstop=2
+"set softtabstop=2
 
 " Tab
-"set noexpandtab
-"set tabstop=2
-"set shiftwidth=2
-"set softtabstop=2
+set tabstop=2
+set noexpandtab
+"set smarttab
+set shiftwidth=2
+set softtabstop=2
 
 " Search
 set incsearch   " Moving cursor to text being search while typing 
@@ -149,7 +149,6 @@ if !exists("g:airline_symbols")
 endif
 
 set laststatus=2
-let g:airline_theme='base16'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '

@@ -1,68 +1,50 @@
 #!/bin/bash
 
-# Check os
-osname=$(uname -s)
+echo "You're about to install «vimio». It will delete all your vim files‼️ "
+read -p "Proceed(y/n)❓" answer </dev/tty
 
-if [[ "$osname" == "Darwin" ]]; then
-    RESET='\x1B[0m'
-    GREEN='\x1B[0;32m'        # Green
-    BGREEN='\x1B[1;32m'       # Green
-else
-    RESET='\e[0m'
-    GREEN='\e[0;32m'        # Green
-    BGREEN='\e[1;32m'       # Green
+if ! [[ "$answer" =~ [yY] ]]; then
+	exit 0;
 fi
 
+# Check OS
+osname=$(uname -s)
+
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
+	echo "🎩 installing «vimio»:" 
+	cd ~
 
-    echo -e ""
-    echo -e "$BGREEN       _____ "
-    echo -e "$BGREEN/\   /\\_    \/\/\ "
-    echo -e "$BGREEN\ \ / / / /\/    \ "
-    echo -e "$BGREEN \ V /\/ /_/ /\/\ \ "
-    echo -e "$BGREEN  \_/\____/\/    \/ "
-    echo -e "$RESET"
+	echo "🚧 removing current vim settings"
+	rm -rf ~/.config/nvim
+	rm -rf ~/.vim > /dev/null
+	rm -rf ~/.vimrc > /dev/null
+	rm -rf vimio > /dev/null
 
-    cd
-    rm -rf $HOME/.vim
-    rm -rf $HOME/.vimrc
-    rm -rf vim-settings
-    git clone --depth 1 -b master --recursive https://github.com/gko/vimio.git vim-settings
-    mv vim-settings/_vimrc $HOME/.vimrc
-    mv vim-settings $HOME/.vim
-    cd .vim
-    mv .ctags ../
+	echo "⚙️  downloading latest version"
+	git clone --depth 1 -b TECH_moveToVimPlug --recursive https://github.com/gko/vimio.git vimio
 
-    #copy fonts for Linux only
-    if [[ "$osname" == "Linux" ]]; then
-        mkdir -p ~/.fonts/
-        cp fonts/* ~/.fonts/
-    fi
+	echo "⚡️ installing..."
+	cp vimio/_vimrc ~/.vimrc > /dev/null
+	mv vimio/_vimrc vimio/init.vim
+	mv vimio ~/.vim > /dev/null
+	mkdir ~/.config
+	ln -s ~/.vim ~/.config/nvim
 
-    chmod +x bin/ctags
-    cd
+	cd .vim > /dev/null
+	mv .ctags ../ > /dev/null
+	chmod +x bin/ctags > /dev/null
+	cd ~ > /dev/null
+	cp ~ 
 
-    </dev/tty vim +BundleInstall +qall
-
+	</dev/tty vim +PlugInstall +qall
 else
-
-    echo ""
-    echo "       _____ "
-    echo "/\   /\\_    \/\/\ "
-    echo "\ \ / / / /\/    \ "
-    echo " \ V /\/ /_/ /\/\ \ "
-    echo "  \_/\____/\/    \/ "
-    echo ""
-    echo "...don't forget to do :BundleInstall in vim to install plugins"
-
-    cd
-    rm -rf vimfiles
-    rm -rf _vimrc
-    rm -rf vim-settings
-    git clone --depth 1 -b master --recursive https://github.com/gko/vimio.git vim-settings
-    mv vim-settings/_vimrc _vimrc
-    mv vim-settings vimfiles
-    mv vimfiles/.ctags ./
-    cd
-
+	cd
+	rm -rf vimfiles
+	rm -rf _vimrc
+	rm -rf vim-settings
+	git clone --depth 1 -b master --recursive https://github.com/gko/vimio.git vim-settings
+	mv vim-settings/_vimrc _vimrc
+	mv vim-settings vimfiles
+	mv vimfiles/.ctags ./
+	cd
 fi

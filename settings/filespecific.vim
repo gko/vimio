@@ -18,14 +18,19 @@ autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
 autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
 autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
 
-"autocmd FileType javascript
-    "\ :setl omnifunc=jscomplete#CompleteJS
+" Fix files with prettier, and then ESLint.
 
-"let g:javascript_conceal=1
-"let g:javascript_conceal_function   = "ƒ"
-"let g:javascript_conceal_null       = "ø"
+" Equivalent to the above.
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\		'javascript': ['eslint'],
+\		'typescript': ['tslint']
+\}
 
-
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\		'typescript': ['tslint']
+\}
 
 "augroup fmt
 	"autocmd!
@@ -56,29 +61,6 @@ nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['javascript', 'python', 'ruby', 'scala', 'java', 'sass']
-    \ }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-
-autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-
-"hi ColorColumn ctermbg=black guibg=#212121
-"let g:vimroom_guibackground="#1d1f21"
-"let g:AutoPairsMapCR = 0
-
-let g:netrw_ftp_cmd="ftp -p"
 set history=1000 " store lots of :cmdline history
 
 "for TOhtml function

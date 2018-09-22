@@ -39,6 +39,13 @@ function! s:Matcher(hits, match, linenums, subline)
   return a:match
 endfunction
 
+command! -bang -nargs=* Rg
+			\ call fzf#vim#grep(
+			\   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+			\   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+			\           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+			\   <bang>0)
+
 " Append line numbers for lines in match to given list.
 function! s:MatchLineNums(numlist, match)
   let newlinecount = len(substitute(a:match, '\n\@!.', '', 'g'))
