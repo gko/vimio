@@ -23,6 +23,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
 
 "Colorschemes
 	Plug 'AlxHnr/clear_colors'
@@ -53,7 +54,6 @@ Plug 'junegunn/fzf.vim'
   Plug 'othree/html5.vim', { 'for': 'html' }
   Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
   Plug 'tpope/vim-haml', { 'for':  'haml' }
-  Plug 'gregsexton/MatchTag', { 'for': 'html' }
 
 " CSS/LESS
   Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }

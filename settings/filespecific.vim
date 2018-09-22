@@ -18,14 +18,19 @@ autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
 autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
 autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
 
-"autocmd FileType javascript
-    "\ :setl omnifunc=jscomplete#CompleteJS
+" Fix files with prettier, and then ESLint.
 
-"let g:javascript_conceal=1
-"let g:javascript_conceal_function   = "ƒ"
-"let g:javascript_conceal_null       = "ø"
+" Equivalent to the above.
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\		'javascript': ['eslint'],
+\		'typescript': ['tslint']
+\}
 
-
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\		'typescript': ['tslint']
+\}
 
 "augroup fmt
 	"autocmd!
