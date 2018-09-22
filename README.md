@@ -98,7 +98,6 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 	* [othree/html5.vim](https://github.com/othree/html5.vim)
 	* [hokaccha/vim-html5validator](https://github.com/hokaccha/vim-html5validator)
 	* [tpope/vim-haml](https://github.com/tpope/vim-haml)
-	* [gregsexton/MatchTag](https://github.com/gregsexton/MatchTag)
 
  * CSS/LESS
 	* [hail2u/vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
