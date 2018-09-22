@@ -8,22 +8,22 @@ let mapleader = ","
 call plug#begin()
 
 "General stuff
-Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-git'
-Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'vim-scripts/mheg', { 'for': 'mheg'}
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
+	Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
+	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+	Plug 'mattn/emmet-vim'
+	Plug 'tpope/vim-git'
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'majutsushi/tagbar'
+	Plug 'kien/ctrlp.vim'
+	Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+	Plug 'vim-scripts/mheg', { 'for': 'mheg'}
+	Plug 'mustache/vim-mustache-handlebars'
+	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+	Plug 'editorconfig/editorconfig-vim'
+	Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
+	Plug '/usr/local/opt/fzf'
+	Plug 'junegunn/fzf.vim'
+	Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
 
 "Colorschemes
 	Plug 'AlxHnr/clear_colors'
@@ -51,32 +51,31 @@ Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
 	Plug 'nightsense/snow'
 
 " HTML/HAML
-  Plug 'othree/html5.vim', { 'for': 'html' }
-  Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
-  Plug 'tpope/vim-haml', { 'for':  'haml' }
+	Plug 'othree/html5.vim', { 'for': 'html' }
+	Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
+	Plug 'tpope/vim-haml', { 'for':  'haml' }
 
 " CSS/LESS
-  Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-  Plug 'gko/vim-coloresque', { 'for': ['css', 'scss', 'sass', 'stylus'] }
-  Plug 'groenewege/vim-less', { 'for':  'less' }
+	Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+	Plug 'gko/vim-coloresque', { 'for': ['css', 'scss', 'sass', 'stylus'] }
+	Plug 'groenewege/vim-less', { 'for':  'less' }
 
 " JavaScript
-  Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
+	Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 	Plug 'prettier/vim-prettier', {
 				\ 'do': 'yarn install',
 				\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Typescript
-  Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
-  Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
-
+	Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
+	Plug 'Quramy/tsuquyomi', { 'for': ['typescript'] }
 
 " JSON
-  Plug 'https://github.com/leshill/vim-json', { 'for': ['json'] }
+	Plug 'leshill/vim-json', { 'for': ['json'] }
 
 " PHP
-  Plug 'vim-scripts/php.vim--Garvin', { 'for': ['php'] }
-  Plug '2072/PHP-Indenting-for-VIm', { 'for': ['php'] }
+	Plug 'vim-scripts/php.vim--Garvin', { 'for': ['php'] }
+	Plug '2072/PHP-Indenting-for-VIm', { 'for': ['php'] }
 
 
 " Python/Django
@@ -84,30 +83,29 @@ Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
 	Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 
 " C/C++
-  Plug 'justmao945/vim-clang', { 'for': ['c', 'c++'] }
+	Plug 'justmao945/vim-clang', { 'for': ['c', 'c++'] }
 
 " Go
-  Plug 'fatih/vim-go', { 'for': ['go'] }
-
+	Plug 'fatih/vim-go', { 'for': ['go'] }
 
 " Ruby/Rails
-  Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
-  Plug 'tpope/vim-rails', { 'for': ['ruby'] }
+	Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+	Plug 'tpope/vim-rails', { 'for': ['ruby'] }
 
 " Dart
-  Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
+	Plug 'dart-lang/dart-vim-plugin', { 'for': ['dart'] }
 
 " Jade
-  Plug 'digitaltoad/vim-jade', { 'for': ['pug'] }
+	Plug 'digitaltoad/vim-jade', { 'for': ['pug'] }
 
 " Stylus
-  Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
+	Plug 'wavded/vim-stylus', { 'for': ['stylus'] }
 
 " Scala
-  Plug 'derekwyatt/vim-scala', { 'for': ['scala'] }
+	Plug 'derekwyatt/vim-scala', { 'for': ['scala'] }
 
 " Java
-  Plug 'artur-shaik/vim-javacomplete2', { 'for': ['java'] }
+	Plug 'artur-shaik/vim-javacomplete2', { 'for': ['java'] }
 	
 call plug#end()
 

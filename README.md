@@ -18,6 +18,7 @@ On unix and windows(with bash which can be installed with [git](http://msysgit.g
 Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 ### Terminal mode
+
  * <kbd>Shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
  * <kbd>Shift</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
  * <kbd>Leader</kbd> + <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like one, two(toggle vertical/horizontal), three split layout
@@ -32,6 +33,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
 
 ### GUI mode specific
+
  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
  * <kbd>Ctrl</kbd> + <kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
  * <kbd>Leader</kbd> + <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
@@ -64,8 +66,8 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 	* [SirVer/ultisnips](https://github.com/SirVer/ultisnips)
 	* [editorconfig/editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 	* [janko-m/vim-test](https://github.com/janko-m/vim-test)
-	* [/usr/local/opt/fzf](https://github.com//usr/local/opt/fzf)
 	* [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
+	* [w0rp/ale](https://github.com/w0rp/ale)
 
  * Colorschemes
 	* [AlxHnr/clear_colors](https://github.com/AlxHnr/clear_colors)
