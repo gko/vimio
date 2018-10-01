@@ -30,6 +30,14 @@ call plug#begin()
  " requires specific font
  " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
 
+if has('nvim')
+ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+ Plug 'Shougo/deoplete.nvim'
+ Plug 'roxma/nvim-yarp'
+ Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 "Colorschemes
  Plug 'AlxHnr/clear_colors'
  Plug 'w0ng/vim-hybrid'
@@ -117,5 +125,5 @@ call plug#begin()
 " Rust
  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
  Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-	
+
 call plug#end()
