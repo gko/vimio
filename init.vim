@@ -71,6 +71,7 @@ call plug#begin()
  Plug 'prettier/vim-prettier', {
  			\ 'do': 'yarn install',
  			\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+
 " JSX
  Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 
