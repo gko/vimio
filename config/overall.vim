@@ -257,3 +257,4 @@ if has("gui_running")
 endif
 
 set history=1000 " store lots of :cmdline history
+set fillchars=""
