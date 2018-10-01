@@ -8,6 +8,7 @@ let mapleader = ","
 call plug#begin()
 
 "General stuff
+ Plug 'xolox/vim-misc'
  Plug 'xolox/vim-easytags', { 'on': ['UpdateTags', 'HighlightTags'] }
  Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
  Plug 'scrooloose/nerdtree', { 'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeClose', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeFromBookmark', 'NERDTreeMirror', 'NERDTreeToggle'] }
