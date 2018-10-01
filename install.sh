@@ -10,41 +10,36 @@ fi
 # Check OS
 osname=$(uname -s)
 
-if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
-	echo "🎩 installing «vimio»:" 
-	cd ~
+echo "🎩 installing «vimio»:"
+cd ~
 
+echo "⚙️  downloading latest version"
+git clone --depth 1 -b master --recursive https://github.com/gko/vimio
+
+if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
 	echo "🚧 removing current vim settings"
 	rm -rf ~/.config/nvim
-	rm -rf ~/.vim > /dev/null
-	rm -rf ~/.vimrc > /dev/null
-	rm -rf vimio > /dev/null
-
-	echo "⚙️  downloading latest version"
-	git clone --depth 1 -b TECH_moveToVimPlug --recursive https://github.com/gko/vimio.git vimio
+	rm -rf ~/.vim
+	rm -rf ~/.vimrc
+	rm -rf vimio
 
 	echo "⚡️ installing..."
-	cp vimio/_vimrc ~/.vimrc > /dev/null
-	mv vimio/_vimrc vimio/init.vim
-	mv vimio ~/.vim > /dev/null
-	mkdir ~/.config
+	mv vimio ~/.vim
+    ln -s ~/.vim/init.vim ~/.vimrc
+    mkdir ~/.vim/after
+	ln -s ~/.vim/config ~/.vim/after/plugin
 	ln -s ~/.vim ~/.config/nvim
-
-	cd .vim > /dev/null
-	mv .ctags ../ > /dev/null
-	chmod +x bin/ctags > /dev/null
-	cd ~ > /dev/null
-	cp ~ 
 
 	</dev/tty vim +PlugInstall +qall
 else
-	cd
-	rm -rf vimfiles
-	rm -rf _vimrc
-	rm -rf vim-settings
-	git clone --depth 1 -b master --recursive https://github.com/gko/vimio.git vim-settings
-	mv vim-settings/_vimrc _vimrc
-	mv vim-settings vimfiles
-	mv vimfiles/.ctags ./
-	cd
+	echo "🚧 removing current vim settings"
+	rm -rf ~/vimfiles
+	rm -rf ~/_vimrc
+	rm -rf ~/vimio
+
+	echo "⚡️ installing..."
+    mv ~/vimio/init.vim ~/_vimrc
+	mv ~/vimio ~/vimfiles
+
+    echo "🛠 don't forget to run PlugInstall"
 fi
