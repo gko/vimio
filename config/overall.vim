@@ -258,3 +258,5 @@ endif
 
 set history=1000 " store lots of :cmdline history
 set fillchars=""
+
+language messages en
