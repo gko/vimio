@@ -13,6 +13,8 @@ osname=$(uname -s)
 echo "🎩 installing «vimio»:"
 cd ~
 
+rm -rf ~/vimio
+
 echo "⚙️  downloading latest version"
 git clone --depth 1 -b master --recursive https://github.com/gko/vimio
 
@@ -21,7 +23,6 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     rm -rf ~/.config/nvim
     rm -rf ~/.vim
     rm -rf ~/.vimrc
-    rm -rf vimio
 
     echo "⚡️ installing..."
     mv ~/vimio ~/.vim
@@ -35,7 +36,6 @@ else
     echo "🚧 removing current vim settings"
     rm -rf ~/vimfiles
     rm -rf ~/_vimrc
-    rm -rf ~/vimio
 
     echo "⚡️ installing..."
     mv ~/vimio/init.vim ~/_vimrc
