@@ -24,7 +24,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     rm -rf vimio
 
     echo "⚡️ installing..."
-    mv vimio ~/.vim
+    mv ~/vimio ~/.vim
     ln -s ~/.vim/init.vim ~/.vimrc
     mkdir ~/.vim/after
     ln -s ~/.vim/config ~/.vim/after/plugin
