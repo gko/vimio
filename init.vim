@@ -8,6 +8,7 @@ let mapleader = ","
 call plug#begin()
 
 "General stuff
+ Plug 'xolox/vim-misc'
  Plug 'xolox/vim-easytags', { 'on': ['UpdateTags', 'HighlightTags'] }
  Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
  Plug 'scrooloose/nerdtree', { 'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeClose', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeFromBookmark', 'NERDTreeMirror', 'NERDTreeToggle'] }
@@ -28,6 +29,14 @@ call plug#begin()
  Plug 'burntsushi/ripgrep', { 'on': 'Rg' }
  " requires specific font
  " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
+
+if has('nvim')
+ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+ Plug 'Shougo/deoplete.nvim'
+ Plug 'roxma/nvim-yarp'
+ Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 "Colorschemes
  Plug 'AlxHnr/clear_colors'
@@ -70,6 +79,7 @@ call plug#begin()
  Plug 'prettier/vim-prettier', {
  			\ 'do': 'yarn install',
  			\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+
 " JSX
  Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 
@@ -115,5 +125,5 @@ call plug#begin()
 " Rust
  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
  Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-	
+
 call plug#end()

@@ -49,9 +49,9 @@ set shiftwidth=2
 set softtabstop=2
 
 " Search
-set incsearch   " Moving cursor to text being search while typing 
-set hlsearch    " Highlighting search result 
-set ignorecase  " Ignore character case while searching 
+set incsearch   " Moving cursor to text being search while typing
+set hlsearch    " Highlighting search result
+set ignorecase  " Ignore character case while searching
 set smartcase   " Override the 'ignorecase' if the search pattern contains upper case characters
 set gdefault    " auto g flag in commands, such as :%s/a/b/
 
@@ -91,17 +91,17 @@ set showtabline=1
 set wrap                " line breaking (http://vimcasts.org/episodes/soft-wrapping-text/)
 
 "if version >= 703
-"  set colorcolumn=80 " 80 column 
+"  set colorcolumn=80 " 80 column
 "end
 
 set textwidth=80
 set formatoptions-=o    " dont continue comments when pushing o/O
-set linebreak           " line breaking without breaking word 
+set linebreak           " line breaking without breaking word
 
 " http://www.allaboutvim.ru/2012/03/blog-post.html
 set path=.,,**
 
-" tab symbol and end of line symbol 
+" tab symbol and end of line symbol
 if has('multi_byte')
   if version >= 700
     set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×
@@ -110,15 +110,15 @@ if has('multi_byte')
   endif
 endif
 
-" Symbol at the begining of line when its broken 
+" Symbol at the begining of line when its broken
 if has("linebreak")
   let &sbr = nr2char(8618).' '  " Show ↪ at the beginning of wrapped lines
 endif
 
-" Spell checking 
+" Spell checking
 if version >= 700
-  set spell spelllang= 
-  set nospell " by default 
+  set spell spelllang=
+  set nospell " by default
   menu Spell.off :setlocal spell spelllang= <cr>
   menu Spell.Russian+English :setlocal spell spelllang=ru,en <cr>
   menu Spell.Russian :setlocal spell spelllang=ru <cr>
@@ -129,15 +129,15 @@ if version >= 700
   menu Spell.Next\ Wrong\ Word<Tab>]s ]s
 endif
 
-set foldcolumn=0        " line width for folding 
+set foldcolumn=0        " line width for folding
 set foldmethod=indent   " folding with indents
 set foldnestmax=10      " depth
 set nofoldenable
-set foldlevel=1         
+set foldlevel=1
 set fillchars="fold: "  " remove the extrafills --------
 
-" don't show pair quote 
-"let loaded_matchparen=1 
+" don't show pair quote
+"let loaded_matchparen=1
 set noshowmatch " don't show pair <> в HTML
 
 "status line
@@ -201,7 +201,7 @@ set backspace=indent,eol,start
 
 " search using ack if available
 if executable('ack')
-  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column 
+  set grepprg=ack\ -s\ -H\ --nogroup\ --nocolor\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
@@ -224,7 +224,7 @@ if has("gui_running")
   set linespace=2
   set numberwidth=3
 
-  if has("unix") 
+  if has("unix")
     if has("gui_mac") || has("gui_macvim")
       set guifont=Monaco:h12
       set macmeta
@@ -238,7 +238,6 @@ if has("gui_running")
   else
     if has("gui_win32") || has("gui_win32s")
       set guifont=Consolas:h11
-      let g:tagbar_ctags_bin='$HOME\vimfiles\bin\ctags.exe'
     endif
   endif
 
@@ -256,3 +255,8 @@ if has("gui_running")
   set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
   "set cursorline
 endif
+
+set history=1000 " store lots of :cmdline history
+set fillchars=""
+
+language messages en
