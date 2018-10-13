@@ -18,7 +18,7 @@ call plug#begin()
  Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
  Plug 'ctrlpvim/ctrlp.vim'
  Plug 'Shougo/neosnippet.vim'
- Plug 'Shougo/neosnippet-snippets' 
+ Plug 'Shougo/neosnippet-snippets'
  Plug 'honza/vim-snippets'
  Plug 'editorconfig/editorconfig-vim'
  Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
@@ -31,7 +31,7 @@ call plug#begin()
  Plug 'vim-airline/vim-airline'
  " requires specific font
  " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
-Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
+ Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
 
 if has('nvim')
  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -141,7 +141,7 @@ let g:deoplete#enable_at_startup = 1
  Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 
 " Markdown
- Plug 'godlygeek/tabular', { 'for': 'markdown' } 
+ Plug 'godlygeek/tabular', { 'for': 'markdown' }
  Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Mheg
