@@ -1,10 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-"cmap w!! %!sudo tee > /dev/null % " save file with root permissions"
-command! Sudo exec 'w !sudo tee % > /dev/null' | e!
-cabbrev sudo Sudo
-
 nnoremap <Esc>A <up>
 nnoremap <Esc>B <down>
 nnoremap <Esc>C <right>
@@ -21,7 +14,7 @@ imap <Leader>-- —
 imap <Leader>- –
 imap <Leader>' ’
 
-" remap cyrrilic symbols 
+" remap cyrrilic symbols
 "set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 map ё `
 map й q
@@ -108,44 +101,6 @@ vnoremap > >gv
 xnoremap p pgvy
 xnoremap P Pgvy
 
-" ,p
-" pastetoggle 
-" set pastetoggle=<Leader>p
-
-" ,nm
-" Toggle type of line numbers
-" http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
-" vim 7.3 required
-let g:relativenumber = 0
-function! ToogleRelativeNumber()
-  if g:relativenumber == 0
-    let g:relativenumber = 1
-    set norelativenumber
-    set number
-    echo "Show line numbers"
-  elseif g:relativenumber == 1
-    let g:relativenumber = 2
-    set nonumber
-    set relativenumber
-    echo "Show relative line numbers"
-  else
-    let g:relativenumber = 0
-    set nonumber
-    set norelativenumber
-    echo "Show no line numbers"
-  endif
-endfunction
-map <Leader>nm :call ToogleRelativeNumber()<cr>
-
-" ,r
-" replace in all opened buffers http://vim.wikia.com/wiki/VimTip382
-function! Replace()
-  let s:word = input("Replace " . expand('<cword>') . " with:")
-  :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
-  :unlet! s:word
-endfunction
-map <Leader>r :call Replace()<CR>
-
 " ,y
 nnoremap <Leader>y "+y
 vnoremap <Leader>y "+y
@@ -158,34 +113,10 @@ vnoremap <Leader>p "+gp
 noremap <Leader>P "+gP
 vnoremap <Leader>P "+gP
 
-"moving lines
-noremap <S-down> :m+<CR>==
-noremap <S-up> :m-2<CR>==
-inoremap <S-Down> <Esc>:m+<CR>==gi
-inoremap <S-Up> <Esc>:m-2<CR>==gi
-vnoremap <S-Down> :m'>+<CR>gv=gv
-vnoremap <S-Up> :m-2<CR>gv=gv
-vnoremap <S-Left> d<ESC>hP`[v`]
-vnoremap <S-Right> d<ESC>p`[v`]
-nnoremap <S-Left> x<ESC>hP
-nnoremap <S-Right> x<ESC>p
-
-if has("gui_running")
-  noremap <C-S-down> :m+<CR>==
-  noremap <C-S-up> :m-2<CR>==
-  inoremap <C-S-Down> <Esc>:m+<CR>==gi
-  inoremap <C-S-Up> <Esc>:m-2<CR>==gi
-  vnoremap <C-S-Down> :m'>+<CR>gv=gv
-  vnoremap <C-S-Up> :m-2<CR>gv=gv
-  vnoremap <C-S-Left> d<ESC>hP`[v`]
-  vnoremap <C-S-Right> d<ESC>p`[v`]
-  nnoremap <C-S-Left> x<ESC>hP
-  nnoremap <C-S-Right> x<ESC>p
-endif
-
 "wrap with brackets and quotes
 vnoremap ' <ESC>`>a'<ESC>`<i'<ESC>`>ll<ESC>
-vnoremap " <ESC>`>a"<ESC>`<i"<ESC>`>ll<ESC>
+" this shortcut breaks copy to the system clipboard
+" vnoremap " <ESC>`>a"<ESC>`<i"<ESC>`>ll<ESC>
 vnoremap ( <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
 vnoremap ) <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
 vnoremap [ <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
@@ -211,7 +142,7 @@ vnoremap <Up> gk
 "inoremap <Up> <Esc>gka
 
 " n и N
-" results of search always in center 
+" results of search always in center
 noremap n :set hlsearch<cr>nzz
 noremap N :set hlsearch<cr>Nzz
 nmap * *zz
@@ -230,13 +161,13 @@ vnoremap <leader>s :s//<left>
 " ,w
 noremap <Leader>w <C-w>w
 
-" an empty split relative to current 
+" an empty split relative to current
 nmap <Leader><left>  :leftabove  vnew<CR>
 nmap <Leader><right> :rightbelow vnew<CR>
 nmap <Leader><up>    :leftabove  new<CR>
 nmap <Leader><down>  :rightbelow new<CR>
 
-" moving between splits 
+" moving between splits
 noremap <C-Left> <C-W>h
 noremap <C-Down> <C-W>j
 noremap <C-Up> <C-W>k
@@ -255,25 +186,12 @@ nmap <Leader>bn :bn!<cr>
 vmap <Leader>bn <Esc>:bn!<cr>
 imap <Leader>bn <Esc>:bn!<cr>
 
-if has("gui_running")
-  " prev buffer
-  nmap <C-Tab> :bp!<cr>
-  vmap <C-Tab> <Esc>:bp!<cr>
-  imap <C-Tab> <Esc>:bp!<cr>
-
-  " next buffer
-  nmap <C-S-Tab> :bn!<cr>
-  vmap <C-S-Tab> <Esc>:bn!<cr>
-  imap <C-S-Tab> <Esc>:bn!<cr>
-endif
-
-" prev tab 
+" prev tab
 nmap <Leader>tp :tabprevious<cr>
 vmap <Leader>tp <Esc>:tabprevious<cr>
 imap <Leader>tp <Esc>:tabprevious<cr>
 
-
-" next tab 
+" next tab
 nmap <Leader>tn :tabnext<cr>
 vmap <Leader>tn <Esc>:tabnext<cr>
 imap <Leader>tn <Esc>:tabnext<cr>
@@ -282,59 +200,9 @@ imap <Leader>tn <Esc>:tabnext<cr>
 nnoremap <Leader>u gUiw
 inoremap <Leader>u <esc>gUiwea
 
-"zen-coding expand abbr
-let g:user_emmet_expandabbr_key = '<c-e>' 
-let g:use_emmet_complete_tag = 1
-
-"snipmate custom key. Safe way
-nmap <Leader>rr :call ReloadAllSnippets()<CR>
-"let g:snippets_dir="$VIMHOME/bundle/snipmate-snippets/,$VIMHOME/my_snippets/"
-
-"
-"
-"neosnippet plugin
-"
-"
-" Plugin key-mappings.
-imap <C-k>  <Plug>(neosnippet_expand_or_jump)
-smap <C-k>  <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>  o<Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory=$VIMHOME.'/bundle/vim-snippets/snippets'
-
-let g:neocomplcache_enable_at_startup = 1
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowBookmarks=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
-let NERDTreeKeepTreeInNewTab=0
-let NERDTreeMinimalUI=1 " Disables display of the 'Bookmarks' label and 'Press ? for help' text.
-let NERDTreeDirArrows=1 " Tells the NERD tree to use arrows instead of + ~ chars when displaying directories.
-let NERDTreeBookmarksFile= $HOME . '/.vim/.NERDTreeBookmarks'
-
 " everything
-":cabbrev e NERDTreeClose<CR>:e!
 :cabbrev t tabedit!
-:cabbrev bd :ene!<CR>:bw #<CR> 
+:cabbrev bd :ene!<CR>:bw #<CR>
 :cabbrev qa qa!
 :cabbrev q q!
 :cabbrev Cd CD
@@ -368,24 +236,6 @@ nnoremap <silent> <Leader>qa :qa<CR>
 vnoremap <silent> <Leader>qa :qa<CR>
 nnoremap <silent> <Leader>q :q<CR>
 vnoremap <silent> <Leader>q :q<CR>
-
-if has("gui_running")
-  nmap <silent> <C-q> :q!<CR>
-  vmap <silent> <C-q> :q!<CR>
-  imap <silent> <C-q> <ESC>:q!<CR>
-
-  nmap <silent> <C-q>a :qa!<CR>
-  vmap <silent> <C-q>a :qa!<CR>
-  imap <silent> <C-q>a <ESC>:qa!<CR>
-
-  nmap <silent> <C-w> :ene!<CR>:bw #<CR>
-  vmap <silent> <C-w> :ene!<CR>:bw #<CR>
-  imap <silent> <C-w> <ESC>:ene!<CR>:bw #<CR>
-endif
-
-nmap <Leader>1 :call Layout(1)<CR>
-nmap <Leader>2 :call Layout(2)<CR>
-nmap <Leader>3 :call Layout(3)<CR>
 
 nnoremap <F4> :GundoToggle<CR>
 nmap <F5> :TagbarToggle<CR>
