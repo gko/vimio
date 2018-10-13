@@ -8,6 +8,7 @@ let mapleader = ","
 call plug#begin()
 
 "General stuff
+ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
  Plug 'xolox/vim-misc'
  Plug 'xolox/vim-easytags', { 'on': ['UpdateTags', 'HighlightTags'] }
  Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
@@ -16,9 +17,9 @@ call plug#begin()
  Plug 'scrooloose/nerdcommenter'
  Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
  Plug 'ctrlpvim/ctrlp.vim'
- Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
- Plug 'vim-scripts/mheg', { 'for': 'mheg' }
- " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+ Plug 'Shougo/neosnippet.vim'
+ Plug 'Shougo/neosnippet-snippets' 
+ Plug 'honza/vim-snippets'
  Plug 'editorconfig/editorconfig-vim'
  Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
  Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' },
@@ -27,8 +28,10 @@ call plug#begin()
  Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
  Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
  Plug 'burntsushi/ripgrep', { 'on': 'Rg' }
+ Plug 'vim-airline/vim-airline'
  " requires specific font
  " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
+Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
 
 if has('nvim')
  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -37,6 +40,8 @@ else
  Plug 'roxma/nvim-yarp'
  Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+let g:deoplete#enable_at_startup = 1
 
 "Colorschemes
  Plug 'AlxHnr/clear_colors'
@@ -62,6 +67,7 @@ endif
  Plug 'morhetz/gruvbox'
  Plug 'kristijanhusak/vim-hybrid-material'
  Plug 'nightsense/snow'
+ Plug 'nightsense/stellarized'
 
 " HTML/HAML
  Plug 'othree/html5.vim', { 'for': 'html' }
@@ -102,6 +108,7 @@ endif
 
 " Go
  Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+ Plug 'mdempsky/gocode', { 'for': 'go' }
 
 " Ruby/Rails
  Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -125,5 +132,19 @@ endif
 " Rust
  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
  Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+
+" Elm
+ Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+ Plug 'elixir-editors/vim-elixir', { 'for': 'elm' }
+
+" Kotlin
+ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
+
+" Markdown
+ Plug 'godlygeek/tabular', { 'for': 'markdown' } 
+ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+" Mheg
+ Plug 'vim-scripts/mheg', { 'for': 'mheg' }
 
 call plug#end()
