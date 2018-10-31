@@ -1,0 +1,101 @@
+#################################################################
+# © Copyright 2011 Konstantin Gorodinskiy. All Rights Reserved. #
+# Do What The Fuck You Want To Public License, Version 2.       #
+# See http://sam.zoy.org/wtfpl/COPYING for more details.        #
+#################################################################
+snippet col
+	${1:name}${2:,col}
+snippet colval
+	${1:name}=${2:value}${3:,colval}
+snippet table
+	${1:name}${2:,table}	
+snippet event
+	${1:name}${2:,event}
+snippet select
+	select ${1:col} from ${2:table} where ${3:condition}
+#joins
+snippet join
+	select ${1:col} from ${2:table} join ${3:table} on ${4:condition};
+snippet ijoin
+	select ${1:col} from ${2:table} inner join ${3:table} on ${4:condition};
+snippet lojoin
+	select ${1:col} from ${2:table} left outer join ${3:table} on ${4:condition};
+snippet rojoin
+	select ${1:col} from ${2:table} right outer join ${3:table} on ${4:condition};
+snippet fojoin
+	select ${1:col} from ${2:table} full outer join ${3:table} on ${4:condition};
+snippet cjoin
+	select ${1:col} from ${2:table} cross join ${3:table};
+#end joins
+snippet insert
+	insert into ${1:table} (${2:col}) values (${3:val});
+snippet inserts
+	insert into ${1:table} (${2:col}) select
+snippet update
+	update ${1:table} set ${2:colval} where ${3:condition}
+snippet decl
+	declare ${1:name} ${2:type};
+snippet exists
+	exists(select)
+snippet delete
+	delete from ${1:table} where ${2:condition}
+#procedures(mode can be IN OUT or INOUT)
+snippet param
+	${1:mode} ${2:name}	${3:type}${4:,param}
+snippet mode in
+	in
+snippet mode out
+	out
+snippet mode inout
+	inout
+snippet proc
+	drop procedure if exists $1;
+	delimiter //
+	create procedure ${1:name} (${2:param})
+	begin
+		${3:#code}
+	end //
+	delimiter ;
+snippet fun
+	drop function if exists $1;
+	delimiter //
+	create function ${1:name} (${2:param})
+	begin
+		${3:#code}
+	end //
+	delimiter ;
+#transactions
+snippet tran
+	start transaction;
+		${1:#code}
+	commit;
+snippet if
+	if ${1:condition} then
+		${2:#code}
+	end if;
+snippet ifel
+	if ${1:condition} then
+		${2:#code}
+	else
+		${3:#code}
+	end if;
+snippet ifelif
+	if ${1:condition} then
+		${2:#code}
+	else if ${3:condition}
+		${4:#code}
+	end if;
+snippet view
+	drop view if exists $1;
+	create view ${1:name}
+	with ${2:flag}
+	as
+	${3:#code}
+snippet trig
+	drop trigger if exists $1;
+	create trigger ${1:name}
+	on ${2:table}
+	${3:after} ${4:event}
+	begin
+		${5:#code}
+	end

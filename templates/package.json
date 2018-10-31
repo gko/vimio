@@ -1,0 +1,40 @@
+{
+  "name": "name",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Your Name <you.name@example.org>",
+
+  "contributors": [{
+    "name": "",
+    "email": ""
+  }],
+
+  "bin": "./bin/",
+
+  "scripts": {
+  },
+
+  "main": "index.js",
+
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+
+  "bugs": {
+    "url": ""
+  },
+
+  "keywords": [],
+
+  "dependencies": {
+  },
+
+  "devDependencies": {
+  },
+
+  "preferGlobal": true,
+  "private": true,
+
+  "license": "MIT"
+}

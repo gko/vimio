@@ -1,0 +1,19 @@
+
+var util = require('util'),
+  stream = require('stream');
+
+function ${1:Stream}(${2:opts}) {
+	this.readable = true;
+	this.writable = true;
+  stream.Stream.call(this);
+}
+
+util.inherits($1, stream.Stream);
+
+$1.prototype.write = function(chunk) {
+  ${3:this.emit('data', chunk);}
+};
+
+$1.prototype.end = function() {
+	${4:}
+};
