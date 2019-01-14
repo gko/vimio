@@ -21,8 +21,8 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 ### Terminal mode
 
- * <kbd>Shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
- * <kbd>Shift</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
+ * <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
+ * <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
  * <kbd>Leader</kbd> + <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like one, two(toggle vertical/horizontal), three split layout
  * <kbd>Ctrl</kbd> + <kbd>n</kbd> toggles Nerd Tree
  * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
