@@ -33,6 +33,7 @@ call plug#begin()
  " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
  Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
  Plug 'wsdjeg/vim-fetch'
+ Plug 'gko/upside-down'
 
 if has('nvim')
  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
