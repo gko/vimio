@@ -36,10 +36,6 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 ### GUI mode specific
 
- * <kbd>Ctrl</kbd> + <kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
- * <kbd>Ctrl</kbd> + <kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
- * <kbd>Leader</kbd> + <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
- * <kbd>Backspace</kbd> toggles Nerd Tree
  * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
  * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly + snippets(i.e. <kbd>'</kbd>+<kbd>TAB</kbd>)
  * <kbd>Ctrl</kbd> + <kbd>s</kbd> saves file, <kbd>Leader</kbd> + <kbd>a</kbd> selects all
@@ -70,6 +66,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
    * [janko-m/vim-test](https://github.com/janko-m/vim-test)
    * [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
    * [w0rp/ale](https://github.com/w0rp/ale)
+   * [gko/upside-down](https://github.com/gko/upside-down)
 
  * Colorschemes
    * [AlxHnr/clear_colors](https://github.com/AlxHnr/clear_colors)
