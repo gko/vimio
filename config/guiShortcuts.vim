@@ -1,15 +1,4 @@
 if has("gui_running")
-  noremap <C-S-down> :m+<CR>==
-  noremap <C-S-up> :m-2<CR>==
-  inoremap <C-S-Down> <Esc>:m+<CR>==gi
-  inoremap <C-S-Up> <Esc>:m-2<CR>==gi
-  vnoremap <C-S-Down> :m'>+<CR>gv=gv
-  vnoremap <C-S-Up> :m-2<CR>gv=gv
-  vnoremap <C-S-Left> d<ESC>hP`[v`]
-  vnoremap <C-S-Right> d<ESC>p`[v`]
-  nnoremap <C-S-Left> x<ESC>hP
-  nnoremap <C-S-Right> x<ESC>p
-
   " prev buffer
   nmap <C-Tab> :bp!<cr>
   vmap <C-Tab> <Esc>:bp!<cr>
