@@ -34,6 +34,7 @@ call plug#begin()
  Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
  Plug 'wsdjeg/vim-fetch'
  Plug 'gko/upside-down'
+ Plug 'gko/vim-layout'
 
 if has('nvim')
  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
