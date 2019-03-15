@@ -96,6 +96,9 @@ let g:deoplete#enable_at_startup = 1
  Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
  Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
+" Webassembly
+ Plug 'rhysd/vim-wasm', { 'for': ['wast', 'wat'] }
+
 " JSON
  Plug 'elzr/vim-json', { 'for': 'json' }
 
