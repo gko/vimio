@@ -4,7 +4,7 @@ echo "You're about to install «vimio». It will delete all your vim files‼️
 read -p "Proceed(y/n)❓" answer </dev/tty
 
 if ! [[ "$answer" =~ [yY] ]]; then
-	exit 0;
+    exit 0;
 fi
 
 # Check OS
@@ -27,8 +27,6 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     echo "⚡️ installing..."
     mv ~/vimio ~/.vim
     ln -s ~/.vim/init.vim ~/.vimrc
-    mkdir ~/.vim/after
-    ln -s ~/.vim/config ~/.vim/after/plugin
     ln -s ~/.vim ~/.config/nvim
 
     </dev/tty vim +PlugInstall +qall
