@@ -87,7 +87,7 @@ Plug 'groenewege/vim-less', { 'for':  'less' }
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 Plug 'prettier/vim-prettier', {
-            \ 'do': 'yarn install',
+            \ 'do': 'npm install',
             \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " JSX
