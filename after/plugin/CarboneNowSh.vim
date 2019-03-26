@@ -1,6 +1,5 @@
 let g:carbon_now_sh_options = {
 \  'ln': 'true',
-\  'fm': 'IBM Plex Mono',
 \  'bg': 'rgba(74,144,226,1)',
 \  't': 'night-owl',
 \  'wt': 'none',
@@ -12,7 +11,6 @@ let g:carbon_now_sh_options = {
 \  'wa': 'true',
 \  'pv': '56px',
 \  'ph': '56px',
-\  'ln': 'false',
 \  'fm': 'IBM Plex Mono',
 \  'fs': '14.5px',
 \  'lh': '141%',
