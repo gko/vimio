@@ -7,7 +7,6 @@
 In order to get all features you might want to install following packages:
  - [fzf](https://github.com/junegunn/fzf),
  - [ripgrep](https://github.com/BurntSushi/ripgrep)
- - [yarn](https://yarnpkg.com/en/)
 
 ## Installation
 
