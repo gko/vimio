@@ -3,7 +3,6 @@ let g:carbon_now_sh_options = {
 \  'bg': 'rgba(74,144,226,1)',
 \  't': 'night-owl',
 \  'wt': 'none',
-\  'l': 'auto',
 \  'ds': 'true',
 \  'dsyoff': '20px',
 \  'dsblur': '68px',

@@ -91,7 +91,7 @@ Plug 'prettier/vim-prettier', {
             \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " JSX
-Plug 'mxw/vim-jsx', { 'for': 'jsx' }
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'jsx' }
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
