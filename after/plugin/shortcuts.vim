@@ -205,7 +205,8 @@ inoremap <Leader>u <esc>gUiwea
 
 " everything
 :cabbrev t tabedit!
-:cabbrev bd :ene!<CR>:bw #<CR>
+" this is a weird one
+" :cabbrev bd :ene!<CR>:bw #<CR>
 :cabbrev qa qa!
 :cabbrev q q!
 :cabbrev Cd CD
