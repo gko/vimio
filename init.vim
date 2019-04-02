@@ -22,7 +22,12 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
+
+if has("mac")
+	Plug '/usr/local/opt/fzf'
+endif
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' },
+
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
