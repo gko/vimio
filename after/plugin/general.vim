@@ -2,6 +2,13 @@ filetype plugin indent on     " required!
 
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+" timeout after leader key
+" see https://stackoverflow.com/a/26657284/676756
+set timeout
+set ttimeout
+set timeoutlen=300
+set ttimeoutlen=50
+
 "Don’t add empty newlines at the end of files
 "this has to go before expandtab
 set binary
