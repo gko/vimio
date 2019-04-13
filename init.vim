@@ -62,7 +62,8 @@ Plug 'dterei/VimCobaltColourScheme'
 Plug 'tpope/vim-vividchalk'
 Plug 'reedes/vim-colors-pencil'
 " TODO update when fix will be merged
-Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+" Plug 'chriskempson/base16-vim'
+Plug 'danielwe/base16-vim'
 Plug 'trapd00r/neverland-vim-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'jpo/vim-railscasts-theme'
