@@ -1,6 +1,8 @@
 " NERDTree
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeFind<CR>
+nmap <C-m> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
