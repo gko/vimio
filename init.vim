@@ -23,6 +23,12 @@ Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc-tsserver', {'do': 'npm install'}
+Plug 'neoclide/coc-css', {'do': 'npm install'}
+Plug 'neoclide/coc-json', {'do': 'npm install'}
+Plug 'neoclide/coc-html', {'do': 'npm install'}
+Plug 'neoclide/coc-eslint', {'do': 'npm install'}
+Plug 'neoclide/coc-prettier', {'do': 'npm install'}
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
