@@ -30,6 +30,7 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     ln -s ~/.vim ~/.config/nvim
 
     </dev/tty vim +PlugInstall +qall
+    </dev/tty vim +"CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css" +qall
 else
     echo "🚧 removing current vim settings"
     rm -rf ~/vimfiles

@@ -22,6 +22,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
