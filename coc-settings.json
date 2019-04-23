@@ -1,5 +1,13 @@
 {
+    "diagnostic.errorSign": "●",
+    "diagnostic.warningSign": "●",
     "languageserver": {
+        "tsserver": {
+            "command": "typescript-language-server",
+            "args": ["--stdio"],
+            "filetypes": ["typescript", "javascript"],
+            "rootPatterns": [".git/", ".hg"]
+        },
         "dart": {
             "command": "dart_language_server",
             "args": [],
