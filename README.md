@@ -11,8 +11,9 @@ In order to get all features you might want to install following packages:
 ## Installation
 
 On unix and windows(with bash which can be installed with [git](http://msysgit.github.io/)):
-
-    curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
+```shell
+curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
+```
 
 ## Shortcuts
 
