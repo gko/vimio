@@ -81,6 +81,7 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'nightsense/snow'
 Plug 'nightsense/stellarized'
 Plug 'nightsense/cosmic_latte'
+Plug 'cormacrelf/vim-colors-github'
 
 " HTML/HAML
 Plug 'othree/html5.vim', { 'for': 'html' }
