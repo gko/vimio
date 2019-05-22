@@ -30,7 +30,7 @@ set nowritebackup
 
 set ruler
 " this lowers the perf a lot
-" set cursorline
+set cursorline
 set lazyredraw
 
 "backups
@@ -48,6 +48,8 @@ set wrap                " line breaking (http://vimcasts.org/episodes/soft-wrapp
 "if version >= 703
 "  set colorcolumn=80 " 80 column
 "end
+" disable colorcolumn
+set cc=
 
 set textwidth=80
 set formatoptions-=o    " dont continue comments when pushing o/O
