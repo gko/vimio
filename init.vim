@@ -8,6 +8,7 @@ let mapleader = ","
 call plug#begin()
 
 "General stuff
+Plug 'mhinz/vim-startify'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags', { 'on': ['UpdateTags', 'HighlightTags'] }
@@ -24,6 +25,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
+Plug 'MattesGroeger/vim-bookmarks'
 " Plug 'airblade/vim-gitgutter'
 
 if has("mac")
