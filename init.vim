@@ -28,7 +28,7 @@ Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'r
 if has("mac")
 	Plug '/usr/local/opt/fzf'
 endif
-Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'Rg' },
+Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all', 'on': ['Ag', 'Rg', 'FZF', 'Files', 'Buffers', 'Commits', 'BCommits', 'Tags', 'BTags', 'History', 'Lines', 'BLines', 'Marks'] },
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
