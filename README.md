@@ -7,6 +7,7 @@
 In order to get all features you might want to install following packages:
  - [fzf](https://github.com/junegunn/fzf),
  - [ripgrep](https://github.com/BurntSushi/ripgrep)
+ - [npm](https://www.npmjs.com/get-npm)
 
 ## Installation
 
