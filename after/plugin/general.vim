@@ -91,7 +91,7 @@ set backspace=indent,eol,start
 "set shortmess=I
 
 "in case if you don't open a file
-cd $HOME
+" cd $HOME
 lcd %:p:h
 
 set history=1000 " store lots of :cmdline history
