@@ -1,3 +1,5 @@
+syntax on
+
 set background=light
 
 let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
@@ -18,6 +20,10 @@ try
         let g:airline_theme='base16'
     else
         colorscheme github
+
+        " https://github.com/cormacrelf/vim-colors-github/pull/5
+        hi! link SignColumn LineNr
+
         let g:airline_theme = "github"
     endif
 catch /^Vim\%((\a\+)\)\=:E185/
