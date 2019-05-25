@@ -1,6 +1,7 @@
 filetype plugin indent on     " required!
 
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+" this deletes  symbols(mostly at the end of the lines)
+" noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " timeout after leader key
 " see https://stackoverflow.com/a/26657284/676756
