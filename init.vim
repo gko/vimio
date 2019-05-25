@@ -28,13 +28,12 @@ Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'r
 if has("mac")
 	Plug '/usr/local/opt/fzf'
 endif
-Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all' },
+Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'Rg' },
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
 Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
-Plug 'burntsushi/ripgrep', { 'on': 'Rg' }
 Plug 'vim-airline/vim-airline'
 " requires specific font
 " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
