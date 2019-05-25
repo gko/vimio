@@ -83,8 +83,6 @@ set ttyfast
 "Add the g flag to search/replace by default
 set gdefault
 
-syntax on
-
 "backspace
 set backspace=indent,eol,start
 
