@@ -1,5 +1,6 @@
 " initial templates for files
 autocmd BufNewFile *.py 0r $VIMHOME/templates/template.py
+autocmd BufNewFile *.todo 0r $VIMHOME/templates/template.todo
 autocmd BufNewFile *.xml 0r $VIMHOME/templates/template.xml
 autocmd BufNewFile *.xsl 0r $VIMHOME/templates/template.xsl
 autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
