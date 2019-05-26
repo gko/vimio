@@ -9,6 +9,7 @@ call plug#begin()
 
 "General stuff
 Plug 'mhinz/vim-startify'
+Plug 'aserebryakov/vim-todo-lists'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc'
