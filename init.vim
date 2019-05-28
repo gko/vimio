@@ -44,7 +44,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
 Plug 'wsdjeg/vim-fetch'
 Plug 'gko/upside-down'
-Plug 'gko/vim-layout'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 
 if has('nvim')
