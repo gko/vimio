@@ -27,7 +27,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
  * <kbd>Ctrl</kbd> + <kbd>n</kbd> toggles NERD Tree
  * <kbd>Ctrl</kbd> + <kbd>m</kbd> shows current file in NERD Tree
  * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
- * <kbd>Ctrl</kbd> + <kbd>y</kbd> + <kbd>,</kbd> expands abbreviation(see [emmet plugin](https://github.com/mattn/emmet-vim/blob/master/README.md#quick-tutorial))
+ * <kbd>Ctrl</kbd> + <kbd>y</kbd> + <kbd>,</kbd> expands abbreviation(see [emmet plugin](https://github.com/mattn/emmet-vim/blob/master/README.mkd#quick-tutorial))
 
 ## List of plugins
 
