@@ -1,6 +1,7 @@
 "file types that weren't recognized for some reason
 autocmd BufReadPre *.xsl set filetype=xslt
 autocmd BufReadPre *.dtd set filetype=xslt
+autocmd FileType vimwiki set syntax=markdown
 autocmd BufRead,BufNewFile *.vm set ft=html syntax=velocity
 autocmd BufRead,BufNewFile *.vt set ft=html syntax=velocity
 autocmd BufRead,BufNewFile *.less set filetype=less.css
