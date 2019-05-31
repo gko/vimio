@@ -101,7 +101,7 @@ Plug 'groenewege/vim-less', { 'for':  'less' }
 Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 Plug 'prettier/vim-prettier', {
             \ 'do': 'npm install',
-            \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+            \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " JSX
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['jsx', 'tsx'] }
