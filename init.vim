@@ -30,8 +30,6 @@ Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'r
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-let g:vimwiki_list = [{ 'path': '~/notes/', 'syntax':'markdown', 'ext': '.md' }]
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
@@ -165,6 +163,9 @@ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 " Markdown
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+let g:vimwiki_list = [{ 'path': '~/notes/', 'syntax':'markdown', 'ext': '.md' }]
+let g:vimwiki_url_maxsave = 0
 
 " Mheg
 Plug 'vim-scripts/mheg', { 'for': 'mheg' }
