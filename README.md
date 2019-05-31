@@ -50,4 +50,4 @@ You can find list of plugins in the [init.vim](https://github.com/gko/vimio/blob
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2018 Konstantin Gorodinskiy
+Copyright (c) 2012-2019 Konstantin Gorodinskiy
