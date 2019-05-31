@@ -164,7 +164,7 @@ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-let g:vimwiki_list = [{ 'path': '~/notes/', 'syntax':'markdown', 'ext': '.md' }]
+let g:vimwiki_list = [{ 'path': '~/Documents/notes/', 'syntax':'markdown', 'ext': '.md' }]
 let g:vimwiki_url_maxsave = 0
 
 " Mheg
