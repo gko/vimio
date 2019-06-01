@@ -127,10 +127,6 @@ nmap <C-s> :w<CR>
 vmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
 
-nmap <Leader>s :w<CR>
-vmap <Leader>s :w<CR>
-imap <Leader>s <Esc>:w<CR>
-
 " Don't skip wrap lines
 noremap j gj
 noremap k gk
