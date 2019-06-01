@@ -20,7 +20,7 @@ curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 
 Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
- * <kbd>Ctrl</kbd> + <kbd>s</kbd> saves current file(works only in Neovim)
+ * <kbd>Ctrl</kbd> + <kbd>s</kbd> saves current file
  * <kbd>Leader</kbd> + <kbd>s</kbd> in both `select` and `normal` mode initiates search and replace
  * <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line or selection above
    or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
