@@ -9,7 +9,6 @@ call plug#begin()
 
 "General stuff
 Plug 'mhinz/vim-startify'
-Plug 'aserebryakov/vim-todo-lists'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc'
@@ -30,6 +29,9 @@ Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'r
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
+Plug 'pbrisbin/vim-mkdir'
+" Plug 'junegunn/vim-easy-align'
+Plug 'godlygeek/tabular'
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
@@ -137,7 +139,7 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 " Dart
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 
-" Jade
+" Pug
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 
 " Stylus
@@ -161,11 +163,10 @@ Plug 'elixir-editors/vim-elixir', { 'for': 'elm' }
 Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 
 " Markdown
-Plug 'godlygeek/tabular', { 'for': 'markdown' }
+" Plug 'aserebryakov/vim-todo-lists', { 'for': 'todo' }
+Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-let g:vimwiki_list = [{ 'path': '~/Documents/notes/', 'syntax':'markdown', 'ext': '.md' }]
-let g:vimwiki_url_maxsave = 0
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
 
 " Mheg
 Plug 'vim-scripts/mheg', { 'for': 'mheg' }
