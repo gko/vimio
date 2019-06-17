@@ -34,17 +34,12 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
    [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
    for more info)
  * <kbd>m</kbd> + <kbd>m</kbd> toggles bookmark(see [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks) plugin)
- * <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`(see
-   [vimwiki](https://github.com/vimwiki/vimwiki/blob/master/README.md) plugin, default
-   `vimwiki` folder is `~/notes`)
+ * <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`
+ * <kbd>Leader</kbd> + <kbd>t</kbd> + <kbd>t</kbd> toggles checkbox in markdown
 
-Even though `vimwiki` works like magic I decided to keep `markdown` syntax
-highlight via [vim-markdown](https://github.com/plasticboy/vim-markdown). You
-can see this configuration in [filetypes.vim](https://github.com/gko/vimio/blob/master/after/plugin/filetypes.vim) file.
+## List of plugins and commands
 
-## List of plugins
-
-You can find list of plugins in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file, as well as commands that they provide.
+You can find list of plugins and exposed commands in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file, as well as commands that they provide.
 
 ## License
 
