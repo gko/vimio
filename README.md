@@ -26,8 +26,8 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
    or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
  * <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character or
    selection to left or to the right
- * <kbd>Ctrl</kbd> + <kbd>n</kbd> toggles NERDTree
- * <kbd>Ctrl</kbd> + <kbd>m</kbd> shows current file in NERDTree
+ * <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
+ * <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
  * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
  * <kbd>Ctrl</kbd> + <kbd>y</kbd> + <kbd>,</kbd> expands abbreviation(see [emmet plugin](https://github.com/mattn/emmet-vim/blob/master/README.mkd#quick-tutorial))
  * <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
