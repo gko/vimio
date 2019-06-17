@@ -1,4 +1,4 @@
-"file types that weren't recognized for some reason
+" file types that weren't recognized for some reason
 autocmd BufReadPre *.xsl set filetype=xslt
 autocmd BufReadPre *.dtd set filetype=xslt
 autocmd BufRead,BufNewFile *.vm set ft=html syntax=velocity
@@ -11,4 +11,5 @@ autocmd BufReadPost *.exs set syntax=elm
 autocmd BufReadPost *.eex set syntax=elm
 autocmd BufReadPost *.elm set syntax=elm
 autocmd BufRead,BufNewFile .babelrc set ft=json syntax=json
-autocmd FileType vimwiki set ft=markdown
+" RFCS questionable decision
+" autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
