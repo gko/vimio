@@ -43,7 +43,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 ## List of plugins and commands
 
-You can find list of plugins and exposed commands in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file, as well as commands that they provide.
+You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file.
 
 ## License
 
