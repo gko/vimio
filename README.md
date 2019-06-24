@@ -26,25 +26,20 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
    or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
  * <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character or
    selection to left or to the right
- * <kbd>Ctrl</kbd> + <kbd>n</kbd> toggles NERDTree
- * <kbd>Ctrl</kbd> + <kbd>m</kbd> shows current file in NERDTree
+ * <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
+ * <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
  * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
  * <kbd>Ctrl</kbd> + <kbd>y</kbd> + <kbd>,</kbd> expands abbreviation(see [emmet plugin](https://github.com/mattn/emmet-vim/blob/master/README.mkd#quick-tutorial))
  * <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
    [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
    for more info)
  * <kbd>m</kbd> + <kbd>m</kbd> toggles bookmark(see [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks) plugin)
- * <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`(see
-   [vimwiki](https://github.com/vimwiki/vimwiki/blob/master/README.md) plugin, default
-   `vimwiki` folder is `~/notes`)
+ * <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`
+ * <kbd>Leader</kbd> + <kbd>t</kbd> + <kbd>t</kbd> toggles checkbox in markdown
 
-Even though `vimwiki` works like magic I decided to keep `markdown` syntax
-highlight via [vim-markdown](https://github.com/plasticboy/vim-markdown). You
-can see this configuration in [filetypes.vim](https://github.com/gko/vimio/blob/master/after/plugin/filetypes.vim) file.
+## List of plugins and commands
 
-## List of plugins
-
-You can find list of plugins in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file, as well as commands that they provide.
+You can find list of plugins and exposed commands in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file, as well as commands that they provide.
 
 ## License
 
