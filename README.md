@@ -39,6 +39,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 * [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
 * [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
 * [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)
 
 ## List of plugins and commands
 
