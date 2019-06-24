@@ -29,7 +29,6 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 * <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
 * <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
 * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
-* <kbd>Ctrl</kbd> + <kbd>y</kbd> + <kbd>,</kbd> expands abbreviation(see [emmet plugin](https://github.com/mattn/emmet-vim/blob/master/README.mkd#quick-tutorial))
 * <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
    [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
    for more info)
