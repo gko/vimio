@@ -12,5 +12,6 @@ autocmd BufReadPost *.eex set syntax=elm
 autocmd BufReadPost *.elm set syntax=elm
 autocmd BufRead,BufNewFile .babelrc set ft=json syntax=json
 autocmd BufRead,BufNewFile .npmrc set ft=sh syntax=sh
+autocmd BufRead,BufNewFile hosts set ft=sh syntax=sh
 " RFCS questionable decision
 " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
