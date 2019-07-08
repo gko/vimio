@@ -5,9 +5,9 @@
 ## Prerequisites
 
 In order to get all features you might want to install following packages:
- - [fzf](https://github.com/junegunn/fzf)
- - [ripgrep](https://github.com/BurntSushi/ripgrep)
- - [npm](https://www.npmjs.com/get-npm)
+- [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [npm](https://www.npmjs.com/get-npm)
 
 ## Installation
 
@@ -33,13 +33,20 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
    [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
    for more info)
 * <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`
- 
+
 ## Plugin shortcuts
 
 * [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
 * [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
 * [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)
+
+### vim-surround
+
+For general instructions see
+[README](https://github.com/tpope/vim-surround#surroundvim)
+
+See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
 
 ## List of plugins and commands
 
