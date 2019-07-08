@@ -113,19 +113,11 @@ vnoremap <Leader>p "+gp
 noremap <Leader>P "+gP
 vnoremap <Leader>P "+gP
 
-"wrap with brackets and quotes
-vnoremap ' <ESC>`>a'<ESC>`<i'<ESC>`>ll<ESC>
-" this shortcut breaks copy to the system clipboard
-" vnoremap " <ESC>`>a"<ESC>`<i"<ESC>`>ll<ESC>
-vnoremap ( <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
-vnoremap ) <ESC>`>a)<ESC>`<i(<ESC>`>ll<ESC>
-vnoremap [ <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
-vnoremap ] <ESC>`>a]<ESC>`<i[<ESC>`>ll<ESC>
-
 "save
-nmap <C-s> :w<CR>
-vmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
+" https://stackoverflow.com/a/3448551/676756
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
 
 " Don't skip wrap lines
 noremap j gj

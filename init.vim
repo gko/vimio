@@ -29,6 +29,7 @@ Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'r
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
+Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
 " Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
@@ -103,7 +104,7 @@ Plug 'groenewege/vim-less', { 'for':  'less' }
 Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 Plug 'prettier/vim-prettier', {
             \ 'do': 'npm install',
-            \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+            \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
 
 " JSX
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['jsx', 'tsx'] }
@@ -170,5 +171,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
 
 " Mheg
 Plug 'vim-scripts/mheg', { 'for': 'mheg' }
+
+" Terraform
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 
 call plug#end()
