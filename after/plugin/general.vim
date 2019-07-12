@@ -27,7 +27,6 @@ set showcmd
 "hate modelines
 set modelines=0
 set nomodeline
-set nowritebackup
 
 set ruler
 " this lowers the perf a lot
@@ -95,3 +94,19 @@ lcd %:p:h
 
 set history=1000 " store lots of :cmdline history
 set fillchars=""
+
+" https://github.com/neoclide/coc.nvim#example-vim-configuration
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Better display for messages
+" set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
