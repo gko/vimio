@@ -16,3 +16,6 @@ autocmd BufRead,BufNewFile *.env,*.env.* set ft=sh syntax=sh
 autocmd BufRead,BufNewFile hosts set ft=sh syntax=sh
 " RFCS questionable decision
 " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
+
+" for coc.vim
+autocmd FileType json syntax match Comment +\/\/.\+$+
