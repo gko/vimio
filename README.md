@@ -40,6 +40,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 * [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
 * [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)
+* [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
 
 ### vim-surround
 
@@ -47,6 +48,10 @@ For general instructions see
 [README](https://github.com/tpope/vim-surround#surroundvim)
 
 See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
+
+### Coc.vim
+
+See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
 
 ## List of plugins and commands
 
