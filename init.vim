@@ -26,13 +26,15 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
-Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
-Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
 Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
 " Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
+Plug 'tyru/open-browser.vim'
+Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+Plug 'ruanyl/vim-gh-line'
+Plug 'szw/vim-g'
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
@@ -40,7 +42,7 @@ endif
 Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all', 'on': ['Ag', 'Rg', 'FZF', 'Files', 'Buffers', 'Commits', 'BCommits', 'Tags', 'BTags', 'History', 'Lines', 'BLines', 'Marks'] },
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'] }
+Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'css', 'scss', 'go', 'rust', 'scala'] }
 Plug 'vim-airline/vim-airline'
 " requires specific font
 " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
@@ -48,16 +50,6 @@ Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutoc
 Plug 'wsdjeg/vim-fetch'
 Plug 'gko/upside-down'
 Plug 'kristijanhusak/vim-carbon-now-sh'
-
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-let g:deoplete#enable_at_startup = 1
 
 "Colorschemes
 Plug 'AlxHnr/clear_colors'
