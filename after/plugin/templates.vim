@@ -7,5 +7,6 @@ autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
 autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
 autocmd BufNewFile *.test.jsx 0r $VIMHOME/templates/template.test.jsx
 autocmd BufNewFile *.test.js 0r $VIMHOME/templates/template.test.jsx
+autocmd BufNewFile *.js 0r $VIMHOME/templates/template.js
 autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
 autocmd BufNewFile .editorconfig 0r $VIMHOME/templates/editorconfig
