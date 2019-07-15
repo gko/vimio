@@ -97,9 +97,10 @@ Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 Plug 'prettier/vim-prettier', {
             \ 'do': 'npm install',
             \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
+Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 
 " JSX
-Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['jsx', 'tsx'] }
+" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['jsx', 'tsx'] }
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
