@@ -34,7 +34,8 @@ Plug 'godlygeek/tabular'
 Plug 'tyru/open-browser.vim'
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
-Plug 'szw/vim-g'
+Plug 'gko/vim-g'
+" Plug 'szw/vim-g'
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
@@ -161,6 +162,7 @@ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+Plug 'ferrine/md-img-paste.vim', { 'for': 'markdown' }
 
 " Mheg
 Plug 'vim-scripts/mheg', { 'for': 'mheg' }

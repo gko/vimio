@@ -101,18 +101,6 @@ vnoremap > >gv
 xnoremap p pgvy
 xnoremap P Pgvy
 
-" ,y
-nnoremap <Leader>y "+y
-vnoremap <Leader>y "+y
-
-" ,p
-nnoremap <Leader>p "+gp
-vnoremap <Leader>p "+gp
-
-" ,P
-noremap <Leader>P "+gP
-vnoremap <Leader>P "+gP
-
 "save
 " https://stackoverflow.com/a/3448551/676756
 noremap <silent> <C-S>          :update<CR>
