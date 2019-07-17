@@ -42,6 +42,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 * [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)
 * [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
 * [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
+* [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
 
 ### vim-surround
 
