@@ -23,3 +23,9 @@ endfunction
 
 autocmd BufEnter * :call BookmarkMapKeys()
 autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
+
+" to disable bookmark keys in CtrlP
+let g:ctrlp_buffer_func = {
+    \ 'enter': 'BookmarkUnmapKeys',
+    \ 'exit': 'BookmarkMapKeys'
+    \ }
