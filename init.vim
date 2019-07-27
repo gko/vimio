@@ -167,6 +167,9 @@ Plug 'ferrine/md-img-paste.vim', { 'for': 'markdown' }
 " Mheg
 Plug 'vim-scripts/mheg', { 'for': 'mheg' }
 
+" Nginx
+Plug 'chr4/nginx.vim'
+
 " Terraform
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'

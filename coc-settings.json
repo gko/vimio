@@ -1,6 +1,7 @@
 {
     "diagnostic.errorSign": "●",
     "diagnostic.warningSign": "●",
+    "eslint.options": { "enable": false },
     "languageserver": {
         "tsserver": {
             "command": "typescript-language-server",
