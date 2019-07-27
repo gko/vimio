@@ -13,5 +13,3 @@ function! E(...)
 
     :ccl
 endfunction
-
-:cabbrev E! E
