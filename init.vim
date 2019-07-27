@@ -36,6 +36,7 @@ Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
 Plug 'gko/vim-g'
 " Plug 'szw/vim-g'
+Plug 'airblade/vim-rooter'
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
