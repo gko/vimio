@@ -90,7 +90,7 @@ set backspace=indent,eol,start
 
 "in case if you don't open a file
 " cd $HOME
-lcd %:p:h
+" lcd %:p:h
 
 set history=1000 " store lots of :cmdline history
 set fillchars=""
