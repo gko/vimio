@@ -25,7 +25,7 @@ Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'c++', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
+Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'cpp', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
 Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
@@ -122,7 +122,7 @@ Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " C/C++
-Plug 'justmao945/vim-clang', { 'for': ['c', 'c++'] }
+Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 
 " Go
 Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
