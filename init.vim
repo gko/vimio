@@ -103,12 +103,12 @@ Plug 'prettier/vim-prettier', {
             \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 
-" JSX
-" Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['jsx', 'tsx'] }
-
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+
+" JSX
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'typescript'] }
 
 " Webassembly
 Plug 'rhysd/vim-wasm', { 'for': ['wast', 'wat'] }
