@@ -34,6 +34,8 @@ Plug 'godlygeek/tabular'
 Plug 'tyru/open-browser.vim'
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
 Plug 'ruanyl/vim-gh-line'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim', { 'on': ['Gist'] }
 Plug 'gko/vim-g'
 " Plug 'szw/vim-g'
 Plug 'airblade/vim-rooter'
