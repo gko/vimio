@@ -102,6 +102,7 @@ Plug 'prettier/vim-prettier', {
             \ 'do': 'npm install',
             \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
+Plug 'jparise/vim-graphql'
 
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
