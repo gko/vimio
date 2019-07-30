@@ -9,9 +9,16 @@ function! LoadMainNodeModule(fname)
     if filereadable(packageJsonPath)
         try
             let mainFile = json_decode(join(readfile(packageJsonPath))).main
+
             return nodeModules . a:fname . "/" . mainFile
         catch /.*/
-            return nodeModules . a:fname
+            let indexJs = nodeModules . a:fname . "/index.js"
+
+            if filereadable(indexJs)
+                return indexJs
+            else
+                return nodeModules . a:fname
+            endif
         endtry
     else
         return nodeModules . a:fname
