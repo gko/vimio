@@ -37,8 +37,14 @@ Plug 'ruanyl/vim-gh-line'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim', { 'on': ['Gist'] }
 Plug 'gko/vim-g'
-" Plug 'szw/vim-g'
 Plug 'airblade/vim-rooter'
+
+Plug 'airblade/vim-matchquote'
+" https://github.com/airblade/vim-matchquote/issues/5
+" /plugin/matchquote.vim
+if has('nvim')
+  let loaded_matchit = 1
+endif
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
