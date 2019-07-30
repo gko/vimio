@@ -40,7 +40,7 @@ Plug 'gko/vim-g'
 Plug 'airblade/vim-rooter'
 
 Plug 'airblade/vim-matchquote'
-" https://github.com/airblade/vim-matchquote/issues/5
+" https://github.com/airblade/vim-matchquote/issues/5#issuecomment-508697156
 " /plugin/matchquote.vim
 if has('nvim')
   let loaded_matchit = 1
