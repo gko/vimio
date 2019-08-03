@@ -180,6 +180,9 @@ Plug 'vim-scripts/mheg', { 'for': 'mheg' }
 " Nginx
 Plug 'chr4/nginx.vim'
 
+" ReasonML
+Plug 'reasonml-editor/vim-reason-plus'
+
 " Terraform
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
