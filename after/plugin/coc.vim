@@ -1,3 +1,7 @@
+if !executable('npm')
+    finish
+endif
+
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -102,3 +106,5 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" https://github.com/neoclide/coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
