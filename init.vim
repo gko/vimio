@@ -1,7 +1,7 @@
 " Konstantin Gorodinskiy(mail[at]konstantin.io)
 
 set nocompatible
-filetype off
+filetype plugin on
 
 let mapleader = ","
 
@@ -19,17 +19,20 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+Plug 'SirVer/ultisnips'
+if executable('npm')
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		let g:UltiSnipsExpandTrigger="<nop>"
+endif
+
 Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'cpp', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
 Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
 Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
-" Plug 'junegunn/vim-easy-align'
 Plug 'godlygeek/tabular'
 Plug 'tyru/open-browser.vim'
 Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
@@ -38,13 +41,6 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim', { 'on': ['Gist'] }
 Plug 'gko/vim-g'
 Plug 'airblade/vim-rooter'
-
-Plug 'airblade/vim-matchquote'
-" https://github.com/airblade/vim-matchquote/issues/5#issuecomment-508697156
-" /plugin/matchquote.vim
-if has('nvim')
-  let loaded_matchit = 1
-endif
 
 if has("mac")
 	Plug '/usr/local/opt/fzf'
@@ -104,9 +100,11 @@ Plug 'groenewege/vim-less', { 'for':  'less' }
 
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
-Plug 'prettier/vim-prettier', {
-            \ 'do': 'npm install',
-            \ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
+if executable('npm')
+	Plug 'prettier/vim-prettier', {
+				\ 'do': 'npm install',
+				\ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
+endif
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 Plug 'jparise/vim-graphql'
 
@@ -171,7 +169,11 @@ Plug 'udalov/kotlin-vim', { 'for': 'kotlin' }
 " Plug 'aserebryakov/vim-todo-lists', { 'for': 'todo' }
 Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+
+if executable('npm')
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+endif
+
 Plug 'ferrine/md-img-paste.vim', { 'for': 'markdown' }
 
 " Mheg
