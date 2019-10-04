@@ -1,6 +1,6 @@
 " https://damien.pobel.fr/post/configure-neovim-vim-gf-javascript-import/
 set path=.,src
-set suffixesadd=.js,.jsx,.ts,.tsx
+set suffixesadd=.ts,.tsx,.js,.jsx
 
 function! LoadMainNodeModule(fname)
     let nodeModules = "./node_modules/"

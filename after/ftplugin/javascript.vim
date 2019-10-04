@@ -1,6 +1,6 @@
 " https://damien.pobel.fr/post/configure-neovim-vim-gf-javascript-import/
 set path=.,src
-set suffixesadd=.js,.jsx,.ts,.tsx
+set suffixesadd=.js,.jsx
 
 function! LoadMainNodeModule(fname)
     let nodeModules = "./node_modules/"
@@ -12,6 +12,7 @@ function! LoadMainNodeModule(fname)
 
             return nodeModules . a:fname . "/" . mainFile
         catch /.*/
+            " in case they forgot to add main field to package.json
             let indexJs = nodeModules . a:fname . "/index.js"
 
             if filereadable(indexJs)
