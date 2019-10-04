@@ -10,7 +10,7 @@ let g:carbon_now_sh_options = {
 \  'wa': 'true',
 \  'pv': '56px',
 \  'ph': '56px',
-\  'fm': 'IBM Plex Mono',
+\  'fm': 'Fira Code',
 \  'fs': '14.5px',
 \  'lh': '141%',
 \  'si': 'false',
