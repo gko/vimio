@@ -132,8 +132,10 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 
 " Go
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-Plug 'mdempsky/gocode', { 'for': 'go' }
+if executable('go')
+	Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+	Plug 'mdempsky/gocode', { 'for': 'go' }
+endif
 
 " Ruby/Rails
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
