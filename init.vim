@@ -12,30 +12,94 @@ Plug 'mhinz/vim-startify'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags', { 'on': ['UpdateTags', 'HighlightTags'] }
+
+Plug 'xolox/vim-easytags', {
+        \ 'on': [
+            \ 'UpdateTags',
+            \ 'HighlightTags'
+        \ ] }
+
 Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTree', 'NERDTreeCWD', 'NERDTreeClose', 'NERDTreeFind', 'NERDTreeFocus', 'NERDTreeFromBookmark', 'NERDTreeMirror', 'NERDTreeToggle'] }
+Plug 'scrooloose/nerdtree', {
+        \ 'on': [
+            \ 'NERDTree',
+            \ 'NERDTreeCWD',
+            \ 'NERDTreeClose',
+            \ 'NERDTreeFind',
+            \ 'NERDTreeFocus',
+            \ 'NERDTreeFromBookmark',
+            \ 'NERDTreeMirror',
+            \ 'NERDTreeToggle'
+        \ ] }
+
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'janko-m/vim-test', { 'for': ['javascript', 'typescript', 'go', 'rust', 'scala'], 'on': ['TestNearest', 'TestFile', 'TestSuite', 'TestLast', 'TestVisit'] }
+
+Plug 'janko-m/vim-test', {
+        \ 'for': [
+            \ 'javascript',
+            \ 'typescript',
+            \ 'go',
+            \ 'rust',
+            \ 'scala'],
+        \ 'on': [
+            \ 'TestNearest',
+            \ 'TestFile',
+            \ 'TestSuite',
+            \ 'TestLast',
+            \ 'TestVisit'
+        \ ] }
 
 Plug 'SirVer/ultisnips'
 if executable('npm')
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		let g:UltiSnipsExpandTrigger="<nop>"
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    let g:UltiSnipsExpandTrigger="<nop>"
 endif
 
-Plug 'metakirby5/codi.vim', { 'for': ['javascript', 'typescript', 'c', 'cpp', 'ruby', 'python', 'r', 'clojure', 'php', 'haskell', 'elm', 'elixir'], 'on': ['Codi', 'Cody!', 'Codi!!'] }
-Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus', 'Gblame', 'Gedit', 'Gmove', 'Gdelete'] }
+Plug 'metakirby5/codi.vim', {
+        \ 'for': [
+            \ 'javascript',
+            \ 'typescript',
+            \ 'c',
+            \ 'cpp',
+            \ 'ruby',
+            \ 'python',
+            \ 'r',
+            \ 'clojure',
+            \ 'php',
+            \ 'haskell',
+            \ 'elm',
+            \ 'elixir'],
+        \ 'on': [
+            \ 'Codi',
+            \ 'Cody!',
+            \ 'Codi!!'
+        \ ] }
+
+Plug 'tpope/vim-fugitive', {
+        \ 'on': [
+            \ 'Gcommit',
+            \ 'Gstatus',
+            \ 'Gblame',
+            \ 'Gedit',
+            \ 'Gmove',
+            \ 'Gdelete'
+        \ ] }
+
 Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'godlygeek/tabular'
 Plug 'tyru/open-browser.vim'
-Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity'] }
+Plug 'junegunn/vim-github-dashboard', {
+        \ 'on': [
+            \ 'GHDashboard',
+            \ 'GHActivity'
+        \ ] }
+
 Plug 'ruanyl/vim-gh-line'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim', { 'on': ['Gist'] }
@@ -43,16 +107,48 @@ Plug 'gko/vim-g'
 Plug 'airblade/vim-rooter'
 
 if has("mac")
-	Plug '/usr/local/opt/fzf'
+    Plug '/usr/local/opt/fzf'
 endif
-Plug 'junegunn/fzf.vim', { 'dir': '~/.fzf', 'do': './install --all', 'on': ['Ag', 'Rg', 'FZF', 'Files', 'Buffers', 'Commits', 'BCommits', 'Tags', 'BTags', 'History', 'Lines', 'BLines', 'Marks'] },
+Plug 'junegunn/fzf.vim', {
+        \ 'dir': '~/.fzf',
+        \ 'do': './install --all',
+        \ 'on': [
+            \ 'Ag',
+            \ 'Rg',
+            \ 'FZF',
+            \ 'Files',
+            \ 'Buffers',
+            \ 'Commits',
+            \ 'BCommits',
+            \ 'Tags',
+            \ 'BTags',
+            \ 'History',
+            \ 'Lines',
+            \ 'BLines',
+            \ 'Marks'
+        \ ] },
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-Plug 'w0rp/ale', { 'for': ['javascript', 'typescript', 'css', 'scss', 'go', 'rust', 'scala'] }
+Plug 'w0rp/ale', {
+        \ 'for': [
+            \ 'javascript',
+            \ 'typescript',
+            \ 'css',
+            \ 'scss',
+            \ 'go',
+            \ 'rust',
+            \ 'scala'
+        \ ] }
+
 Plug 'vim-airline/vim-airline'
 " requires specific font
 " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
-Plug 'sedm0784/vim-you-autocorrect', { 'on': ['EnableAutocorrect', 'DisableAutocorrect'] }
+Plug 'sedm0784/vim-you-autocorrect', {
+        \ 'on': [
+            \ 'EnableAutocorrect',
+            \ 'DisableAutocorrect'
+        \ ] }
+
 Plug 'wsdjeg/vim-fetch'
 Plug 'gko/upside-down'
 Plug 'kristijanhusak/vim-carbon-now-sh'
@@ -101,9 +197,21 @@ Plug 'groenewege/vim-less', { 'for':  'less' }
 " JavaScript
 Plug 'pangloss/vim-javascript', { 'for':  'javascript' }
 if executable('npm')
-	Plug 'prettier/vim-prettier', {
-				\ 'do': 'npm install',
-				\ 'for': ['javascript', 'html', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml'] }
+    Plug 'prettier/vim-prettier', {
+            \ 'do': 'npm install',
+            \ 'for': [
+                \ 'javascript',
+                \ 'html',
+                \ 'typescript',
+                \ 'css',
+                \ 'less',
+                \ 'scss',
+                \ 'json',
+                \ 'graphql',
+                \ 'markdown',
+                \ 'vue',
+                \ 'yaml'
+            \ ] }
 endif
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 Plug 'jparise/vim-graphql'
@@ -133,8 +241,8 @@ Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 
 " Go
 if executable('go')
-	Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-	Plug 'mdempsky/gocode', { 'for': 'go' }
+    Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+    Plug 'mdempsky/gocode', { 'for': 'go' }
 endif
 
 " Ruby/Rails
@@ -173,7 +281,7 @@ Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 if executable('npm')
-	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
 endif
 
 Plug 'ferrine/md-img-paste.vim', { 'for': 'markdown' }
