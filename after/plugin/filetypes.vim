@@ -14,6 +14,7 @@ autocmd BufRead,BufNewFile .babelrc set ft=json syntax=json
 autocmd BufRead,BufNewFile .npmrc set ft=sh syntax=sh
 autocmd BufRead,BufNewFile *.env,*.env.* set ft=sh syntax=sh
 autocmd BufRead,BufNewFile hosts set ft=sh syntax=sh
+autocmd BufRead,BufNewFile .gitconfig.local set ft=gitconfig
 " RFCS questionable decision
 " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
 
