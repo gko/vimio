@@ -2,6 +2,8 @@
 
 ![screenshot](https://raw.github.com/gko/vimio/master/screenshot.png)
 
+An [article](https://dev.to/konstantin/configuring-a-perfect-editor-for-frontend-developement-3ja) describing  key features of this config.
+
 ## Prerequisites
 
 In order to get all features you might want to install following packages:
