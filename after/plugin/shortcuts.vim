@@ -221,4 +221,4 @@ nnoremap <F4> :GundoToggle<CR>
 nmap <F5> :TagbarToggle<CR>
 
 " open ~/Documents/notes/index.md
-nnoremap <Leader>ww :e ~/Documents/notes/index.md<cr>
+nnoremap <Leader>ww :e ~/Documents/Notes/index.md<cr>
