@@ -12,6 +12,7 @@ Plug 'mhinz/vim-startify'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'xolox/vim-misc'
+Plug 'terryma/vim-multiple-cursors'
 
 Plug 'xolox/vim-easytags', {
         \ 'on': [
