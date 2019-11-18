@@ -2,6 +2,12 @@ syntax on
 
 set background=light
 
+if exists('$TMUX')
+    " Colors in tmux
+    let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
 if has("termguicolors") && supportsTrueColor
     set termguicolors
