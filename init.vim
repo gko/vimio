@@ -39,6 +39,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'TaDaa/vimade'
 
 Plug 'janko-m/vim-test', {
         \ 'for': [
@@ -106,6 +107,9 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim', { 'on': ['Gist'] }
 Plug 'gko/vim-g'
 Plug 'airblade/vim-rooter'
+" neither works
+" Plug 'wsdjeg/FlyGrep.vim'
+" Plug 'wsdjeg/vim-todo', { 'on':  'OpenTodo' }
 
 if has("mac")
     Plug '/usr/local/opt/fzf'
