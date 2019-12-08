@@ -56,10 +56,13 @@ Plug 'janko-m/vim-test', {
             \ 'TestVisit'
         \ ] }
 
-Plug 'SirVer/ultisnips'
+if has('python3')
+	Plug 'SirVer/ultisnips'
+endif
+
 if executable('npm')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:UltiSnipsExpandTrigger="<nop>"
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	let g:UltiSnipsExpandTrigger="<nop>"
 endif
 
 Plug 'metakirby5/codi.vim', {
