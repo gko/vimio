@@ -29,7 +29,12 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     ln -s ~/.vim/init.vim ~/.vimrc
     ln -s ~/.vim ~/.config/nvim
 
-    </dev/tty vim +PlugInstall +qall
+    # install via neovim if it exists
+    if type nvim &> /dev/null; then
+        </dev/tty nvim +PlugInstall +qall
+    else
+        </dev/tty vim +PlugInstall +qall
+    fi
 else
     echo "🚧 removing current vim settings"
     rm -rf ~/vimfiles
