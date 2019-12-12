@@ -39,7 +39,9 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'TaDaa/vimade'
+if has('nvim')
+    Plug 'TaDaa/vimade'
+endif
 
 Plug 'janko-m/vim-test', {
         \ 'for': [
@@ -114,27 +116,30 @@ Plug 'airblade/vim-rooter'
 " Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'wsdjeg/vim-todo', { 'on':  'OpenTodo' }
 
-if has("mac")
-    Plug '/usr/local/opt/fzf'
+" just guessing
+if isdirectory('/usr/local/opt/fzf')
+		Plug '/usr/local/opt/fzf'
+        Plug 'junegunn/fzf.vim'
+else
+		Plug 'junegunn/fzf.vim', {
+				\ 'dir': '~/.fzf',
+				\ 'do': './install --all',
+				\ 'on': [
+						\ 'Ag',
+						\ 'Rg',
+						\ 'FZF',
+						\ 'Files',
+						\ 'Buffers',
+						\ 'Commits',
+						\ 'BCommits',
+						\ 'Tags',
+						\ 'BTags',
+						\ 'History',
+						\ 'Lines',
+						\ 'BLines',
+						\ 'Marks'
+				\ ] },
 endif
-Plug 'junegunn/fzf.vim', {
-        \ 'dir': '~/.fzf',
-        \ 'do': './install --all',
-        \ 'on': [
-            \ 'Ag',
-            \ 'Rg',
-            \ 'FZF',
-            \ 'Files',
-            \ 'Buffers',
-            \ 'Commits',
-            \ 'BCommits',
-            \ 'Tags',
-            \ 'BTags',
-            \ 'History',
-            \ 'Lines',
-            \ 'BLines',
-            \ 'Marks'
-        \ ] },
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'w0rp/ale', {
