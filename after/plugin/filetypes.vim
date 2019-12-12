@@ -11,6 +11,7 @@ autocmd BufReadPost *.exs set syntax=elm
 autocmd BufReadPost *.eex set syntax=elm
 autocmd BufReadPost *.elm set syntax=elm
 autocmd BufRead,BufNewFile .babelrc set ft=json syntax=json
+autocmd BufRead,BufNewFile .prettierrc set ft=yaml syntax=yaml
 autocmd BufRead,BufNewFile .npmrc set ft=sh syntax=sh
 autocmd BufRead,BufNewFile *.env,*.env.* set ft=sh syntax=sh
 autocmd BufRead,BufNewFile hosts set ft=sh syntax=sh
