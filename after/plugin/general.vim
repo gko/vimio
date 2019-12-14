@@ -74,6 +74,9 @@ set nocompatible
 if !has("nvim")
     "Allow cursor keys in insert mode
     set esckeys
+else
+    " https://neovim.io/doc/user/options.html#'inccommand'
+    set inccommand=nosplit
 end
 
 "Optimize for fast terminal connections
