@@ -46,6 +46,7 @@ else
     echo "⚡️ installing..."
     mv ~/vimio/init.vim ~/_vimrc
     mv ~/vimio ~/vimfiles
+
     curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
