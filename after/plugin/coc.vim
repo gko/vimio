@@ -1,4 +1,4 @@
-if !executable('npm')
+if !executable('npm') || !exists("*coc#status")
     finish
 endif
 
