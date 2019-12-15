@@ -14,6 +14,7 @@ echo "🎩 installing «vimio»:"
 cd ~
 
 rm -rf ~/vimio
+rm -rf ~/.fzf
 
 echo "⚙️  downloading latest version"
 git clone --depth 1 -b master --recursive https://github.com/gko/vimio
