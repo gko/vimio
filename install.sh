@@ -29,6 +29,9 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     ln -s ~/.vim/init.vim ~/.vimrc
     ln -s ~/.vim ~/.config/nvim
 
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
     # install via neovim if it exists
     if type nvim &> /dev/null; then
         </dev/tty nvim +PlugInstall +qall
@@ -43,6 +46,8 @@ else
     echo "⚡️ installing..."
     mv ~/vimio/init.vim ~/_vimrc
     mv ~/vimio ~/vimfiles
+    curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     echo "🛠 don't forget to run PlugInstall"
 fi
