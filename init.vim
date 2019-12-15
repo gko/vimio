@@ -118,28 +118,26 @@ Plug 'airblade/vim-rooter'
 
 " just guessing
 if isdirectory('/usr/local/opt/fzf')
-		Plug '/usr/local/opt/fzf'
-        Plug 'junegunn/fzf.vim'
+    Plug '/usr/local/opt/fzf'
 else
-		Plug 'junegunn/fzf.vim', {
-				\ 'dir': '~/.fzf',
-				\ 'do': './install --all',
-				\ 'on': [
-						\ 'Ag',
-						\ 'Rg',
-						\ 'FZF',
-						\ 'Files',
-						\ 'Buffers',
-						\ 'Commits',
-						\ 'BCommits',
-						\ 'Tags',
-						\ 'BTags',
-						\ 'History',
-						\ 'Lines',
-						\ 'BLines',
-						\ 'Marks'
-				\ ] },
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
+Plug 'junegunn/fzf.vim', {
+        \ 'on': [
+            \ 'Ag',
+            \ 'Rg',
+            \ 'FZF',
+            \ 'Files',
+            \ 'Buffers',
+            \ 'Commits',
+            \ 'BCommits',
+            \ 'Tags',
+            \ 'BTags',
+            \ 'History',
+            \ 'Lines',
+            \ 'BLines',
+            \ 'Marks'
+        \ ] }
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'w0rp/ale', {
