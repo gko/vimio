@@ -1,4 +1,4 @@
-if !executable('npm') || !exists("*coc#status")
+if !executable('npm') || !exists("g:coc_enabled")
     finish
 endif
 
