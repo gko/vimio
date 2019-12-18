@@ -112,4 +112,6 @@ set updatetime=300
 set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+if v:version >= 704
+    set signcolumn=yes
+endif
