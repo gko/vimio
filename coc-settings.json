@@ -3,6 +3,11 @@
     "diagnostic.warningSign": "●",
     "eslint.options": { "enable": false },
     "languageserver": {
+        "rust": {
+            "command": "ra_lsp_server",
+            "filetypes": ["rust"],
+            "rootPatterns": ["Cargo.toml"]
+        },
         "tsserver": {
             "command": "typescript-language-server",
             "args": ["--stdio"],
