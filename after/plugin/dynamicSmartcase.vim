@@ -1,3 +1,7 @@
+if v:version <= 704
+    finish
+endif
+
 " assumes set ignorecase smartcase
 augroup dynamic_smartcase
     autocmd!
