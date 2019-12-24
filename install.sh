@@ -39,6 +39,8 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     else
         </dev/tty vim +PlugInstall +qall
     fi
+
+    echo "Done!"
 else
     echo "🚧 removing current vim settings"
     rm -rf ~/vimfiles
@@ -53,3 +55,5 @@ else
 
     echo "🛠 don't forget to run PlugInstall"
 fi
+
+echo "🛠 I recommend to installing :CocInstall coc-css coc-json coc-ultisnips"
