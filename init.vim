@@ -50,7 +50,7 @@ Plug 'wellle/context.vim', {
             \ 'ContextUpdate'
         \ ] }
 
-Plug 'kkoomen/vim-doge', { 'on': 'DogeGenerate' }
+Plug 'kkoomen/vim-doge'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
