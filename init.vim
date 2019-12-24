@@ -170,6 +170,7 @@ Plug 'dense-analysis/ale', {
         \ ] }
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " requires specific font
 " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
 Plug 'sedm0784/vim-you-autocorrect', {
@@ -183,6 +184,7 @@ Plug 'gko/upside-down'
 Plug 'kristijanhusak/vim-carbon-now-sh'
 
 "Colorschemes
+Plug 'arzg/vim-colors-xcode'
 Plug 'AlxHnr/clear_colors'
 Plug 'w0ng/vim-hybrid'
 Plug 'fxn/vim-monochrome'
