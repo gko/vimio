@@ -240,6 +240,9 @@ Plug 'rhysd/vim-wasm', { 'for': ['wast', 'wat'] }
 " JSON
 Plug 'elzr/vim-json', { 'for': 'json' }
 
+" TOML
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+
 " PHP
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 
