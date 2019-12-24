@@ -140,7 +140,7 @@ Plug 'junegunn/fzf.vim', {
         \ ] }
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
-Plug 'w0rp/ale', {
+Plug 'dense-analysis/ale', {
         \ 'for': [
             \ 'javascript',
             \ 'typescript',
