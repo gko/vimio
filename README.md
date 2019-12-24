@@ -22,7 +22,7 @@ curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 
 ### macOS
 
-In macOS don't forget to check the «Use option as meta key»:
+In macOS terminal.app don't forget to check the «Use option as meta key»:
 
 ![terminal](https://raw.githubusercontent.com/gko/upside-down/master/terminal.png)
 
