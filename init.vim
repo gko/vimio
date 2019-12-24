@@ -33,6 +33,24 @@ Plug 'scrooloose/nerdtree', {
             \ 'NERDTreeToggle'
         \ ] }
 
+Plug 'voldikss/vim-floaterm', {
+        \ 'on': [
+            \ 'FloatermNew',
+            \ 'FloatermToggle',
+            \ 'FloatermPrev',
+            \ 'FloatermNext'
+        \ ] }
+
+Plug 'wellle/context.vim', {
+        \ 'on': [
+            \ 'ContextActivate',
+            \ 'ContextEnable',
+            \ 'ContextDisable',
+            \ 'ContextToggle',
+            \ 'ContextUpdate'
+        \ ] }
+
+Plug 'kkoomen/vim-doge', { 'on': 'DogeGenerate' }
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
