@@ -54,7 +54,6 @@ Plug 'kkoomen/vim-doge'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 if has('nvim')
@@ -134,7 +133,8 @@ Plug 'airblade/vim-rooter'
 " Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'wsdjeg/vim-todo', { 'on':  'OpenTodo' }
 
-" just guessing
+" deprecated
+" Plug 'ctrlpvim/ctrlp.vim'
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf'
 else
