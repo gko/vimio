@@ -20,6 +20,11 @@ On unix and windows(with bash which can be installed with [git](http://msysgit.g
 curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 ```
 
+After installation I recommend installing following `coc.vim` extensions:
+```vimscript
+:CocInstall coc-css coc-json coc-ultisnips
+```
+
 ### macOS
 
 In macOS terminal.app don't forget to check the «Use option as meta key»:
