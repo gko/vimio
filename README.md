@@ -53,7 +53,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 -   [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
 -   [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
 -   [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
--   ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](#17))
+-   ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
 -   [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
 -   [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
 -   [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
