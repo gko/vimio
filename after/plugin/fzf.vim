@@ -8,7 +8,7 @@ nnoremap <silent> <C-b> :Buffers<CR>
 if executable('ag')
     let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 elseif executable('fd')
-    let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
+    let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
 elseif executable('rg')
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git"'
 endif
