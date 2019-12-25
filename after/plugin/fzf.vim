@@ -16,8 +16,8 @@ endif
 if has('nvim') && exists("*nvim_open_win")
     " fix hideous sign column
     let g:fzf_colors = {
-      \ "fg+":     ["fg", "CursorLine", "CursorColumn", "Normal"],
-      \ "bg+":     ["bg", "ColorColumn", "CursorLine", "CursorColumn"]}
+      \ "fg+": ["fg", "ColorColumn", "CursorLine", "CursorColumn", "Normal"],
+      \ "bg+": ["bg", "ColorColumn", "CursorLine", "CursorColumn", "Normal"]}
 
     let $FZF_DEFAULT_OPTS='--layout=reverse --margin=1,4'
     let g:fzf_layout = { 'window': 'call FloatingFZF()' }

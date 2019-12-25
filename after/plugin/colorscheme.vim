@@ -22,15 +22,14 @@ let g:solarized_termcolors=256
 try
     if filereadable(expand("~/.vimrc_background"))
         let base16colorspace=256
-        source ~/.vimrc_background
         let g:airline_theme='base16'
+        source ~/.vimrc_background
     else
+        let g:airline_theme = "github"
         colorscheme github
 
         " https://github.com/cormacrelf/vim-colors-github/pull/5
         hi! link SignColumn LineNr
-
-        let g:airline_theme = "github"
     endif
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
