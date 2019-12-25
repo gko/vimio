@@ -2,8 +2,6 @@ nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\
 nnoremap <silent> <C-p> :Files<CR>
 " show buffers
 nnoremap <silent> <C-b> :Buffers<CR>
-" still testing
-nnoremap <silent> <Leader>b :Buffers<CR>
 
 let $FZF_DEFAULT_OPTS=' --color=dark --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
 
@@ -15,6 +13,7 @@ elseif executable('fd')
 elseif executable('rg')
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git"'
 endif
+" if you don't have any of the above you can still use `GitFiles`
 
 if has('nvim') && exists("*nvim_open_win")
     let g:fzf_layout = { 'window': 'call FloatingFZF()' }
