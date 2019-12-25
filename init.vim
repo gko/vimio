@@ -146,6 +146,7 @@ Plug 'junegunn/fzf.vim', {
             \ 'Rg',
             \ 'FZF',
             \ 'Files',
+            \ 'GitFiles',
             \ 'Buffers',
             \ 'Commits',
             \ 'BCommits',
