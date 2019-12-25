@@ -11,9 +11,9 @@ let $FZF_DEFAULT_OPTS=' --color=dark --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,
 if executable('ag')
     let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 elseif executable('fd')
-    let $FZF_DEFAULT_COMMAND='fd --type f'
+    let $FZF_DEFAULT_COMMAND='fd --type f --exclude .git'
 elseif executable('rg')
-    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git"'
 endif
 
 if has('nvim') && exists("*nvim_open_win")
