@@ -1,7 +1,9 @@
 nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
-nnoremap <C-p> :Files<CR>
+nnoremap <silent> <C-p> :Files<CR>
 " show buffers
-nnoremap <C-b> :Buffers<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+" still testing
+nnoremap <silent> <Leader>b :Buffers<CR>
 
 if has('nvim') && exists("*nvim_open_win")
     let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
