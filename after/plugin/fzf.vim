@@ -3,19 +3,23 @@ nnoremap <silent> <C-p> :Files<CR>
 " show buffers
 nnoremap <silent> <C-b> :Buffers<CR>
 
-let $FZF_DEFAULT_OPTS=' --color=dark --color=fg:15,bg:-1,hl:1,fg+:#ffffff,bg+:0,hl+:1 --color=info:0,prompt:0,pointer:12,marker:4,spinner:11,header:-1 --layout=reverse  --margin=1,4'
-
+" if you don't have any of the above you can still use `GitFiles`
 " https://github.com/junegunn/fzf.vim/issues/121
 if executable('ag')
     let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 elseif executable('fd')
-    let $FZF_DEFAULT_COMMAND='fd --type f --exclude .git'
+    let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
 elseif executable('rg')
     let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git"'
 endif
-" if you don't have any of the above you can still use `GitFiles`
 
 if has('nvim') && exists("*nvim_open_win")
+    " fix hideous sign column
+    let g:fzf_colors = {
+      \ "fg+":     ["fg", "CursorLine", "CursorColumn", "Normal"],
+      \ "bg+":     ["bg", "ColorColumn", "CursorLine", "CursorColumn"]}
+
+    let $FZF_DEFAULT_OPTS='--layout=reverse --margin=1,4'
     let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
     function! FloatingFZF()
