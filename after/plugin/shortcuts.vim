@@ -154,9 +154,6 @@ noremap <C-Down> <C-W>j
 noremap <C-Up> <C-W>k
 noremap <C-Right> <C-W>l
 
-" show buffers
-nmap <C-b> :CtrlPBuffer<cr>
-
 " prev buffer
 nmap <Leader>bp :bp!<cr>
 vmap <Leader>bp <Esc>:bp!<cr>
