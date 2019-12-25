@@ -6,7 +6,7 @@ nnoremap <silent> <C-b> :Buffers<CR>
 " if you don't have any of the above you can still use `GitFiles`
 " https://github.com/junegunn/fzf.vim/issues/121
 if executable('ag')
-    let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 elseif executable('fd')
     let $FZF_DEFAULT_COMMAND = 'fd --type f --exclude .git'
 elseif executable('rg')
