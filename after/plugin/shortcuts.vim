@@ -184,7 +184,6 @@ inoremap <Leader>u <esc>gUiwea
 " :cabbrev bd :ene!<CR>:bw #<CR>
 :cabbrev qa qa!
 :cabbrev q q!
-:cabbrev Cd CD
 
 :cabbrev ц w
 ":cabbrev у NERDTreeClose<CR>:e!
