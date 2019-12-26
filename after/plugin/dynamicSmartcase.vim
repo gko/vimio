@@ -1,4 +1,5 @@
-if v:version <= 704
+" https://vi.stackexchange.com/a/15876
+if !exists('##CmdlineEnter')
     finish
 endif
 
