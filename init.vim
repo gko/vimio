@@ -60,7 +60,7 @@ if has('nvim')
     Plug 'TaDaa/vimade'
 endif
 
-Plug 'janko-m/vim-test', {
+Plug 'janko/vim-test', {
         \ 'for': [
             \ 'javascript',
             \ 'typescript',
