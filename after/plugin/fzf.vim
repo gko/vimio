@@ -32,7 +32,7 @@ if has('nvim') && exists("*nvim_open_win")
         endif
 
         let width = 80
-        if &columns > 80
+        if &columns > 110
             let width = float2nr(&columns * 0.7) " 70%
         endif
 
