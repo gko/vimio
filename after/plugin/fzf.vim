@@ -26,8 +26,16 @@ if has('nvim') && exists("*nvim_open_win")
         let buf = nvim_create_buf(v:false, v:true)
         call setbufvar(buf, '&signcolumn', 'no')
 
-        let height = float2nr(10)
-        let width = float2nr(80)
+        let height = 10
+        if &lines > 10
+            let height = float2nr(&lines * 0.4) " 40%
+        endif
+
+        let width = 80
+        if &columns > 80
+            let width = float2nr(&columns * 0.7) " 70%
+        endif
+
         let horizontal = float2nr((&columns - width) / 2)
         let vertical = 1
 
@@ -37,6 +45,7 @@ if has('nvim') && exists("*nvim_open_win")
             \ 'col': horizontal,
             \ 'width': width,
             \ 'height': height,
+            \ 'anchor': 'NW',
             \ 'style': 'minimal'
             \ }
 
