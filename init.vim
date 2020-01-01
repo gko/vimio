@@ -133,13 +133,16 @@ Plug 'airblade/vim-rooter'
 " Plug 'wsdjeg/FlyGrep.vim'
 " Plug 'wsdjeg/vim-todo', { 'on':  'OpenTodo' }
 
-" deprecated
-" Plug 'ctrlpvim/ctrlp.vim'
+" if has('patch-8.1.2114') || has('nvim-0.4')
+" Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
+" else
+
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf'
 else
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
+
 Plug 'junegunn/fzf.vim', {
         \ 'on': [
             \ 'Ag',
@@ -157,6 +160,8 @@ Plug 'junegunn/fzf.vim', {
             \ 'BLines',
             \ 'Marks'
         \ ] }
+
+" endif
 
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'dense-analysis/ale', {
