@@ -180,10 +180,14 @@ inoremap <Leader>u <esc>gUiwea
 
 " everything
 :cabbrev t tabedit!
+
 " this is a weird one
 " :cabbrev bd :ene!<CR>:bw #<CR>
+
 :cabbrev qa qa!
 :cabbrev q q!
+
+:cabbrev E e
 
 :cabbrev ц w
 ":cabbrev у NERDTreeClose<CR>:e!
