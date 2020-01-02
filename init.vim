@@ -168,6 +168,7 @@ Plug 'dense-analysis/ale', {
         \ 'for': [
             \ 'javascript',
             \ 'typescript',
+            \ 'vue',
             \ 'css',
             \ 'scss',
             \ 'go',
