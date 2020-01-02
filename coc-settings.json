@@ -11,7 +11,7 @@
         "tsserver": {
             "command": "typescript-language-server",
             "args": ["--stdio"],
-            "filetypes": ["typescript", "javascript"],
+            "filetypes": ["typescript", "javascript", "vue"],
             "rootPatterns": [".git/", ".hg"]
         },
         "ocaml": {
