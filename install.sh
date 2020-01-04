@@ -28,6 +28,8 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     echo "⚡️ installing..."
     mv ~/vimio ~/.vim
     ln -s ~/.vim/init.vim ~/.vimrc
+    # in case it doesn't exist
+    mkdir ~/.config
     ln -s ~/.vim ~/.config/nvim
 
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
