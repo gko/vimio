@@ -56,7 +56,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
-if has('nvim')
+
+if has('nvim') && (has('python') || has('python3'))
     Plug 'TaDaa/vimade'
 endif
 
