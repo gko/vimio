@@ -162,8 +162,6 @@ Plug 'junegunn/fzf.vim', {
             \ 'Marks'
         \ ] }
 
-" endif
-
 Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 Plug 'dense-analysis/ale', {
         \ 'for': [
