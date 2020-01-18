@@ -1,7 +1,7 @@
 let g:carbon_now_sh_options = {
 \  'ln': 'true',
 \  'bg': 'rgba(74,144,226,1)',
-\  't': 'night-owl',
+\  't': 'base16-light',
 \  'wt': 'none',
 \  'ds': 'true',
 \  'dsyoff': '20px',
