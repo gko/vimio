@@ -118,7 +118,7 @@ Plug 'tpope/vim-fugitive', {
 Plug 'tpope/vim-surround'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'godlygeek/tabular'
-Plug 'tyru/open-browser.vim'
+" Plug 'tyru/open-browser.vim'
 Plug 'junegunn/vim-github-dashboard', {
         \ 'on': [
             \ 'GHDashboard',
