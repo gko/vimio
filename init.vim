@@ -21,17 +21,17 @@ Plug 'xolox/vim-easytags', {
         \ ] }
 
 Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
-Plug 'scrooloose/nerdtree', {
-        \ 'on': [
-            \ 'NERDTree',
-            \ 'NERDTreeCWD',
-            \ 'NERDTreeClose',
-            \ 'NERDTreeFind',
-            \ 'NERDTreeFocus',
-            \ 'NERDTreeFromBookmark',
-            \ 'NERDTreeMirror',
-            \ 'NERDTreeToggle'
-        \ ] }
+" Plug 'scrooloose/nerdtree', {
+        " \ 'on': [
+            " \ 'NERDTree',
+            " \ 'NERDTreeCWD',
+            " \ 'NERDTreeClose',
+            " \ 'NERDTreeFind',
+            " \ 'NERDTreeFocus',
+            " \ 'NERDTreeFromBookmark',
+            " \ 'NERDTreeMirror',
+            " \ 'NERDTreeToggle'
+        " \ ] }
 
 Plug 'voldikss/vim-floaterm', {
         \ 'on': [
