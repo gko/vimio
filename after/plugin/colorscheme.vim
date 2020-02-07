@@ -34,3 +34,5 @@ try
 catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
+
+highlight Comment cterm=italic gui=italic

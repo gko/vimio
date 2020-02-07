@@ -1,5 +1,6 @@
 " example of .vimrc_background file
 " will take base16 as airline theme (adapts to whatever colortheme you have)
-if !exists('g:colors_name') || g:colors_name != 'xcodelight'
-  colorscheme xcodelight
+if !exists('g:colors_name') || g:colors_name != 'gruvbox'
+    set background=dark
+    colorscheme gruvbox
 endif
