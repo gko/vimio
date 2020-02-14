@@ -1,6 +1,5 @@
-" example of .vimrc_background file
-" will take base16 as airline theme (adapts to whatever colortheme you have)
-if !exists('g:colors_name') || g:colors_name != 'gruvbox'
-    set background=dark
-    colorscheme gruvbox
-endif
+" let g:gruvbox_contrast_dark="soft"
+" let g:gruvbox_contrast_light="soft"
+set background=light
+colorscheme gruvbox
+hi Visual cterm=none gui=none ctermbg=19
