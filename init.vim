@@ -66,6 +66,8 @@ Plug 'janko/vim-test', {
             \ 'javascript',
             \ 'typescript',
             \ 'go',
+            \ 'c',
+            \ 'cpp',
             \ 'rust',
             \ 'scala'],
         \ 'on': [
@@ -81,7 +83,20 @@ if has('python3')
 endif
 
 if executable('npm')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', { 'branch': 'release',
+        \ 'for': [
+            \ 'javascript',
+            \ 'typescript',
+            \ 'go',
+            \ 'c',
+            \ 'cpp',
+            \ 'java',
+            \ 'rust',
+            \ 'vue',
+            \ 'css',
+            \ 'scss',
+            \ 'scala'] }
+
     let g:UltiSnipsExpandTrigger="<nop>"
 endif
 
