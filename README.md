@@ -25,6 +25,17 @@ After installation I recommend installing following `coc.vim` extensions:
 :CocInstall coc-css coc-json coc-ultisnips
 ```
 
+### Color scheme
+
+You can have a `~/.vimrc_background` file, where you keep custom colorscheme
+settings.
+
+Example can be found [here](/.vimrc_background). And you can symlink it as
+following:
+```shell
+ln -sf ~/.vim/.vimrc_background ~/
+```
+
 ### macOS
 
 In macOS terminal.app don't forget to check the «Use option as meta key»:
