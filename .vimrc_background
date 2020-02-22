@@ -1,5 +1,8 @@
 let g:gruvbox_contrast_dark="soft"
 let g:gruvbox_contrast_light="soft"
-set background=dark
+
+set background=light
+
 colorscheme gruvbox
+
 hi Visual cterm=none gui=none ctermbg=19
