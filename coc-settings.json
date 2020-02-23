@@ -11,7 +11,12 @@
         "tsserver": {
             "command": "typescript-language-server",
             "args": ["--stdio"],
-            "filetypes": ["typescript", "javascript", "vue"],
+            "filetypes": [
+                "typescript",
+                "typescriptreact",
+                "javascript",
+                "vue"
+            ],
             "rootPatterns": [".git/", ".hg"]
         },
         "ocaml": {
@@ -67,7 +72,7 @@
         "metals": {
             "command": "metals-vim",
             "rootPatterns": ["build.sbt"],
-            "filetypes": ["scala", "sbt"]
+            "filetypes": ["scala", "sbt.scala", "sbt"]
         },
         "python": {
             "command": "python",
