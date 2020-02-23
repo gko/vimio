@@ -10,6 +10,8 @@ set ttimeout
 set timeoutlen=300
 set ttimeoutlen=50
 
+set scrolloff=50
+
 "Don’t add empty newlines at the end of files
 "this has to go before expandtab
 set binary
