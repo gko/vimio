@@ -251,7 +251,7 @@ endfunction
 
 function! plug#end()
   if !exists('g:plugs')
-    return s:err('Call plug#begin() first')
+    return s:err('plug#end() called without calling plug#begin() first')
   endif
 
   if exists('#PlugLOD')
@@ -1338,9 +1338,10 @@ function! s:bar()
 endfunction
 
 function! s:logpos(name)
-  for i in range(4, line('$'))
+  let max = line('$')
+  for i in range(4, max > 4 ? max : 4)
     if getline(i) =~# '^[-+x*] '.a:name.':'
-      for j in range(i + 1, line('$'))
+      for j in range(i + 1, max > 5 ? max : 5)
         if getline(j) !~ '^ '
           return [i, j - 1]
         endif
