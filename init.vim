@@ -264,7 +264,7 @@ Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " JSX
-Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'typescript'] }
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'typescript', 'typescriptreact'] }
 
 " Webassembly
 Plug 'rhysd/vim-wasm', { 'for': ['wast', 'wat'] }
