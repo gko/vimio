@@ -14,6 +14,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'xolox/vim-misc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'camspiers/lens.vim'
 
 Plug 'xolox/vim-easytags', {
         \ 'on': [
@@ -258,7 +259,8 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 Plug 'jparise/vim-graphql'
 
 " Typescript
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+" Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " JSX
