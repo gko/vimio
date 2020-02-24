@@ -35,4 +35,6 @@ catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme default
 endtry
 
-highlight Comment cterm=italic gui=italic
+if has('nvim')
+    highlight Comment cterm=italic gui=italic
+endif
