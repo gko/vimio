@@ -19,7 +19,6 @@ autocmd BufRead,BufNewFile hosts set ft=sh syntax=sh
 autocmd BufRead,BufNewFile .gitconfig.local set ft=gitconfig
 " https://scalameta.org/metals/docs/editors/vim.html
 autocmd BufRead,BufNewFile *.sbt set filetype=scala
-autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescriptreact
 " RFCS questionable decision
 " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
 
