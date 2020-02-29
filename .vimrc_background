@@ -1,8 +1,11 @@
-let g:gruvbox_contrast_dark="soft"
-let g:gruvbox_contrast_light="soft"
-
 set background=dark
 
-colorscheme gruvbox
+let g:gruvbox_contrast_dark="soft"
+let g:gruvbox_contrast_light="soft"
+" hi Visual cterm=none gui=none ctermbg=19
 
-hi Visual cterm=none gui=none ctermbg=19
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
+
+colorscheme sonokai

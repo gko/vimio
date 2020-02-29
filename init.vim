@@ -197,6 +197,7 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 "Colorschemes
 Plug 'arzg/vim-colors-xcode'
 Plug 'rakr/vim-one'
+Plug 'sainnhe/sonokai'
 Plug 'AlxHnr/clear_colors'
 Plug 'w0ng/vim-hybrid'
 Plug 'fxn/vim-monochrome'
