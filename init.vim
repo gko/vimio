@@ -260,9 +260,15 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'typescript'] }
 Plug 'jparise/vim-graphql'
 
 " Typescript
-" Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
-Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+if has('nvim')
+    Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+else
+    " TODO remove once merged https://github.com/leafgarland/typescript-vim/pull/140
+    autocmd BufRead,BufNewFile *.tsx setfiletype typescriptreact
+    " due to this issue https://github.com/HerringtonDarkholme/yats.vim/issues/25
+    Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescriptreact'] }
+endif
+" Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " JSX
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'typescript', 'typescriptreact'] }
