@@ -11,13 +11,8 @@
         "tsserver": {
             "command": "typescript-language-server",
             "args": ["--stdio"],
-            "filetypes": [
-                "typescript",
-                "typescriptreact",
-                "javascript",
-                "vue"
-            ],
-            "rootPatterns": [".git/", ".hg"]
+            "filetypes": ["typescript", "typescriptreact", "javascript", "vue"],
+            "rootPatterns": [".git", ".hg"]
         },
         "ocaml": {
             "command": "ocaml-language-server",
@@ -132,5 +127,6 @@
                 }
             }
         }
-    }
+    },
+    "java.errors.incompleteClasspath.severity": "ignore"
 }
