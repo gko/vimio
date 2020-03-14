@@ -1,12 +1,14 @@
 set background=dark
 
-let g:gruvbox_contrast_dark="soft"
-let g:gruvbox_contrast_light="soft"
+" let g:gruvbox_contrast_dark="soft"
+" let g:gruvbox_contrast_light="soft"
 " hi Visual cterm=none gui=none ctermbg=19
+" colorscheme gruvbox
 
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-let g:airline_theme = 'sonokai'
+" let g:sonokai_style = 'andromeda'
+" let g:sonokai_enable_italic = 1
+" let g:sonokai_disable_italic_comment = 1
+" let g:airline_theme = 'sonokai'
+" colorscheme sonokai
 
-colorscheme sonokai
+colorscheme nord
