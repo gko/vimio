@@ -21,6 +21,7 @@ autocmd BufRead,BufNewFile .gitconfig.local set ft=gitconfig
 autocmd BufRead,BufNewFile *.sbt set filetype=scala
 " RFCS questionable decision
 " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
+au BufReadCmd,FileReadCmd,SourceCmd jdt://* call LanguageClient#Call("java/classFileContents", {uri: expand("<amatch>")}, showResultInNewReadOnlyBuffer)
 
 " for coc.vim
 autocmd FileType json syntax match Comment +\/\/.\+$+
