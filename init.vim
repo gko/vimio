@@ -86,35 +86,39 @@ endif
 
 if executable('npm')
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+    Plug 'neoclide/coc-java', {'do': 'npm i'}
+    Plug 'neoclide/coc-json', {'do': 'npm i'}
 
     let g:UltiSnipsExpandTrigger="<nop>"
 endif
 
-Plug 'metakirby5/codi.vim', {
-        \ 'for': [
-            \ 'javascript',
-            \ 'typescript',
-            \ 'c',
-            \ 'cpp',
-            \ 'ruby',
-            \ 'python',
-            \ 'r',
-            \ 'clojure',
-            \ 'php',
-            \ 'haskell',
-            \ 'elm',
-            \ 'elixir'],
-        \ 'on': [
-            \ 'Codi',
-            \ 'Cody!',
-            \ 'Codi!!'
-        \ ] }
+Plug 'jpalardy/vim-slime'
+" Plug 'metakirby5/codi.vim', {
+        " \ 'for': [
+            " \ 'javascript',
+            " \ 'typescript',
+            " \ 'c',
+            " \ 'cpp',
+            " \ 'ruby',
+            " \ 'python',
+            " \ 'r',
+            " \ 'clojure',
+            " \ 'php',
+            " \ 'haskell',
+            " \ 'elm',
+            " \ 'elixir'],
+        " \ 'on': [
+            " \ 'Codi',
+            " \ 'Cody!',
+            " \ 'Codi!!'
+        " \ ] }
 
 Plug 'tpope/vim-fugitive', {
         \ 'on': [
             \ 'Gcommit',
             \ 'Gstatus',
             \ 'Gblame',
+            \ 'Gdiff',
             \ 'Gedit',
             \ 'Gmove',
             \ 'Gdelete'
@@ -202,6 +206,7 @@ Plug 'AlxHnr/clear_colors'
 Plug 'w0ng/vim-hybrid'
 Plug 'fxn/vim-monochrome'
 Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
 Plug 'rhysd/vim-color-spring-night'
 Plug 'dterei/VimCobaltColourScheme'
 Plug 'tpope/vim-vividchalk'
