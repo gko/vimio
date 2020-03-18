@@ -11,4 +11,13 @@ set background=dark
 " let g:airline_theme = 'sonokai'
 " colorscheme sonokai
 
-colorscheme nord
+" colorscheme nord
+
+" let g:airline_theme = 'transparent'
+" let g:material_style='palenight'
+" set background=dark
+" colorscheme vim-material
+
+colorscheme base16-material-palenight
+hi LineNr ctermbg=0 guibg=#292D3E ctermfg=11 guifg=#3a3f58
+hi SignColumn ctermbg=0 guibg=#292D3E
