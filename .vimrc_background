@@ -12,6 +12,7 @@ set background=dark
 " colorscheme sonokai
 
 " colorscheme nord
+" colorscheme iceberg
 
 " let g:airline_theme = 'transparent'
 " let g:material_style='palenight'
