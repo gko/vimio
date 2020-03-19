@@ -14,11 +14,13 @@ set background=dark
 " colorscheme nord
 " colorscheme iceberg
 
-" let g:airline_theme = 'transparent'
-" let g:material_style='palenight'
-" set background=dark
-" colorscheme vim-material
-
-colorscheme base16-material-palenight
-hi LineNr ctermbg=0 guibg=#292D3E ctermfg=11 guifg=#3a3f58
-hi SignColumn ctermbg=0 guibg=#292D3E
+if has('nvim')
+	let g:airline_theme = 'transparent'
+	let g:material_terminal_italics = 1
+	let g:material_theme_style = 'palenight'
+	colorscheme material
+else
+	colorscheme base16-material-palenight
+	" hi LineNr ctermbg=0 guibg=#292D3E ctermfg=11 guifg=#3a3f58
+	" hi SignColumn ctermbg=0 guibg=#292D3E
+endif
