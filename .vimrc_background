@@ -14,13 +14,14 @@ set background=dark
 " colorscheme nord
 " colorscheme iceberg
 
-if has('nvim')
+let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
+if has("termguicolors") && supportsTrueColor
 	let g:airline_theme = 'transparent'
-	let g:material_terminal_italics = 1
+
+    let g:material_terminal_italics = 1
+
 	let g:material_theme_style = 'palenight'
 	colorscheme material
 else
-	colorscheme base16-material-palenight
-	" hi LineNr ctermbg=0 guibg=#292D3E ctermfg=11 guifg=#3a3f58
-	" hi SignColumn ctermbg=0 guibg=#292D3E
+    colorscheme base16-material-palenight
 endif
