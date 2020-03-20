@@ -25,5 +25,5 @@ if has("termguicolors") && supportsTrueColor
 else
     colorscheme base16-material-palenight
     " https://github.com/chriskempson/base16-vim/pull/210
-    hi Statement term=bold ctermfg=5 gui=bold guifg="#C792EA"
+    hi Statement term=bold ctermfg=5 gui=bold guifg=#C792EA
 endif
