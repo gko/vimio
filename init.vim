@@ -184,6 +184,7 @@ Plug 'dense-analysis/ale', {
             \ 'scala'
         \ ] }
 
+" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " requires specific font
@@ -205,7 +206,9 @@ Plug 'sainnhe/sonokai'
 Plug 'AlxHnr/clear_colors'
 Plug 'w0ng/vim-hybrid'
 " Plug 'hzchirs/vim-material'
-Plug 'kaicataldo/material.vim'
+" Plug 'kaicataldo/material.vim'
+" https://github.com/kaicataldo/material.vim/pull/42
+Plug 'gko/material.vim', {'branch': 'add_airline_theme'}
 Plug 'cocopon/iceberg.vim'
 Plug 'fxn/vim-monochrome'
 Plug 'arcticicestudio/nord-vim'

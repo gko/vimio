@@ -16,7 +16,8 @@ set background=dark
 
 let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
 if has("termguicolors") && supportsTrueColor
-    let g:airline_theme = 'transparent'
+    let g:airline_theme = 'material'
+    let g:lightline = { 'colorscheme': 'material_vim' }
 
     let g:material_terminal_italics = 1
 
