@@ -87,7 +87,7 @@ endif
 if executable('npm')
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'neoclide/coc-java', {'do': 'npm i'}
-    Plug 'neoclide/coc-json', {'do': 'npm i'}
+    " Plug 'neoclide/coc-json', {'do': 'npm i'}
 
     let g:UltiSnipsExpandTrigger="<nop>"
 endif
