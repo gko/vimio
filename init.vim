@@ -15,6 +15,7 @@ Plug 'xolox/vim-misc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'camspiers/lens.vim'
+Plug 'gcmt/taboo.vim'
 
 Plug 'xolox/vim-easytags', {
         \ 'on': [
