@@ -2,11 +2,11 @@ syntax on
 
 set background=light
 
-" if exists('$TMUX')
-    " " Colors in tmux
-    " let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
-    " let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
-" endif
+if exists('$TMUX')
+    " Colors in tmux
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 
 let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
 if has("termguicolors") && supportsTrueColor
@@ -22,8 +22,12 @@ let g:solarized_termcolors=256
 try
     if filereadable(expand("~/.vimrc_background"))
         let base16colorspace=256
-        let g:airline_theme='base16'
+
         source ~/.vimrc_background
+
+        if ! exists('g:airline_theme')
+            let g:airline_theme='base16'
+        endif
     else
         let g:airline_theme = "github"
         colorscheme github
