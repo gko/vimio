@@ -31,6 +31,7 @@ try
 
         " https://github.com/chriskempson/base16-vim/pull/210#issuecomment-609629586
         if exists('g:base16_gui0E')
+            highlight CursorLineNr cterm=none gui=none
             exec "hi Statement guifg=#" . g:base16_gui0E
             exec "hi Statement ctermfg=" . g:base16_cterm0E
         endif
