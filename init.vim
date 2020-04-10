@@ -122,7 +122,14 @@ Plug 'tpope/vim-fugitive', {
             \ 'Gdiff',
             \ 'Gedit',
             \ 'Gmove',
-            \ 'Gdelete'
+            \ 'Gdelete',
+            \ 'Flog',
+            \ 'Flogsplit'
+        \ ] }
+Plug 'rbong/vim-flog', {
+        \ 'on': [
+            \ 'Flog',
+            \ 'Flogsplit'
         \ ] }
 
 Plug 'tpope/vim-surround'
