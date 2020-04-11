@@ -48,12 +48,11 @@
             }
         },
         "golang": {
-            "command": "go-langserver",
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".git/", ".hg/"],
             "filetypes": ["go"],
             "initializationOptions": {
-                "gocodeCompletionEnabled": true,
-                "diagnosticsEnabled": true,
-                "lintTool": "golint"
+                "usePlaceholders": true
             }
         },
         "intelephense": {

@@ -90,28 +90,28 @@ See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim
 
 ##### Typescript/Javascript
 
-[https://github.com/theia-ide/typescript-language-server#installing](https://github.com/theia-ide/typescript-language-server#installing)
+https://github.com/theia-ide/typescript-language-server#installing
 
 ##### Go
 
-[https://github.com/sourcegraph/go-langserver](https://github.com/sourcegraph/go-langserver)
+https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation
 
 ##### Rust
 
-[https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start](https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start)
+https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
 
 you may need to install:
 
--   rustup [https://github.com/rust-lang/rustup#installation](https://github.com/rust-lang/rustup#installation)
+-   rustup https://github.com/rust-lang/rustup#installation
 -   rust-src `rustup component add rust-src`
 
 ##### Scala
 
-[https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary](https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary)
+https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary
 
 ##### PHP
 
-[https://github.com/bmewburn/intelephense-docs#installation](https://github.com/bmewburn/intelephense-docs#installation)
+https://github.com/bmewburn/intelephense-docs#installation
 
 ## List of plugins and commands
 
