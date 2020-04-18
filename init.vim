@@ -81,52 +81,17 @@ call plug#begin()
                 \ 'TestVisit'
             \ ] }
 
-    if has('python3')
-        Plug 'SirVer/ultisnips'
-    endif
-
-    if executable('npm')
-        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-        Plug 'neoclide/coc-java', {'do': 'npm i'}
-        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
-        " Plug 'neoclide/coc-json', {'do': 'npm i'}
-
-        let g:UltiSnipsExpandTrigger="<nop>"
-    endif
-
     Plug 'jpalardy/vim-slime'
-
-    Plug 'tpope/vim-fugitive', {
-            \ 'on': [
-                \ 'Gcommit',
-                \ 'Gstatus',
-                \ 'Gblame',
-                \ 'Gdiff',
-                \ 'Gedit',
-                \ 'Gmove',
-                \ 'Gdelete',
-                \ 'Flog',
-                \ 'Flogsplit'
-            \ ] }
-    Plug 'rbong/vim-flog', {
-            \ 'on': [
-                \ 'Flog',
-                \ 'Flogsplit'
-            \ ] }
 
     Plug 'tpope/vim-surround'
     Plug 'pbrisbin/vim-mkdir'
     Plug 'godlygeek/tabular'
     " Plug 'tyru/open-browser.vim'
-    Plug 'junegunn/vim-github-dashboard', {
-            \ 'on': [
-                \ 'GHDashboard',
-                \ 'GHActivity'
-            \ ] }
 
-    Plug 'ruanyl/vim-gh-line'
     Plug 'mattn/webapi-vim'
     Plug 'mattn/gist-vim', { 'on': ['Gist'] }
+
+    " https://github.com/szw/vim-g/pull/19
     Plug 'gko/vim-g'
     Plug 'airblade/vim-rooter'
     " neither works
@@ -188,6 +153,52 @@ call plug#begin()
     Plug 'wsdjeg/vim-fetch'
     Plug 'gko/upside-down'
     Plug 'kristijanhusak/vim-carbon-now-sh'
+" }}}
+
+" Git stuff {{{
+    Plug 'tpope/vim-fugitive', {
+            \ 'on': [
+                \ 'Gcommit',
+                \ 'Gstatus',
+                \ 'Gblame',
+                \ 'Gdiff',
+                \ 'Gedit',
+                \ 'Gmove',
+                \ 'Gdelete',
+                \ 'Flog',
+                \ 'Flogsplit'
+            \ ] }
+
+    Plug 'rbong/vim-flog', {
+            \ 'on': [
+                \ 'Flog',
+                \ 'Flogsplit'
+            \ ] }
+
+    Plug 'junegunn/vim-github-dashboard', {
+            \ 'on': [
+                \ 'GHDashboard',
+                \ 'GHActivity'
+            \ ] }
+
+    Plug 'ruanyl/vim-gh-line'
+
+    Plug 'airblade/vim-gitgutter'
+" }}}
+
+" Coc and Ultisnips {{{
+    if has('python3')
+        Plug 'SirVer/ultisnips'
+    endif
+
+    if executable('npm')
+        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+        Plug 'neoclide/coc-java', {'do': 'npm i'}
+        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+        " Plug 'neoclide/coc-json', {'do': 'npm i'}
+
+        let g:UltiSnipsExpandTrigger="<nop>"
+    endif
 " }}}
 
 " Colorschemes {{{
