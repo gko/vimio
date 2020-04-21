@@ -14,14 +14,8 @@ set background=dark
 " colorscheme nord
 " colorscheme iceberg
 
-let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
-if has("termguicolors") && supportsTrueColor
-    let g:material_terminal_italics = 1
-    let g:material_theme_style = 'palenight'
-    colorscheme material
+let g:material_theme_style = 'palenight'
 
-    let g:lightline = { 'colorscheme': 'material_vim' }
-    let g:airline_theme = 'material'
-else
-    colorscheme base16-material-palenight
-endif
+let g:lightline = { 'colorscheme': 'material_vim' }
+colorscheme material
+let g:airline_theme = 'material'
