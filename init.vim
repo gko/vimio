@@ -391,3 +391,7 @@ call plug#begin()
 " }}}
 
 call plug#end()
+
+if filereadable(expand("~/.vim/regexlist.vim"))
+    source ~/.vim/regexlist.vim
+endif
