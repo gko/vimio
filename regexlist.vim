@@ -5,3 +5,5 @@ let requireImport = "\\v(const|var|let)\\s*(\\S*|\\{[^\\}]*\\})\\s*\\=\\s*requir
 
 " convert function to arrow function
 let functionArrow = "\\vfunction\\s*(\\S*)\\s*(\\([^)]*\\))/const \\1 = \\2 =>"
+
+let markdownLinks = "\\%V\\v(.*)/[\\1](\\1)"

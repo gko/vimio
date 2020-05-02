@@ -207,9 +207,7 @@ call plug#begin()
     Plug 'sainnhe/sonokai'
     Plug 'AlxHnr/clear_colors'
     Plug 'w0ng/vim-hybrid'
-    " Plug 'kaicataldo/material.vim'
-    " https://github.com/kaicataldo/material.vim/pull/45
-    Plug 'gko/material.vim', { 'branch': 'add_cterm_support' }
+    Plug 'kaicataldo/material.vim'
     Plug 'cocopon/iceberg.vim'
     Plug 'fxn/vim-monochrome'
     Plug 'arcticicestudio/nord-vim'
