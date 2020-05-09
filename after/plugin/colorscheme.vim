@@ -38,7 +38,7 @@ try
     else
         let g:lightline = { 'colorscheme': 'github' }
         colorscheme github
-        let g:airline_theme = "github"
+        let g:airline_theme='github'
 
         " https://github.com/cormacrelf/vim-colors-github/pull/5
         hi! link SignColumn LineNr
