@@ -1,3 +1,7 @@
+if executable('ranger')
+    finish
+endif
+
 " NERDTree
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeFind<CR>
