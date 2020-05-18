@@ -24,7 +24,16 @@ call plug#begin()
             \ ] }
 
     Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
-    Plug 'scrooloose/nerdtree', {
+
+    if executable('ranger')
+        " ranger is awesome
+        let g:ranger_replace_netrw = 1
+
+        Plug 'francoiscabrol/ranger.vim'
+
+        Plug 'rbgrouleff/bclose.vim'
+    else
+        Plug 'scrooloose/nerdtree', {
             \ 'on': [
                 \ 'NERDTree',
                 \ 'NERDTreeCWD',
@@ -35,6 +44,7 @@ call plug#begin()
                 \ 'NERDTreeMirror',
                 \ 'NERDTreeToggle'
             \ ] }
+    endif
 
     Plug 'voldikss/vim-floaterm', {
             \ 'on': [
