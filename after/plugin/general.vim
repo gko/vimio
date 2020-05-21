@@ -1,5 +1,8 @@
 filetype plugin indent on     " required!
 
+" https://github.com/francoiscabrol/ranger.vim/issues/42
+set shell=bash
+
 " this deletes  symbols(mostly at the end of the lines)
 " noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
