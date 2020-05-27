@@ -26,6 +26,8 @@ call plug#begin()
     Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
 
     if executable('ranger')
+        let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+
         " ranger is awesome
         let g:ranger_replace_netrw = 1
 
