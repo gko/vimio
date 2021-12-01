@@ -174,6 +174,7 @@ else
     nnoremap <silent> K :call <SID>show_documentation()<CR>
 
     function! s:show_documentation()
+      hi typescriptParens guibg=NONE
       if (index(['vim','help'], &filetype) >= 0)
         execute 'h '.expand('<cword>')
       else
