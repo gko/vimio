@@ -161,6 +161,18 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 " }}}
 
+    Plug 'scrooloose/nerdtree', {
+        \ 'on': [
+            \ 'NERDTree',
+            \ 'NERDTreeCWD',
+            \ 'NERDTreeClose',
+            \ 'NERDTreeFind',
+            \ 'NERDTreeFocus',
+            \ 'NERDTreeFromBookmark',
+            \ 'NERDTreeMirror',
+            \ 'NERDTreeToggle'
+        \ ] }
+
     if isdirectory('/usr/local/opt/fzf')
         Plug '/usr/local/opt/fzf'
     else
