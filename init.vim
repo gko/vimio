@@ -184,6 +184,16 @@ call plug#begin()
             \ 'BLines',
             \ 'Marks'
         \ ] }
+
+    if executable('npm')
+        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+        Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
+        " Plug 'neoclide/coc-java', {'do': 'npm i'}
+
+        let g:UltiSnipsExpandTrigger="<nop>"
+    endif
+
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lspconfig'
