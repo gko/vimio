@@ -94,29 +94,6 @@ call plug#begin()
     " Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
     " else
 
-    if isdirectory('/usr/local/opt/fzf')
-        Plug '/usr/local/opt/fzf'
-    else
-        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    endif
-
-    Plug 'junegunn/fzf.vim', {
-            \ 'on': [
-                \ 'Ag',
-                \ 'Rg',
-                \ 'FZF',
-                \ 'Files',
-                \ 'GitFiles',
-                \ 'Buffers',
-                \ 'Commits',
-                \ 'BCommits',
-                \ 'Tags',
-                \ 'BTags',
-                \ 'History',
-                \ 'Lines',
-                \ 'BLines',
-                \ 'Marks'
-            \ ] }
     Plug 'pechorin/any-jump.vim'
 
     Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme', 'wast', 'wat'] }
@@ -184,6 +161,29 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 " }}}
 
+    if isdirectory('/usr/local/opt/fzf')
+        Plug '/usr/local/opt/fzf'
+    else
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    endif
+
+    Plug 'junegunn/fzf.vim', {
+        \ 'on': [
+            \ 'Ag',
+            \ 'Rg',
+            \ 'FZF',
+            \ 'Files',
+            \ 'GitFiles',
+            \ 'Buffers',
+            \ 'Commits',
+            \ 'BCommits',
+            \ 'Tags',
+            \ 'BTags',
+            \ 'History',
+            \ 'Lines',
+            \ 'BLines',
+            \ 'Marks'
+        \ ] }
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lspconfig'
