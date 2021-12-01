@@ -95,12 +95,14 @@ lua <<EOF
     }
 
     for _, lsp in ipairs(servers) do
-        nvim_lsp[lsp].setup {
-            on_attach = on_attach,
-            flags = {
-                debounce_text_changes = 150,
+        if nvim_lsp[lsp] then
+            nvim_lsp[lsp].setup {
+                on_attach = on_attach,
+                flags = {
+                    debounce_text_changes = 150,
+                }
             }
-        }
+        end
     end
 EOF
 
