@@ -228,6 +228,8 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'rktjmp/lush.nvim'
+    Plug 'mcchrish/zenbones.nvim'
     Plug 'habamax/vim-freyeday'
     Plug 'yasukotelin/shirotelin'
     Plug 'senran101604/neotrix.vim'
