@@ -208,34 +208,21 @@ call plug#begin()
 
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
+        " still not that good
         Plug 'neovim/nvim-lspconfig'
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        Plug 'Shougo/deoplete-lsp'
-        Plug 'fszymanski/deoplete-emoji'
+
+        " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        " Plug 'Shougo/deoplete-lsp'
+        " Plug 'fszymanski/deoplete-emoji'
         Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
-        Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle',  'NvimTreeRefresh', 'NvimTreeFindFile']}
+        " Plug 'kyazdani42/nvim-tree.lua' ", { 'on': ['NvimTreeToggle',  'NvimTreeRefresh', 'NvimTreeFindFile']}
+
+        " Plug 'nvim-lua/popup.nvim'
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'nvim-telescope/telescope.nvim'
+
+
         let g:deoplete#enable_at_startup = 1
-    else
-        if executable('npm')
-            Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-            Plug 'neoclide/coc-snippets', {'do': 'npm i'}
-            Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
-            " Plug 'neoclide/coc-java', {'do': 'npm i'}
-
-            let g:UltiSnipsExpandTrigger="<nop>"
-        endif
-
-        Plug 'scrooloose/nerdtree', {
-                        \ 'on': [
-                                \ 'NERDTree',
-                                \ 'NERDTreeCWD',
-                                \ 'NERDTreeClose',
-                                \ 'NERDTreeFind',
-                                \ 'NERDTreeFocus',
-                                \ 'NERDTreeFromBookmark',
-                                \ 'NERDTreeMirror',
-                                \ 'NERDTreeToggle'
-                        \ ] }
     endif
 " }}}
 
