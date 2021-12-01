@@ -133,6 +133,7 @@ call plug#begin()
 " Git stuff {{{
     Plug 'tpope/vim-fugitive', {
             \ 'on': [
+                \ 'Git',
                 \ 'Gcommit',
                 \ 'Gstatus',
                 \ 'Gblame',
