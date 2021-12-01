@@ -113,32 +113,32 @@ set background=light
 " }}}
 
 " fseydey{{{
-func! s:freyeday_setup() abort
-    hi Comment gui=italic cterm=italic
-    hi Statement gui=bold cterm=bold
-    hi Pmenu guifg='#333333' guibg='#ffffff'
-    hi diffAdded guifg='#5f875f' gui=NONE cterm=NONE
-    hi diffRemoved guifg='#d75f5f' gui=NONE cterm=NONE
-    hi link CocErrorFloat Pmenu
-    hi NoBackground guibg=NONE
-    hi link typescriptParens NoBackground
+" func! s:freyeday_setup() abort
+    " hi Comment gui=italic cterm=italic
+    " hi Statement gui=bold cterm=bold
+    " hi Pmenu guifg='#333333' guibg='#ffffff'
+    " hi diffAdded guifg='#5f875f' gui=NONE cterm=NONE
+    " hi diffRemoved guifg='#d75f5f' gui=NONE cterm=NONE
+    " hi link CocErrorFloat Pmenu
+    " hi NoBackground guibg=NONE
+    " hi link typescriptParens NoBackground
 
-    hi NonText guibg='#f7f7f7f'
-    hi Normal guibg='#f7f7f7f'
-    hi LineNr guibg='#f7f7f7f'
-    hi SignColumn guibg='#f7f7f7f'
+    " hi NonText guibg='#f7f7f7f'
+    " hi Normal guibg='#f7f7f7f'
+    " hi LineNr guibg='#f7f7f7f'
+    " hi SignColumn guibg='#f7f7f7f'
 
-    " hi NonText guibg='#fbfaf9'
-    " hi Normal guibg='#fbfaf9'
-    " hi LineNr guibg='#fbfaf9'
-    " hi SignColumn guibg='#fbfaf9'
-endfunc
+    " " hi NonText guibg='#fbfaf9'
+    " " hi Normal guibg='#fbfaf9'
+    " " hi LineNr guibg='#fbfaf9'
+    " " hi SignColumn guibg='#fbfaf9'
+" endfunc
 
-augroup colorscheme_change | au!
-    au ColorScheme freyeday call s:freyeday_setup()
-augroup END
+" augroup colorscheme_change | au!
+    " au ColorScheme freyeday call s:freyeday_setup()
+" augroup END
 
-colorscheme freyeday
+" colorscheme freyeday
 " }}}
 
 " miramare {{{
@@ -166,6 +166,8 @@ colorscheme freyeday
 " colorscheme spring-night
 " let g:airline_theme = 'spring_night'
 " }}}
+
+colo zenbones
 
 if has('nvim')
     " highlight Statement cterm=italic gui=italic
