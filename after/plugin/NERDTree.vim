@@ -1,5 +1,3 @@
-if has('nvim-0.5') | finish | endif
-
 " slightly better version of this hint: https://github.com/preservim/nerdtree#how-can-i-map-a-specific-key-or-shortcut-to-open-nerdtree
 function OpenNerdTree()
     if &filetype == 'nerdtree' || empty(expand('%:p'))
