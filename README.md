@@ -1,135 +1,141 @@
-#Vim Settings
+# Vim Settings
 
-##Installation
+![screenshot](/screenshot.png)
+
+An [article](https://dev.to/konstantin/configuring-a-perfect-editor-for-frontend-development-1pe5) describing key features of this config.
+
+## Prerequisites
+
+In order to get all features you might want to install following packages:
+
+- [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [npm](https://www.npmjs.com/get-npm)
+
+## Installation
 
 On unix and windows(with bash which can be installed with [git](http://msysgit.github.io/)):
 
-    curl -L https://raw.github.com/gorodinskiy/vimio/dev/install.sh|sh
+```shell
+curl -L https://raw.github.com/gko/vimio/main/install.sh | bash
+```
 
-##Shortcuts
+### macOS
+
+In macOS terminal.app don't forget to check the «Use option as meta key»:
+
+![terminal](https://raw.githubusercontent.com/gko/upside-down/master/terminal.png)
+
+And «Esc+» option in iterm2:
+
+![iterm2](https://raw.githubusercontent.com/gko/upside-down/master/iterm2.png)
+
+## Shortcuts
 
 Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
-###Terminal mode
- * <kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
- * <kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
- * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like one, two(toggle vertical/horizontal), three split layout
- * <kbd>Backspace</kbd> toggles Nerd Tree
- * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
- * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly + snippets(i.e. <kbd>'</kbd>+<kbd>TAB</kbd>)
- * <kbd>Ctrl</kbd>+<kbd>s</kbd> saves file, <kbd>Ctrl</kbd>+<kbd>a</kbd> selects all
- * <kbd>Leader</kbd>+<kbd>bd</kbd> closes current buffer,<kbd>Leader</kbd>+<kbd>q</kbd> closes split, <kbd>Leader</kbd>+<kbd>qa</kbd> quits vim
- * <kbd>Ctrl</kbd> + <kbd>Left/Right/Bottom/Top</kbd> moves around splits
- * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left/Right</kbd> next/previous buffer
- * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
- * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
+- <kbd>Ctrl</kbd> + <kbd>s</kbd> saves current file
+- <kbd>Leader</kbd> + <kbd>s</kbd> in both `select` and `normal` mode initiates search and replace
+- <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line or selection above
+  or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
+- <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character or
+  selection to left or to the right
+- <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
+- <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
+- when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
+- <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
+  [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
+  for more info)
 
-###GUI mode specific
- * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd> moves line/selection above/below current previous/next line
- * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Left</kbd>/<kbd>Right</kbd> moves character/selection to left/right
- * <kbd>Leader</kbd>+<kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> opens emacs like 1/2(toggle vertical/horizontal)/3 split layout
- * <kbd>Backspace</kbd> toggles Nerd Tree
- * <kbd>F5</kbd> toggles Tagbar(compiled tagbar for mac and windows in .vim/bin/ folder)
- * when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly + snippets(i.e. <kbd>'</kbd>+<kbd>TAB</kbd>)
- * <kbd>Ctrl</kbd>+<kbd>s</kbd> saves file, <kbd>Leader</kbd>+<kbd>a</kbd> selects all
- * <kbd>Ctrl</kbd> + <kbd>b</kbd> currently opened buffers
- * <kbd>Ctrl</kbd> + <kbd>p</kbd> go to any file in folder
- * <kbd>Ctrl</kbd>+<kbd>w</kbd> closes current buffer, <kbd>Ctrl</kbd>+<kbd>q</kbd> closes split, <kbd>Ctrl</kbd>+<kbd>qa</kbd> quits vim
- * <kbd>Ctrl</kbd> + <kbd>Left/Right/Bottom/Top</kbd> moves around splits
- * <kbd>Ctrl</kbd> + <kbd>Tab</kbd> next buffer
- * <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> previous buffer
- * <kbd>Ctrl</kbd> + <kbd>e</kbd> [zen coding](https://github.com/mattn/zencoding-vim) expand abbreviation
- * <kbd>Leader</kbd> + <kbd>s</kbd> in both select and normal mode search and replace
+### Plugin shortcuts
 
-##List of plugins
+- [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
+- [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
+- [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
+- ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
+- [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
+- [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
+- [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
+- [vim-doge](https://github.com/kkoomen/vim-doge#gdoge_mapping)
 
-* General
- * [vim-easymotion.git](https://github.com/Lokaltog/vim-easymotion.git)
- * [TaskList.vim.git](https://github.com/vim-scripts/TaskList.vim.git)
- * [nerdtree.git](https://github.com/scrooloose/nerdtree.git)
- * [zencoding-vim.git](https://github.com/mattn/zencoding-vim.git)
- * [vim-git.git](https://github.com/tpope/vim-git.git)
- * [vim-ruby.git](https://github.com/vim-ruby/vim-ruby.git)
- * [VimCobaltColourScheme.git](https://github.com/dterei/VimCobaltColourScheme.git)
- * [vim-vividchalk.git](https://github.com/tpope/vim-vividchalk.git)
- * [Wombat.git](https://github.com/vim-scripts/Wombat.git)
- * [vim-rails.git](https://github.com/tpope/vim-rails.git)
- * [SunburstVIM.git](https://github.com/tangphillip/SunburstVIM.git)
- * [vim-snipmate.git](https://github.com/garbas/vim-snipmate.git)
- * [tlib_vim.git](https://github.com/tomtom/tlib_vim.git)
- * [snipmate-snippets.git](https://github.com/honza/snipmate-snippets.git)
- * [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
- * [vim-velocity.git](https://github.com/lepture/vim-velocity.git)
- * [vim-addon-mw-utils.git](https://github.com/MarcWeber/vim-addon-mw-utils.git)
- * [neocomplcache.git](https://github.com/Shougo/neocomplcache.git)
- * [neosnippet](https://github.com/Shougo/neosnippet)
- * [vim-colors-solarized.git](https://github.com/altercation/vim-colors-solarized.git)
- * [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
- * [vim-railscasts-theme.git](https://github.com/jpo/vim-railscasts-theme.git)
- * [vim-tomorrow-theme.git](https://github.com/chriskempson/vim-tomorrow-theme.git)
- * [vimroom.git](https://github.com/mikewest/vimroom.git)
- * [vim-powerline.git](https://github.com/Lokaltog/vim-powerline.git)
- * [tagbar.git](https://github.com/majutsushi/tagbar.git)
- * [clang_complete.git](https://github.com/Rip-Rip/clang_complete.git)
- * [neocomplcache-clang_complete.git](https://github.com/Shougo/neocomplcache-clang_complete.git)
- * [neverland-vim-theme.git](https://github.com/trapd00r/neverland-vim-theme.git)
- * [ir_black.git](https://github.com/twerth/ir_black.git)
- * [ctrlp.vim.git](https://github.com/kien/ctrlp.vim.git)
- * [vim-markdown.git](https://github.com/plasticboy/vim-markdown.git)
- * [mheg.git](https://github.com/vim-scripts/mheg.git)
- * [colour-schemes](https://github.com/gorodinskiy/colour-schemes)
+#### vim-surround
 
-* HTML/HAML
- * [html5.vim.git](https://github.com/othree/html5.vim.git)
- * [vim-html5validator.git](https://github.com/hokaccha/vim-html5validator.git)
- * [vim-haml.git](https://github.com/tpope/vim-haml.git)
- * [MatchTag.git](https://github.com/gregsexton/MatchTag.git)
+For general instructions see
+[README](https://github.com/tpope/vim-surround#surroundvim)
 
-* CSS/LESS
- * [vim-css3-syntax.git](https://github.com/hail2u/vim-css3-syntax.git)
- * [vim-css-color.git](https://github.com/ap/vim-css-color.git)
- * [vim-less.git](https://github.com/groenewege/vim-less.git)
+See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
 
-* JavaScript
- * [vim-javascript.git](https://github.com/pangloss/vim-javascript.git)
- * [vim-jquery.git](https://github.com/itspriddle/vim-jquery.git)
- * [vim-coffee-script.git](https://github.com/kchmck/vim-coffee-script.git)
- * [jshint.vim.git](https://github.com/walm/jshint.vim.git)
- * [vim-javascript-syntax.git](https://github.com/jelera/vim-javascript-syntax.git)
- * [jscomplete-vim.git](https://github.com/teramako/jscomplete-vim.git)
+#### Coc.vim
 
-* JSON
- * [vim-json.git](https://github.com/leshill/vim-json.git)
+See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
 
-* PHP
- * [php.vim--Garvin.git](https://github.com/vim-scripts/php.vim--Garvin.git)
- * [PHP-Indenting-for-VIm.git](https://github.com/2072/PHP-Indenting-for-VIm.git)
+##### Language servers installation
 
-* Python/Django
- * [jedi-vim.git](https://github.com/davidhalter/jedi-vim.git)
- * [python-mode.git](https://github.com/klen/python-mode.git)
- * [pydoc.vim.git](https://github.com/fs111/pydoc.vim.git)
+###### Typescript/Javascript
 
-* Ruby/Rails
- * [vim-ruby.git](https://github.com/vim-ruby/vim-ruby.git)
- * [vim-rails.git](https://github.com/tpope/vim-rails.git)
- * [vim-endwise.git](https://github.com/tpope/vim-endwise.git)
+https://github.com/theia-ide/typescript-language-server#installing
 
-* Dart
- * [dart-vim-plugin.git](https://github.com/dart-lang/dart-vim-plugin.git)
+###### Go
 
-* Jade
- * [vim-jade.git](https://github.com/digitaltoad/vim-jade.git)
+https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation
 
-* Stylus
- * [vim-stylus.git](https://github.com/wavded/vim-stylus.git)
+###### Rust
 
-* Scala
- * [vim-scala.git](https://github.com/derekwyatt/vim-scala.git)
- * [scala-vim-snippets.git](https://github.com/gorodinskiy/scala-vim-snippets.git)
+https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
+
+you may need to install:
+
+- rustup https://github.com/rust-lang/rustup#installation
+- rust-src `rustup component add rust-src`
+
+###### Scala
+
+https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary
+
+###### PHP
+
+https://github.com/bmewburn/intelephense-docs#installation
+
+## List of all plugins and commands
+
+You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file.
+
+## Your config
+
+If you create `~/.vimrc.local` it will be loaded before the end of `vim-plug`.
+So you can add a custom config + vim plugins of your choice there.
+
+Example [.vimrc.local](/.vimrc.local).
+
+### Color scheme
+
+You can have a `~/.vimrc_background` file, where you keep custom colorscheme
+settings.
+
+Example can be found [here](/.vimrc_background). And you can symlink it as
+following:
+```shell
+ln -sf ~/.vim/.vimrc_background ~/
+```
+### Taking notes and TODOs
+
+- <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/Documents/Notes/index.md`
+- :Todo opens `~/Documents/Notes/todo.md` in a vertical split and fills in current date
+
+see more info in this article: https://dev.to/konstantin/taking-notes-in-vim-revisited-558k
+you can find the code here:
+https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after/plugin/shortcuts.vim#L225-L229
+
+and here
+
+https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after/plugin/filetypes.vim#L28-L32
+
+#### Checkboxes
+
+For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plugin is installed
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2016 Konstantin Gorodinskiy
+Copyright (c) 2012-2020 Konstantin Gorodinskiy

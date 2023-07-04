@@ -1,68 +1,61 @@
 #!/bin/bash
 
-# Check os
+echo "You're about to install «vimio». It will delete all your vim files‼️ "
+read -p "Proceed(y/n)❓" answer </dev/tty
+
+if ! [[ "$answer" =~ [yY] ]]; then
+    exit 0;
+fi
+
+# Check OS
 osname=$(uname -s)
 
-if [[ "$osname" == "Darwin" ]]; then
-    RESET='\x1B[0m'
-    GREEN='\x1B[0;32m'        # Green
-    BGREEN='\x1B[1;32m'       # Green
-else
-    RESET='\e[0m'
-    GREEN='\e[0;32m'        # Green
-    BGREEN='\e[1;32m'       # Green
-fi
+echo "🎩 installing «vimio»:"
+cd ~
+
+rm -rf ~/vimio
+rm -rf ~/.fzf
+
+echo "⚙️  downloading latest version"
+git clone --depth 1 -b main --recursive https://github.com/gko/vimio
 
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
+    echo "🚧 removing current vim settings"
+    rm -rf ~/.config/nvim
+    rm -rf ~/.vim
+    rm -rf ~/.vimrc
 
-    echo -e ""
-    echo -e "$BGREEN       _____ "
-    echo -e "$BGREEN/\   /\\_    \/\/\ "
-    echo -e "$BGREEN\ \ / / / /\/    \ "
-    echo -e "$BGREEN \ V /\/ /_/ /\/\ \ "
-    echo -e "$BGREEN  \_/\____/\/    \/ "
-    echo -e "$RESET"
+    echo "⚡️ installing..."
+    mv ~/vimio ~/.vim
+    ln -s ~/.vim/init.vim ~/.vimrc
+    # in case it doesn't exist
+    mkdir ~/.config
+    ln -s ~/.vim ~/.config/nvim
 
-    cd
-    rm -rf $HOME/.vim
-    rm -rf $HOME/.vimrc
-    rm -rf vim-settings
-    git clone --depth 1 -b dev --recursive https://github.com/gko/vimio.git vim-settings
-    mv vim-settings/_vimrc $HOME/.vimrc
-    mv vim-settings $HOME/.vim
-    cd .vim
-    mv .ctags ../
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    #copy fonts for Linux only
-    if [[ "$osname" == "Linux" ]]; then
-        mkdir -p ~/.fonts/
-        cp fonts/* ~/.fonts/
+    # install via neovim if it exists
+    if type nvim &> /dev/null; then
+        </dev/tty nvim +PlugInstall +qall
+    else
+        </dev/tty vim +PlugInstall +qall
     fi
 
-    chmod +x bin/ctags
-    cd
-
-    </dev/tty vim +BundleInstall +qall
-
+    echo "Done!"
 else
+    echo "🚧 removing current vim settings"
+    rm -rf ~/vimfiles
+    rm -rf ~/_vimrc
 
-    echo ""
-    echo "       _____ "
-    echo "/\   /\\_    \/\/\ "
-    echo "\ \ / / / /\/    \ "
-    echo " \ V /\/ /_/ /\/\ \ "
-    echo "  \_/\____/\/    \/ "
-    echo ""
-    echo "...don't forget to do :BundleInstall in vim to install plugins"
+    echo "⚡️ installing..."
+    mv ~/vimio/init.vim ~/_vimrc
+    mv ~/vimio ~/vimfiles
 
-    cd
-    rm -rf vimfiles
-    rm -rf _vimrc
-    rm -rf vim-settings
-    git clone --depth 1 -b dev --recursive https://github.com/gko/vimio.git vim-settings
-    mv vim-settings/_vimrc _vimrc
-    mv vim-settings vimfiles
-    mv vimfiles/.ctags ./
-    cd
+    curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+    echo "🛠 don't forget to run PlugInstall"
 fi
+
+echo "🛠 I recommend to installing :CocInstall coc-css coc-json coc-ultisnips"

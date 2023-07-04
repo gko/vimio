@@ -1,0 +1,12 @@
+" initial templates for files
+autocmd BufNewFile *.py 0r $VIMHOME/templates/template.py
+autocmd BufNewFile *.todo 0r $VIMHOME/templates/template.todo
+autocmd BufNewFile *.xml 0r $VIMHOME/templates/template.xml
+autocmd BufNewFile *.xsl 0r $VIMHOME/templates/template.xsl
+autocmd BufNewFile *.jade 0r $VIMHOME/templates/template.jade
+autocmd BufNewFile *.html 0r $VIMHOME/templates/template.html
+autocmd BufNewFile *.test.jsx 0r $VIMHOME/templates/template.test.jsx
+autocmd BufNewFile *.test.js 0r $VIMHOME/templates/template.test.jsx
+autocmd BufNewFile *.js 0r $VIMHOME/templates/template.js
+autocmd BufNewFile package.json 0r $VIMHOME/templates/package.json
+autocmd BufNewFile .editorconfig 0r $VIMHOME/templates/editorconfig
