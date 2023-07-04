@@ -228,6 +228,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'daschw/leaf.nvim'
     Plug 'savq/melange'
     Plug 'rktjmp/lush.nvim'
     Plug 'mcchrish/zenbones.nvim'

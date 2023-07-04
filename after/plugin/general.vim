@@ -130,6 +130,10 @@ if v:version >= 705
     set signcolumn=yes
 endif
 
+" https://github.com/neovim/neovim/issues/9342
+" https://twitter.com/Neovim/status/1504784802398023726
+set laststatus=3
+
 " https://vimtricks.com/p/ensuring-aligned-indentation/
 set shiftround
 

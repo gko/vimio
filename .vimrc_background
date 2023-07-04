@@ -167,7 +167,11 @@ set background=light
 " let g:airline_theme = 'spring_night'
 " }}}
 
-colo zenbones
+" colo zenbones
+
+colo melange
+hi NoBackground guibg=NONE
+hi link typescriptParens NoBackground
 
 if has('nvim')
     " highlight Statement cterm=italic gui=italic
