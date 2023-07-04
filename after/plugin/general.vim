@@ -130,6 +130,9 @@ if v:version >= 705
     set signcolumn=yes
 endif
 
+" https://vimtricks.com/p/ensuring-aligned-indentation/
+set shiftround
+
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")

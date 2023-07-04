@@ -225,8 +225,17 @@ vnoremap <silent> <Leader>q :q<CR>
 nnoremap <F4> :GundoToggle<CR>
 nmap <F5> :TagbarToggle<CR>
 
+" https://vimtricks.com/p/highlight-specific-lines/
+" define line highlight color
+highlight LineHighlight ctermbg=darkgray guibg=darkgray
+" highlight the current line
+nnoremap <silent> <Leader>l :call matchadd('LineHighlight', '\%'.line('.').'l')<CR>
+" clear all the highlighted lines
+nnoremap <silent> <Leader>c :call clearmatches()<CR>
+
+" nmap <script>n<CR> <SID>:tab drop tmp/notes.md<CR>
 " open ~/Documents/notes/index.md
-nnoremap <Leader>ww :e ~/Documents/Notes/index.md<cr>
+nnoremap <Leader>ww :tab drop ~/Documents/Notes/index.md<cr>
 if !exists(":Todo")
     command Todo :vsp ~/Documents/Notes/todo.md
 endif
