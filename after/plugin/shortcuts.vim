@@ -139,6 +139,10 @@ noremap ? :set hlsearch<cr>?
 nnoremap <leader>s :%s//<left>
 vnoremap <leader>s :s//<left>
 
+" https://superuser.com/a/264719
+" visually select a search result
+nnoremap g/ //e<Enter>v??<Enter>
+
 " find selected text
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 

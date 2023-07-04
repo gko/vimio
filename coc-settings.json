@@ -89,7 +89,7 @@
             "filetypes": ["python"],
             "settings": {
                 "pyls": {
-                    "enable": true,
+                    "enable": false,
                     "trace": {
                         "server": "verbose"
                     },

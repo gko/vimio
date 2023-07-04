@@ -228,6 +228,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'savq/melange'
     Plug 'rktjmp/lush.nvim'
     Plug 'mcchrish/zenbones.nvim'
     Plug 'habamax/vim-freyeday'
