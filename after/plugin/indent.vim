@@ -14,3 +14,6 @@ set noexpandtab
 "set smarttab
 set shiftwidth=2
 set softtabstop=2
+
+" https://vimtricks.com/p/ensuring-aligned-indentation/
+set shiftround
