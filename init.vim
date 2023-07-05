@@ -13,7 +13,6 @@ call plug#begin()
 " General stuff {{{
     Plug 'mhinz/vim-startify'
     Plug 'MattesGroeger/vim-bookmarks'
-    " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
     Plug 'xolox/vim-misc'
     " FIXME when deleting a multiline comment it deletes whitespace after
     " this comment
@@ -90,28 +89,9 @@ call plug#begin()
     Plug 'gko/vim-g'
     " Plug 'airblade/vim-rooter'
 
-    " if has('patch-8.1.2114') || has('nvim-0.4')
-    " Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
-    " else
-
     Plug 'pechorin/any-jump.vim'
 
     Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme', 'wast', 'wat'] }
-    " Plug 'dense-analysis/ale', {
-            " \ 'for': [
-                " \ 'javascript',
-                " \ 'typescript',
-                " \ 'vue',
-                " \ 'css',
-                " \ 'scss',
-                " \ 'go',
-                " \ 'rust',
-                " \ 'scala'
-            " \ ] }
-
-    " Plug 'itchyny/lightline.vim'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
 
     Plug 'sedm0784/vim-you-autocorrect', {
             \ 'on': [
@@ -212,18 +192,11 @@ call plug#begin()
         " still not that good
         Plug 'neovim/nvim-lspconfig'
 
-        " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        " Plug 'Shougo/deoplete-lsp'
-        " Plug 'fszymanski/deoplete-emoji'
         Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
-        " Plug 'kyazdani42/nvim-tree.lua' ", { 'on': ['NvimTreeToggle',  'NvimTreeRefresh', 'NvimTreeFindFile']}
 
         " Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
-
-
-        let g:deoplete#enable_at_startup = 1
     endif
 " }}}
 

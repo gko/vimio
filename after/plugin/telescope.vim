@@ -1,4 +1,4 @@
-if exists('g:loaded_fzf_vim')
+if exists('g:loaded_fzf_vim') || !has('nvim')
   finish
 endif
 
