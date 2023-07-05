@@ -254,9 +254,10 @@ call plug#begin()
     Plug 'zaiste/Atom'
     Plug 'morhetz/gruvbox'
     Plug 'kristijanhusak/vim-hybrid-material'
-    Plug 'nightsense/snow'
-    Plug 'nightsense/stellarized'
-    Plug 'nightsense/cosmic_latte'
+    " nightsense deleted all the repos
+    " Plug 'nightsense/snow'
+    " Plug 'nightsense/stellarized'
+    " Plug 'nightsense/cosmic_latte'
     Plug 'cormacrelf/vim-colors-github'
     Plug 'romgrk/github-light.vim'
 " }}}
