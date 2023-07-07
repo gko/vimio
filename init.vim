@@ -1,6 +1,7 @@
 " Konstantin Gorodinskiy(mail[at]konstantin.io)
+
 if exists('g:vscode')
-	finish
+    finish
 endif
 
 set nocompatible
@@ -8,6 +9,7 @@ filetype plugin on
 
 let mapleader = ","
 
+" https://stackoverflow.com/a/75963085/676756
 call plug#begin()
 
 " General stuff {{{

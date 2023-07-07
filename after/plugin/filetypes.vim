@@ -24,6 +24,9 @@ augroup filetype_detect_group
     " RFCS questionable decision
     " autocmd BufRead,BufNewFile *.todo.md,*.todo set ft=todo | call VimTodoListsInit()
 
+    " https://github.com/gko/vimio/issues/22
+    autocmd FileType gitcommit setlocal noautoindent nocindent nosmartindent indentexpr=
+
     " for coc.vim
     autocmd FileType json syntax match Comment +\/\/.\+$+
 
