@@ -8,7 +8,9 @@ if has('nvim') && has('nvim-0.5.0') && !exists("g:coc_enabled")
 
     augroup show-line-diagnostics
         autocmd!
-        autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+        " autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+        " https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
+        autocmd CursorHold, CursorHoldI * lua vim.diagnostic.open_float({scope="line"})
     augroup end
 " }}}
 
