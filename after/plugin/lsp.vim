@@ -1,5 +1,4 @@
 if has('nvim') || !exists("g:coc_enabled") || !executable('npm')
-    echom "aaa"
     finish
 endif
 

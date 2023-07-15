@@ -12,6 +12,9 @@ else
     diagnostics_fn = vim.lsp.diagnostic.show_line_diagnostics
 end
 
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
 vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
     callback = function()
@@ -113,7 +116,8 @@ function LspEnable()
             lspconfig[lsp].setup {
                 flags = {
                     debounce_text_changes = 150,
-                }
+                },
+                capabilities = capabilities
             }
         end
     end

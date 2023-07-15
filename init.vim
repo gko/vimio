@@ -182,12 +182,19 @@ call plug#begin()
 
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
-        " still not that good
+        Plug 'hrsh7th/nvim-cmp'
+        Plug 'hrsh7th/cmp-nvim-lsp'
+        Plug 'hrsh7th/cmp-buffer'
+        Plug 'hrsh7th/cmp-path'
+        Plug 'hrsh7th/cmp-cmdline'
+        Plug 'hrsh7th/nvim-cmp'
+        " For ultisnips users.
+        Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
         Plug 'neovim/nvim-lspconfig'
 
         Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
 
-        " Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
     elseif executable('npm')
