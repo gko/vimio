@@ -43,7 +43,7 @@ lua <<EOF
     )
 
     -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
-    local nvim_lsp = require('lspconfig')
+    local lspconfig = require('lspconfig')
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -88,11 +88,10 @@ lua <<EOF
         'gopls',
         'tsserver',
         'intelephense',
-        'pyls',
+        'pyright',
         'html',
         'cssls',
         'jsonls',
-        'sumneko_lua',
         'rust_analyzer',
         'metals',
         'ccls',
@@ -101,18 +100,20 @@ lua <<EOF
         'ocamlls',
         'dartls',
         'terraformls',
-        -- 'vimls',
+        'lua_ls',
     }
 
-    for _, lsp in ipairs(servers) do
-        if nvim_lsp[lsp] then
-            nvim_lsp[lsp].setup {
-                flags = {
-                    debounce_text_changes = 150,
-                }
-            }
-        end
-    end
+   for _, lsp in ipairs(servers) do
+       -- need to check for setup because some of
+       -- lsp configurations exist but have no setup (i.e. are deprecated)
+       if lspconfig[lsp] and lspconfig[lsp].setup then
+           lspconfig[lsp].setup {
+               flags = {
+                   debounce_text_changes = 150,
+               }
+           }
+       end
+   end
 EOF
 
         if bufname("%") != ""
