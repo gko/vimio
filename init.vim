@@ -329,7 +329,7 @@ call plug#begin()
 " }}}
 
 " PHP {{{
-    Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+    " Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 " }}}
 
 " Python/Django {{{
@@ -338,7 +338,7 @@ call plug#begin()
 " }}}
 
 " C/C++ {{{
-    Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
+    " Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 " }}}
 
 " Go {{{
