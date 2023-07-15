@@ -2,6 +2,9 @@
 " beware of this issue https://github.com/neovim/neovim/issues/11867
 if has('nvim') && has('nvim-0.5.0') && !exists("g:coc_enabled")
 
+" https://www.reddit.com/r/neovim/comments/wdeohs/comment/iihsy9b/
+set completeopt-=preview
+
 " diagnotics {{{
     let g:diagnostic_insert_delay = 1
     let g:diagnostic_enable_virtual_text = 0
