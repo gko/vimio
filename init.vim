@@ -180,15 +180,6 @@ call plug#begin()
             \ 'Marks'
         \ ] }
 
-    if executable('npm')
-        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
-        Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
-        " Plug 'neoclide/coc-java', {'do': 'npm i'}
-
-        let g:UltiSnipsExpandTrigger="<nop>"
-    endif
-
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         " still not that good
@@ -199,6 +190,13 @@ call plug#begin()
         " Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
+    elseif executable('npm')
+        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+        Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
+        " Plug 'neoclide/coc-java', {'do': 'npm i'}
+
+        let g:UltiSnipsExpandTrigger="<nop>"
     endif
 " }}}
 
