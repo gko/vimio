@@ -6,11 +6,17 @@ local success, telescope = pcall(require, "telescope")
 
 if not success then return end
 
+local telescopeConfig = require("telescope.config")
+
 telescope.setup {
     pickers = {
         find_files = {
             -- hidden = true
             no_ignore = false
+        },
+        -- https://github.com/nvim-telescope/telescope.nvim/issues/179#issuecomment-907607683
+        buffers = {
+            sort_lastused = true
         }
     }
 }
