@@ -2,6 +2,18 @@ if has('nvim') || !exists("g:coc_enabled") || !executable('npm')
     finish
 endif
 
+" https://github.com/tmsvg/pear-tree/issues/33#issuecomment-777888854
+
+" Disable automapping so we can fix Coc mapping.
+let g:pear_tree_map_special_keys = 0
+
+" Default mappings:
+imap <BS> <Plug>(PearTreeBackspace)
+imap <Esc> <Plug>(PearTreeFinishExpansion)
+
+" Get PearTreeExpand working with coc.nvim
+imap <expr> <CR> pumvisible() ? coc#_select_confirm() : "\<Plug>(PearTreeExpand)"
+
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count

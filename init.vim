@@ -22,7 +22,8 @@ call plug#begin()
 
     " https://github.com/tmsvg/pear-tree/issues/33
     " breaks the CR for the popup (i.e. in coc.nvim)
-    " Plug 'tmsvg/pear-tree'
+    " temporary fix https://github.com/tmsvg/pear-tree/issues/33#issuecomment-777888854 (see /after/plugin/lsp.vim)
+    Plug 'tmsvg/pear-tree'
 
     Plug 'terryma/vim-multiple-cursors'
     Plug 'gcmt/taboo.vim'
