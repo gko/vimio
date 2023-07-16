@@ -19,7 +19,11 @@ call plug#begin()
     " FIXME when deleting a multiline comment it deletes whitespace after
     " this comment
     " Plug 'jiangmiao/auto-pairs'
-    Plug 'tmsvg/pear-tree'
+
+    " https://github.com/tmsvg/pear-tree/issues/33
+    " breaks the CR for the popup (i.e. in coc.nvim)
+    " Plug 'tmsvg/pear-tree'
+
     Plug 'terryma/vim-multiple-cursors'
     Plug 'gcmt/taboo.vim'
     " Plug 'chaoren/vim-wordmotion'
