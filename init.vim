@@ -13,6 +13,7 @@ let mapleader = ","
 call plug#begin()
 
 " General stuff {{{
+    Plug 'github/copilot.vim', { 'on': 'Copilot' }
     Plug 'mhinz/vim-startify'
     Plug 'MattesGroeger/vim-bookmarks'
     Plug 'xolox/vim-misc'
