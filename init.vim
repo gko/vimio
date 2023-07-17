@@ -10,6 +10,8 @@ filetype plugin on
 let mapleader = ","
 
 " https://stackoverflow.com/a/75963085/676756
+" ~/.local/share/nvim/plugged/ for nvim
+" ~/.vim/plugged/ for vim
 call plug#begin()
 
 " General stuff {{{
