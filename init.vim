@@ -204,7 +204,7 @@ call plug#begin()
         Plug 'nvim-telescope/telescope.nvim'
     elseif executable('npm')
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'neoclide/coc-tsserver', {'do': 'npm i'}
+        Plug 'neoclide/coc-tsserver', {'do': 'npm i', 'for': ['javascript', 'typescript'] }
         " ERESOLVE unable to resolve dependency tree
         " Plug 'neoclide/coc-snippets', {'do': 'npm i'}
         Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
