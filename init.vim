@@ -15,6 +15,7 @@ let mapleader = ","
 call plug#begin()
 
 " General stuff {{{
+    " see https://github.com/gko/vimio/blob/master/after/plugin/copilot.vim
     Plug 'github/copilot.vim', { 'on': 'Copilot' }
     Plug 'mhinz/vim-startify'
     Plug 'MattesGroeger/vim-bookmarks'
