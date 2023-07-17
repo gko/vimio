@@ -24,11 +24,11 @@ curl -L https://raw.github.com/gko/vimio/main/install.sh | bash
 
 In macOS terminal.app don't forget to check the «Use option as meta key»:
 
-![terminal](https://raw.githubusercontent.com/gko/upside-down/master/terminal.png)
+![terminal](/terminal.png)
 
 And «Esc+» option in iterm2:
 
-![iterm2](https://raw.githubusercontent.com/gko/upside-down/master/iterm2.png)
+![iterm2](/iterm2.png)
 
 ## Shortcuts
 
@@ -44,7 +44,7 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 - <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
 - when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
 - <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
-  [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
+  [yankmatches.vim](https://github.com/gko/vimio/blob/main/after/plugin/yankmatches.vim)
   for more info)
 
 ### Plugin shortcuts
@@ -73,15 +73,15 @@ See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim
 
 ###### Typescript/Javascript
 
-https://github.com/theia-ide/typescript-language-server#installing
+https://github.com/typescript-language-server/typescript-language-server#installing
 
 ###### Go
 
-https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation
+https://github.com/golang/tools/tree/master/gopls#installation
 
 ###### Rust
 
-https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
+https://rust-analyzer.github.io/manual.html#installation
 
 you may need to install:
 
@@ -90,15 +90,15 @@ you may need to install:
 
 ###### Scala
 
-https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary
+https://scalameta.org/metals/docs/editors/vim/#using-an-alternative-lsp-client
 
 ###### PHP
 
-https://github.com/bmewburn/intelephense-docs#installation
+https://github.com/bmewburn/intelephense-docs/blob/master/installation.md
 
 ## List of all plugins and commands
 
-You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file.
+You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/main/init.vim) file.
 
 ## Your config
 
