@@ -4,7 +4,9 @@ end
 
 -- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 -- Set up nvim-cmp.
-local cmp = require'cmp'
+local success, cmp = pcall(require, "cmp")
+
+if not success then return end
 
 cmp.setup({
     snippet = {
