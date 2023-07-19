@@ -2,9 +2,9 @@ if vim.g.loaded_fzf_vim then
     return
 end
 
-local success, telescope = pcall(require, "telescope")
+local ok, telescope = pcall(require, "telescope")
 
-if not success then return end
+if not ok then return end
 
 local telescopeConfig = require("telescope.config")
 

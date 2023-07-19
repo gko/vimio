@@ -13,7 +13,11 @@ else
 end
 
 -- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+
+if not ok then return end
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
 vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -50,7 +54,9 @@ function LspEnable()
     )
 
     -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
-    local lspconfig = require('lspconfig')
+    local ok, lspconfig = pcall(require, 'lspconfig')
+
+    if not ok then return end
 
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
