@@ -9,9 +9,12 @@ if not success then return end
 local telescopeConfig = require("telescope.config")
 
 telescope.setup {
+    defaults = {
+        file_ignore_patterns = { ".git", ".hg", ".cargo", "node_modules", ".bundle", "__pycache__" }
+    },
     pickers = {
         find_files = {
-            -- hidden = true
+            hidden = true,
             no_ignore = false
         },
         -- https://github.com/nvim-telescope/telescope.nvim/issues/179#issuecomment-907607683
@@ -21,7 +24,7 @@ telescope.setup {
     }
 }
 
-local opts = {silent=true}
+local opts = { silent = true }
 -- Telescope mappings
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
