@@ -20,7 +20,7 @@ if not ok then return end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
-vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+vim.api.nvim_create_autocmd({ "CursorHold", --[[ "CursorHoldI" --]] }, {
     callback = function()
         diagnostics_fn({scope="line"})
     end
