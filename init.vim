@@ -114,11 +114,6 @@ call plug#begin()
     " Plug 'wsdjeg/vim-fetch'
     Plug 'gko/upside-down'
     Plug 'kristijanhusak/vim-carbon-now-sh', { 'on': 'CarbonNowSh' }
-
-    if has('python3')
-        Plug 'SirVer/ultisnips'
-        Plug 'honza/vim-snippets'
-    endif
 " }}}
 
 " Git stuff {{{
@@ -197,8 +192,6 @@ call plug#begin()
         Plug 'hrsh7th/cmp-path'
         Plug 'hrsh7th/cmp-cmdline'
         Plug 'hrsh7th/nvim-cmp'
-        " For ultisnips users.
-        Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
         Plug 'neovim/nvim-lspconfig'
 
@@ -213,6 +206,12 @@ call plug#begin()
         " Plug 'neoclide/coc-snippets', {'do': 'npm i'}
         Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
         " Plug 'neoclide/coc-java', {'do': 'npm i'}
+
+        " install ultisnips only for coc
+        if has('python3')
+            Plug 'SirVer/ultisnips'
+            Plug 'honza/vim-snippets'
+        endif
 
         let g:UltiSnipsExpandTrigger="<nop>"
     endif
