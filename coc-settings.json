@@ -72,7 +72,7 @@
             }
         },
         "metals": {
-            "command": "metals-vim",
+            "command": "metals",
             "rootPatterns": ["build.sbt"],
             "filetypes": ["scala", "sbt.scala", "sbt"]
         },
