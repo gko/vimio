@@ -345,23 +345,13 @@ call plug#begin()
     Plug 'cespare/vim-toml', { 'for': 'toml' }
 " }}}
 
-" PHP {{{
-    " Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-" }}}
-
 " Python/Django {{{
     Plug 'klen/python-mode', { 'for': 'python' }
-    Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-" }}}
-
-" C/C++ {{{
-    " Plug 'justmao945/vim-clang', { 'for': ['c', 'cpp'] }
 " }}}
 
 " Go {{{
     if executable('go')
         Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
-        Plug 'mdempsky/gocode', { 'for': 'go' }
     endif
 " }}}
 
@@ -386,13 +376,8 @@ call plug#begin()
     Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " }}}
 
-" Java {{{
-    Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
-" }}}
-
 " Rust {{{
     Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-    Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 " }}}
 
 " Elm {{{
@@ -423,17 +408,12 @@ call plug#begin()
     Plug 'chr4/nginx.vim'
 " }}}
 
-" ReasonML {{{
-" Plug 'reasonml-editor/vim-reason-plus'
-" }}}
-
 " Swift {{{
     Plug 'keith/swift.vim', { 'for': 'swift' }
 " }}}
 
 " Terraform {{{
     Plug 'hashivim/vim-terraform', { 'for': 'tf' }
-    Plug 'juliosueiras/vim-terraform-completion', { 'for': 'tf' }
 " }}}
 
 " Your part of config {{{
