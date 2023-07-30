@@ -8,9 +8,9 @@ An [article](https://dev.to/konstantin/configuring-a-perfect-editor-for-frontend
 
 In order to get all features you might want to install following packages:
 
-- [fzf](https://github.com/junegunn/fzf)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [npm](https://www.npmjs.com/get-npm)
+- [fzf](https://github.com/junegunn/fzf#installation)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## Installation
 
@@ -65,9 +65,13 @@ For general instructions see
 
 See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
 
-#### Coc.vim
+#### Coc.nvim
 
-See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
+For vim I use Coc.nvim, in their repository you can find their [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
+
+#### nvim-lspconfig
+
+For nvim I use native nvim lsp config. You can find the example config here: [example lsp config](https://github.com/neovim/nvim-lspconfig#suggested-configuration)
 
 ##### Language servers installation
 
