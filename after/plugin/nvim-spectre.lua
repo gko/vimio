@@ -29,7 +29,7 @@ spectre.setup({
     line_sep       = '└-----------------------------------------',
     highlight      = {
         ui = "String",
-        search = "DiffChange",
-        replace = "DiffDelete"
+        search = "DiffDelete",
+        replace = "DiffAdd"
     },
 })
