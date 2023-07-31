@@ -142,4 +142,4 @@ For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plu
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2020 Konstantin Gorodinskiy
+Copyright (c) 2012-2023 Konstantin Gorodinskiy
