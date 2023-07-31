@@ -199,6 +199,7 @@ call plug#begin()
 
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
+        Plug 'nvim-pack/nvim-spectre'
     elseif executable('npm')
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'neoclide/coc-tsserver', {'do': 'npm i', 'for': ['javascript', 'typescript'] }
