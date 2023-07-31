@@ -14,6 +14,16 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
+local all_buffers_source = {
+    name = 'buffer',
+    -- https://github.com/hrsh7th/cmp-buffer#all-buffers
+    option = {
+        get_bufnrs = function()
+            return vim.api.nvim_list_bufs()
+        end
+    }
+}
+
 cmp.setup({
     -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#no-snippet-plugin
     snippet = {
@@ -75,9 +85,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'ultisnips' }, -- For ultisnips users.
-    }, {
-        { name = 'buffer' },
+        all_buffers_source
     })
 })
 
@@ -85,8 +93,7 @@ cmp.setup({
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
         { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
-    }, {
-        { name = 'buffer' },
+        all_buffers_source
     })
 })
 
