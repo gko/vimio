@@ -10,7 +10,7 @@ local telescopeConfig = require("telescope.config")
 
 telescope.setup {
     defaults = {
-        file_ignore_patterns = { ".git", ".hg", ".cargo", "node_modules", ".bundle", "__pycache__" }
+        file_ignore_patterns = { ".git", ".hg", ".cargo", "node_modules", ".bundle", "__pycache__", "vendor" }
     },
     pickers = {
         find_files = {
