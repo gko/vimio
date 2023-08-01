@@ -241,5 +241,5 @@ nnoremap <silent> <Leader>c :call clearmatches()<CR>
 " open ~/Documents/notes/index.md
 nnoremap <Leader>ww :tab drop ~/Documents/Notes/index.md<cr>
 if !exists(":Todo")
-    command Todo :vsp ~/Documents/Notes/todo.md
+    command Todo :tab drop ~/Documents/Notes/todo.md
 endif
