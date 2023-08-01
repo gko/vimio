@@ -6,3 +6,7 @@
         " \   let g:prettier#config#arrow_parens = 'avoid' |
         " \ endif
 " augroup end
+
+" prefer prettier config to prettier plugin defaults
+" https://github.com/prettier/vim-prettier/issues/266#issuecomment-953417529
+let g:prettier#config#config_precedence = 'prefer-file'
