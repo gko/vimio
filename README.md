@@ -138,6 +138,10 @@ https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after
 
 For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plugin is installed
 
+#### Pasting images
+
+With help of [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage) you can paste images by using <kbd>Leader</kbd> + <kbd>p</kbd> (it would store in the same folder as the markdown document in `img` folder)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
