@@ -15,7 +15,6 @@ endif
 
 set t_Co=256
 let g:molokai_original = 1
-let g:solarized_termcolors=256
 
 " set colorscheme
 " if you have base16 installed take that colorscheme
