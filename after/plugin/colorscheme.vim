@@ -8,7 +8,9 @@ if exists('$TMUX')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-let supportsTrueColor = $COLORTERM == "truecolor" || $COLORTERM == "24bit"
+" if COLORTERM variable is not exposed but termguicolors colors are supported
+" we probably should turn it on, otherwise the colors are messed up
+let supportsTrueColor = $COLORTERM == "" || $COLORTERM == "truecolor" || $COLORTERM == "24bit"
 if has("termguicolors") && supportsTrueColor
     set termguicolors
 endif
