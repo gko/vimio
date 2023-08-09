@@ -22,7 +22,7 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
 vim.api.nvim_create_autocmd({ "CursorHold", --[[ "CursorHoldI" --]] }, {
     callback = function()
-        diagnostics_fn({scope="line"})
+        diagnostics_fn({ scope = "line" })
     end
 })
 
@@ -140,7 +140,6 @@ function LspDisable()
         vim.cmd('edit!')
     end
 end
-
 
 vim.cmd([[command! LspEnable lua LspEnable()]])
 vim.cmd([[command! LspDisable lua LspDisable()]])
