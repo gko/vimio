@@ -283,7 +283,8 @@ call plug#begin()
 
 " HTML/HAML {{{
     Plug 'othree/html5.vim', { 'for': 'html' }
-    Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
+    " keeps crashing
+    " Plug 'hokaccha/vim-html5validator', { 'for':  'html' }
     Plug 'tpope/vim-haml', { 'for':  'haml' }
     Plug 'mustache/vim-mustache-handlebars'
 " }}}
