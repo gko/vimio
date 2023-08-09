@@ -12,6 +12,21 @@ else
     diagnostics_fn = vim.lsp.diagnostic.show_line_diagnostics
 end
 
+function lsp_binary_exists(server_config)
+    local valid_config = server_config.document_config and
+        server_config.document_config.default_config and
+        type(server_config.document_config.default_config.cmd) == "table" and
+        #server_config.document_config.default_config.cmd >= 1
+
+    if not valid_config then
+        return false
+    end
+
+    local binary = server_config.document_config.default_config.cmd[1]
+
+    return vim.fn.executable(binary) == 1
+end
+
 -- Set up lspconfig.
 local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 
@@ -118,7 +133,7 @@ function LspEnable()
     for _, lsp in ipairs(servers) do
         -- need to check for setup because some of
         -- lsp configurations exist but have no setup (i.e. are deprecated)
-        if lspconfig[lsp] and lspconfig[lsp].setup then
+        if lspconfig[lsp] and lspconfig[lsp].setup and lsp_binary_exists(lspconfig[lsp]) then
             lspconfig[lsp].setup {
                 flags = {
                     debounce_text_changes = 150,
