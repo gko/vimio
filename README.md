@@ -142,6 +142,16 @@ For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plu
 
 With help of [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage) you can paste images by using <kbd>Leader</kbd> + <kbd>p</kbd> (it would store in the same folder as the markdown document in `img` folder)
 
+## Benchmark
+
+Not that it matters, but I get the following startup time:
+```
+$ hyperfine "nvim --headless +qa"
+Benchmark 1: nvim --headless +qa
+    Time (mean ± σ):     200.1 ms ±   6.9 ms    [User: 123.9 ms, System: 63.2 ms]
+    Range (min … max):   191.9 ms … 210.9 ms    14 runs
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
