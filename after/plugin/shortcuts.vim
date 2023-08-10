@@ -243,3 +243,8 @@ nnoremap <Leader>ww :tab drop ~/Documents/Notes/index.md<cr>
 if !exists(":Todo")
     command Todo :tab drop ~/Documents/Notes/todo.md
 endif
+
+" TODO need a shortcut/command for :set virtualedit=all and virtualedit=none
+" always forgetting the name of this mode and it's hard to find it by description
+" it allows to put cursor anywhere in the document as if it was filled with
+" whitespace
