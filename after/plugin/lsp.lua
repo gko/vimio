@@ -23,6 +23,7 @@ function lsp_binary_exists(server_config)
     end
 
     local binary = server_config.document_config.default_config.cmd[1]
+    -- print(binary)
 
     return vim.fn.executable(binary) == 1
 end
@@ -111,23 +112,23 @@ function LspEnable()
         end,
     })
 
-    local servers = {
-        'gopls',
-        'tsserver',
-        'intelephense',
-        'pyright',
-        'html',
-        'cssls',
-        'jsonls',
-        'rust_analyzer',
-        'metals',
-        'ccls',
-        'kotlin_language_server',
-        'sourcekit',
-        'ocamlls',
-        'dartls',
-        'terraformls',
-        'lua_ls',
+    local servers = {             -------------- binaries
+        'gopls',                  -- gopls
+        'tsserver',               -- typescript-language-server
+        'intelephense',           -- intelephense
+        'pyright',                -- pyright-langserver
+        'html',                   -- vscode-html-language-server
+        'cssls',                  -- vscode-css-language-server
+        'jsonls',                 -- vscode-json-language-server
+        'rust_analyzer',          -- rust-analyzer
+        'metals',                 -- metals
+        'ccls',                   -- ccls
+        'kotlin_language_server', -- kotlin-language-server
+        'sourcekit',              -- sourcekit-lsp
+        'ocamlls',                -- ocaml-language-server
+        'dartls',                 -- dart
+        'terraformls',            -- terraform-ls
+        'lua_ls',                 -- lua-language-server
     }
 
     for _, lsp in ipairs(servers) do
