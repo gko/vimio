@@ -209,7 +209,7 @@ call plug#begin()
         " Plug 'neoclide/coc-java', {'do': 'npm i'}
 
         " install ultisnips only for coc
-        if has('python3')
+        if has('python') || has('python3')
             Plug 'SirVer/ultisnips'
             Plug 'honza/vim-snippets'
         endif
@@ -349,7 +349,9 @@ call plug#begin()
 " }}}
 
 " Python/Django {{{
-    Plug 'klen/python-mode', { 'for': 'python' }
+    if has('python') || has('python3')
+        Plug 'klen/python-mode', { 'for': 'python' }
+    endif
 " }}}
 
 " Go {{{
