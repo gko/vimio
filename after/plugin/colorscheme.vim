@@ -1,6 +1,38 @@
 syntax on
 
+" https://stackoverflow.com/a/54652367
+" more optimized version of this function
+function! IsDarkTerminalBackground()
+    " get the value of the COLORFGBG environment variable
+    let colorfgbg = $COLORFGBG
+
+    " check if it is set and that it has a valid structure
+    if empty(colorfgbg) || stridx(colorfgbg, ";") == -1
+        return 0
+    endif
+
+    let parts = split(colorfgbg, ";")
+
+    if len(parts) == 0
+        return 0
+    endif
+
+    let color = parts[-1]
+    echom color
+
+    if color == '0' || color == '1' || color == '2' ||
+                \ color == '3' || color == '4' || color == '5' ||
+                \ color == '6' || color == '8'
+        return 1
+    endif
+
+    return 0
+endfunction
+
 set background=light
+if IsDarkTerminalBackground() == 1
+    set background=dark
+endif
 
 if exists('$TMUX')
     " Colors in tmux
