@@ -18,7 +18,6 @@ function! IsDarkTerminalBackground()
     endif
 
     let color = parts[-1]
-    echom color
 
     if color == '0' || color == '1' || color == '2' ||
                 \ color == '3' || color == '4' || color == '5' ||
