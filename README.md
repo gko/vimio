@@ -146,7 +146,7 @@ With help of [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usag
 
 Not that it matters, but I get the following startup time:
 ```
-$ hyperfine "nvim --headless +qa"
+$ hyperfine "nvim --headless +qa" --warmup 5
 Benchmark 1: nvim --headless +qa
     Time (mean ± σ):     200.1 ms ±   6.9 ms    [User: 123.9 ms, System: 63.2 ms]
     Range (min … max):   191.9 ms … 210.9 ms    14 runs
