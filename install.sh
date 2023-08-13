@@ -60,4 +60,5 @@ else
     echo "🛠 don't forget to run PlugInstall"
 fi
 
-echo "🛠 I recommend to installing :CocInstall coc-css coc-json coc-ultisnips"
+echo "Done.\n\nDon't forget to install ripgrep, fzf, sed  and npm for more features.\n\n\
+more info here: https://github.com/gko/vimio#prerequisites"
