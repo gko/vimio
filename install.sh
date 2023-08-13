@@ -17,6 +17,8 @@ rm -rf ~/vimio
 rm -rf ~/.fzf
 
 echo "⚙️  downloading latest version"
+# git pull --unshallow
+# to get all revisions
 git clone --depth 1 -b main --recursive https://github.com/gko/vimio
 
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
