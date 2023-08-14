@@ -60,4 +60,4 @@ else
     echo "🛠 don't forget to run PlugInstall"
 fi
 
-echo "Done.\n\nDon't forget to install ripgrep, fzf, sed  and npm formore features.\n\nmore info here: https://github.com/gko/vimio#prerequisites"
+echo -e "Done.\n\nDon't forget to install ripgrep, fzf, sed  and npm formore features.\n\nMore info here: https://github.com/gko/vimio#prerequisites"
