@@ -43,8 +43,6 @@ if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     else
         </dev/tty vim +PlugInstall +qall
     fi
-
-    echo "Done!"
 else
     echo "🚧 removing current vim settings"
     rm -rf ~/vimfiles
@@ -57,7 +55,7 @@ else
     curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    echo "🛠 don't forget to run PlugInstall"
+    echo "🛠 please run PlugInstall from within vim"
 fi
 
-echo -e "Done.\n\nDon't forget to install ripgrep, fzf, sed  and npm formore features.\n\nMore info here: https://github.com/gko/vimio#prerequisites"
+echo -e "\n\nDone!\n\nDon't forget to install ripgrep, fzf, sed  and npm formore features.\n\nMore info here: https://github.com/gko/vimio#prerequisites"
