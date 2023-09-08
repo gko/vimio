@@ -6,8 +6,6 @@ local ok, telescope = pcall(require, "telescope")
 
 if not ok then return end
 
-local telescopeConfig = require("telescope.config")
-
 telescope.setup {
     defaults = {
         file_ignore_patterns = { ".git", ".hg", ".cargo", "node_modules", ".bundle", "__pycache__", "vendor" }
@@ -19,7 +17,9 @@ telescope.setup {
         },
         -- https://github.com/nvim-telescope/telescope.nvim/issues/179#issuecomment-907607683
         buffers = {
-            sort_lastused = true
+            sort_lastused = true,
+            -- https://github.com/nvim-telescope/telescope.nvim/issues/791#issuecomment-882101144
+            sort_mru = true
         }
     }
 }
