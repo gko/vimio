@@ -240,8 +240,14 @@ nnoremap <silent> <Leader>c :call clearmatches()<CR>
 " nmap <script>n<CR> <SID>:tab drop tmp/notes.md<CR>
 " open ~/Documents/notes/index.md
 nnoremap <Leader>ww :tab drop ~/Documents/Notes/index.md<cr>
-if !exists(":Todo")
+if !exists(":Note") && !exists(":Notes")
+    command Note :tab drop ~/Documents/Notes/index.md
+    command Notes :tab drop ~/Documents/Notes/index.md
+endif
+
+if !exists(":Todo") && !exists(":TODO")
     command Todo :tab drop ~/Documents/Notes/todo.md
+    command TODO :tab drop ~/Documents/Notes/todo.md
 endif
 
 " TODO need a shortcut/command for :set virtualedit=all and virtualedit=none
