@@ -90,6 +90,7 @@ call plug#begin()
 
     Plug 'tpope/vim-surround'
     Plug 'pbrisbin/vim-mkdir'
+    " http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
     Plug 'godlygeek/tabular'
     " Plug 'tyru/open-browser.vim'
 
