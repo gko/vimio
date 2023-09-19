@@ -58,4 +58,4 @@ else
     echo "🛠 please run PlugInstall from within vim"
 fi
 
-echo -e "\n\nDone!\n\nDon't forget to install ripgrep, fzf, sed  and npm formore features.\n\nMore info here: https://github.com/gko/vimio#prerequisites"
+echo -e "\n\nDone!\n\nDon't forget to install ripgrep, fzf, sed  and npm for more features.\n\nMore info here: https://github.com/gko/vimio#prerequisites"
