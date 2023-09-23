@@ -168,6 +168,7 @@
 if has('nvim')
     colo melange
     hi NoBackground guibg=NONE
+    " hi Normal guibg=NONE
 else
     colo zenbones
 endif
