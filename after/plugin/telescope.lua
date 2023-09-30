@@ -8,7 +8,7 @@ if not ok then return end
 
 telescope.setup {
     defaults = {
-        file_ignore_patterns = { ".git", ".hg", ".cargo", "node_modules", ".bundle", "__pycache__", "vendor" }
+        file_ignore_patterns = { "%.git", "%.hg", "%.cargo", "node%_modules", "%.bundle", "%_%_pycache%_%_", "vendor" }
     },
     pickers = {
         find_files = {
