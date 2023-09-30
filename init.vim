@@ -60,7 +60,7 @@ call plug#begin()
 
     Plug 'kkoomen/vim-doge'
     Plug 'mattn/emmet-vim'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
     Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
     Plug 'editorconfig/editorconfig-vim'
 
