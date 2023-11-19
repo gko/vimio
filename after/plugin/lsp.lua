@@ -116,7 +116,9 @@ function LspEnable()
         'gopls',                  -- gopls
         'tsserver',               -- typescript-language-server
         'intelephense',           -- intelephense
-        'pyright',                -- pyright-langserver
+        -- 'pyright',             -- pyright-langserver
+        -- 'pylsp',               -- pylsp
+        'jedi_language_server',   -- jedi-language-server
         'html',                   -- vscode-html-language-server
         'cssls',                  -- vscode-css-language-server
         'jsonls',                 -- vscode-json-language-server
@@ -139,7 +141,7 @@ function LspEnable()
                 flags = {
                     debounce_text_changes = 150,
                 },
-                capabilities = capabilities
+                capabilities = capabilities,
             }
         end
     end
