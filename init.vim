@@ -397,8 +397,7 @@ call plug#begin()
 
 " Markdown {{{
     Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
-    " TODO revert once merged https://github.com/preservim/vim-markdown/pull/643
-    Plug 'gko/vim-markdown', { 'for': 'markdown', 'branch': 'tables_without_borders' }
+    Plug 'preservim/vim-markdown', { 'for': 'markdown' }
 
     if executable('npm')
         Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
