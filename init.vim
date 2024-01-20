@@ -187,7 +187,6 @@ call plug#begin()
 
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
-        Plug 'hrsh7th/nvim-cmp'
         Plug 'hrsh7th/cmp-nvim-lsp'
         Plug 'hrsh7th/cmp-buffer'
         Plug 'hrsh7th/cmp-path'
@@ -268,7 +267,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'
     Plug 'twerth/ir_black'
     Plug 'nanotech/jellybeans.vim'
-    Plug 'trevordmiller/nova-vim'
+    " Plug 'trevordmiller/nova-vim'
     Plug 'vim-scripts/Wombat'
     Plug 'sjl/badwolf'
     Plug 'zaiste/Atom'
