@@ -185,8 +185,13 @@ call plug#begin()
             \ 'Marks'
         \ ] }
 
+    Plug 'honza/vim-snippets'
+
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
+        Plug 'L3MON4D3/LuaSnip'
+        Plug 'saadparwaiz1/cmp_luasnip'
+
         Plug 'hrsh7th/cmp-nvim-lsp'
         Plug 'hrsh7th/cmp-buffer'
         Plug 'hrsh7th/cmp-path'
@@ -211,7 +216,6 @@ call plug#begin()
         " install ultisnips only for coc
         if has('python') || has('python3')
             Plug 'SirVer/ultisnips'
-            Plug 'honza/vim-snippets'
         endif
 
         let g:UltiSnipsExpandTrigger="<nop>"
