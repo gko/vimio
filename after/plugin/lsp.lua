@@ -4,14 +4,6 @@ if vim.fn.has('nvim-0.5.0') ~= 1 then
     return
 end
 
-local diagnostics_fn
-
-if vim.diagnostic.open_float then
-    diagnostics_fn = vim.diagnostic.open_float
-else
-    diagnostics_fn = vim.lsp.diagnostic.show_line_diagnostics
-end
-
 function lsp_binary_exists(server_config)
     local valid_config = server_config.document_config and
         server_config.document_config.default_config and
@@ -28,6 +20,17 @@ function lsp_binary_exists(server_config)
     return vim.fn.executable(binary) == 1
 end
 
+-- https://github.com/mfussenegger/nvim-dap/discussions/294#discussioncomment-1347333
+function close_all_popups()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local config = vim.api.nvim_win_get_config(win)
+
+        if config.relative ~= "" then
+            vim.api.nvim_win_close(win, false)
+        end
+    end
+end
+
 -- Set up lspconfig.
 local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 
@@ -35,12 +38,21 @@ if not ok then return end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
-vim.api.nvim_create_autocmd({ "CursorHold", --[[ "CursorHoldI" --]] }, {
-    callback = function()
-        diagnostics_fn({ scope = "line" })
-    end
-})
+if vim.diagnostic.open_float then
+    -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
+    vim.api.nvim_create_autocmd({ "CursorHold", --[[ "CursorHoldI" --]] }, {
+        callback = function()
+            -- https://www.reddit.com/r/neovim/comments/tvy18v/comment/i3cfsr5
+            for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+                if vim.api.nvim_win_get_config(winid).zindex then
+                    return
+                end
+            end
+
+            vim.diagnostic.open_float({ scope = "line", focusable = false })
+        end
+    })
+end
 
 function LspEnable()
     -- https://github.com/nvim-lua/diagnostic-nvim/issues/73
@@ -109,6 +121,9 @@ function LspEnable()
             vim.keymap.set('n', '<space>f', function()
                 vim.lsp.buf.format { async = true }
             end, opts)
+
+            -- not a part of standard config
+            vim.keymap.set('n', '<Esc>', close_all_popups)
         end,
     })
 
@@ -117,8 +132,8 @@ function LspEnable()
         'tsserver',               -- typescript-language-server
         'intelephense',           -- intelephense
         -- 'pyright',             -- pyright-langserver
-        -- 'pylsp',               -- pylsp
-        'jedi_language_server',   -- jedi-language-server
+        'pylsp',                  -- pylsp
+        -- 'jedi_language_server',   -- jedi-language-server
         'html',                   -- vscode-html-language-server
         'cssls',                  -- vscode-css-language-server
         'jsonls',                 -- vscode-json-language-server
