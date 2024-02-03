@@ -146,6 +146,7 @@ function LspEnable()
         'dartls',                 -- dart
         'terraformls',            -- terraform-ls
         'lua_ls',                 -- lua-language-server
+        'zls'                     -- zls
     }
 
     for _, lsp in ipairs(servers) do

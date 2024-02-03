@@ -389,6 +389,10 @@ call plug#begin()
     Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " }}}
 
+" Zig {{{
+    Plug 'ziglang/zig.vim', {'for': 'zig'}
+" }}}
+
 " Elm {{{
     Plug 'ElmCast/elm-vim', { 'for': 'elm' }
     Plug 'elixir-editors/vim-elixir', { 'for': 'elm' }
