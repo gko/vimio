@@ -24,6 +24,10 @@ call plug#begin()
     " this comment
     " Plug 'jiangmiao/auto-pairs'
 
+    if has('nvim')
+        Plug 'alec-gibson/nvim-tetris', { 'on': 'Tetris' }
+    endif
+
     " https://github.com/tmsvg/pear-tree/issues/33
     " breaks the CR for the popup (i.e. in coc.nvim)
     " temporary fix https://github.com/tmsvg/pear-tree/issues/33#issuecomment-777888854 (see /after/plugin/lsp.vim)
