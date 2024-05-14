@@ -166,7 +166,10 @@
 " }}}
 
 if has('nvim')
+    set background=light
     colo melange
+    hi String guifg=#3e7c1f
+    hi Visual guifg=#333333 guibg=#e7da86
     hi NoBackground guibg=NONE
     " hi Normal guibg=NONE
 else
