@@ -42,7 +42,8 @@ endif
 " if COLORTERM variable is not exposed but termguicolors colors are supported
 " we probably should turn it on, otherwise the colors are messed up
 let supportsTrueColor = $COLORTERM == "" || $COLORTERM == "truecolor" || $COLORTERM == "24bit"
-if has("termguicolors") && supportsTrueColor
+" https://github.com/neovim/neovim/issues/11327#issuecomment-992800549
+if has("termguicolors") && supportsTrueColor && $TERM_PROGRAM != "Apple_Terminal"
     set termguicolors
 endif
 
