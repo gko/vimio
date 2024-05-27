@@ -1,19 +1,21 @@
 " gruvbox {{{
-"    let g:gruvbox_contrast_dark="soft"
-"    let g:gruvbox_contrast_light="soft"
+    " let g:lightline = { 'colorscheme': 'gruvbox' }
 
-"    let g:lightline = { 'colorscheme': 'gruvbox' }
+    " " let g:gruvbox_contrast_dark="soft"
+    " " let g:gruvbox_contrast_light="soft"
 
-"    let g:gruvbox_italic=1
-"    let g:gruvbox_invert_selection=0
-"    colorscheme gruvbox
+    " let g:gruvbox_transparent_bg = 1
+    " let g:gruvbox_italic=1
+    " let g:gruvbox_invert_selection=0
+    " colorscheme gruvbox
 
-"    let g:airline_theme = 'gruvbox'
+    " let g:airline_theme = 'gruvbox'
 
-"    hi GruvboxGreenSign guibg=NONE ctermbg=NONE
-"    hi GruvboxAquaSign guibg=NONE ctermbg=NONE
-"    hi GruvboxRedSign guibg=NONE ctermbg=NONE
-"    hi Normal guibg=NONE ctermbg=NONE
+    " hi GruvboxGreenSign guibg=NONE ctermbg=NONE
+    " hi GruvboxAquaSign guibg=NONE ctermbg=NONE
+    " hi GruvboxRedSign guibg=NONE ctermbg=NONE
+    " hi Normal guibg=NONE ctermbg=NONE
+    " hi VertSplit guibg=NONE
 " }}}
 
 " let g:sonokai_style = 'andromeda'
