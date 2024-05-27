@@ -1,3 +1,5 @@
+set background=light
+
 " gruvbox {{{
     " let g:lightline = { 'colorscheme': 'gruvbox' }
 
@@ -16,6 +18,7 @@
     " hi GruvboxRedSign guibg=NONE ctermbg=NONE
     " hi Normal guibg=NONE ctermbg=NONE
     " hi VertSplit guibg=NONE
+    " hi link WinSeparator VertSplit
 " }}}
 
 " let g:sonokai_style = 'andromeda'
