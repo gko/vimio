@@ -19,6 +19,7 @@ set background=light
     " hi Normal guibg=NONE ctermbg=NONE
     " hi VertSplit guibg=NONE
     " hi link WinSeparator VertSplit
+    " hi! link NormalFloat Pmenu
 " }}}
 
 " let g:sonokai_style = 'andromeda'
