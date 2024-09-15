@@ -129,7 +129,7 @@ function LspEnable()
 
     local servers = {             -------------- binaries
         'gopls',                  -- gopls
-        'tsserver',               -- typescript-language-server
+        'ts_ls',                  -- typescript-language-server
         'intelephense',           -- intelephense
         -- 'pyright',             -- pyright-langserver
         'pylsp',                  -- pylsp
