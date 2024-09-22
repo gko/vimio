@@ -50,6 +50,13 @@ endif
 set t_Co=256
 let g:molokai_original = 1
 
+" https://superuser.com/a/588243
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+
 " set colorscheme
 " if you have base16 installed take that colorscheme
 try
