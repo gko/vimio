@@ -41,6 +41,16 @@ cmp.setup({
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         -- ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
+        -- https://github.com/hrsh7th/nvim-cmp/discussions/1034#discussioncomment-2991086
+        ['<C-o>'] = cmp.mapping(function(fallback)
+            local fallback_key = vim.api.nvim_replace_termcodes('<Tab>', true, true, true)
+            local resolved_key = vim.fn['copilot#Accept'](fallback)
+            if fallback_key == resolved_key then
+                cmp.confirm({ select = true })
+            else
+                vim.api.nvim_feedkeys(resolved_key, 'n', true)
+            end
+        end),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 
         -- https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#no-snippet-plugin
