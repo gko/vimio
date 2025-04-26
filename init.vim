@@ -291,6 +291,7 @@ call plug#begin()
     " Plug 'nightsense/cosmic_latte'
     Plug 'cormacrelf/vim-colors-github'
     Plug 'romgrk/github-light.vim'
+    Plug 'projekt0n/github-nvim-theme'
 " }}}
 
 " HTML/HAML {{{
