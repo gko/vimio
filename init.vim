@@ -207,6 +207,9 @@ call plug#begin()
         Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
 
         Plug 'nvim-lua/plenary.nvim'
+
+        " before using to login
+        " :Copilot auth
         Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'on': ['CopilotChat', 'CopilotChatOpen', 'CopilotChatToggle'] }
 
         Plug 'nvim-telescope/telescope.nvim'
