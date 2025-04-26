@@ -17,6 +17,7 @@ call plug#begin()
 " General stuff {{{
     " see https://github.com/gko/vimio/blob/master/after/plugin/copilot.vim
     Plug 'github/copilot.vim', { 'on': 'Copilot' }
+    Plug 'DanBradbury/copilot-chat.vim', { 'on': ['CopilotChat', 'CopilotChatOpen'] }
     Plug 'mhinz/vim-startify'
     Plug 'MattesGroeger/vim-bookmarks'
     Plug 'xolox/vim-misc'
