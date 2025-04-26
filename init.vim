@@ -208,6 +208,8 @@ call plug#begin()
         Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
 
         Plug 'nvim-lua/plenary.nvim'
+        Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'on': ['CopilotChat', 'CopilotChatOpen', 'CopilotChatToggle'] }
+
         Plug 'nvim-telescope/telescope.nvim'
         Plug 'nvim-pack/nvim-spectre'
     elseif executable('npm')
@@ -217,6 +219,8 @@ call plug#begin()
         " Plug 'neoclide/coc-snippets', {'do': 'npm i'}
         Plug 'neoclide/coc-sources', {'rtp': 'packages/emoji/', 'do': 'npm i'}
         " Plug 'neoclide/coc-java', {'do': 'npm i'}
+
+        Plug 'DanBradbury/copilot-chat.vim', { 'on': ['CopilotChat', 'CopilotChatOpen'] }
 
         " install ultisnips only for coc
         if has('python') || has('python3')
