@@ -194,6 +194,10 @@ inoremap <Leader>u <esc>gUiwea
 :cabbrev qa qa!
 :cabbrev q q!
 
+:cabbrev Bd bd
+:cabbrev BD bd
+:cabbrev bD bd
+
 :cabbrev E e
 
 :cabbrev ц w
