@@ -3,7 +3,7 @@ function OpenNerdTree()
     if &filetype == 'nerdtree' || empty(expand('%:p'))
         :NERDTreeToggle
     else
-        :NERDTreeFind
+        :NERDTreeFind %:p
     endif
 endfunction
 
