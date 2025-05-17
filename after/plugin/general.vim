@@ -125,11 +125,6 @@ set updatetime=1000
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
-" always show signcolumns
-if v:version >= 705
-    set signcolumn=yes
-endif
-
 " https://github.com/neovim/neovim/issues/9342
 " https://twitter.com/Neovim/status/1504784802398023726
 set laststatus=3
@@ -140,7 +135,7 @@ if has("patch-8.1.1564")
     " Recently vim can merge signcolumn and number column into one
     set signcolumn=number
 else
-    set signcolumn=yes
+    set signcolumn=yes:1
 endif
 
 " https://www.reddit.com/r/neovim/comments/wdeohs/comment/iihsy9b/
