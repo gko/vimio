@@ -298,6 +298,9 @@ call plug#begin()
     Plug 'cormacrelf/vim-colors-github'
     Plug 'romgrk/github-light.vim'
     Plug 'projekt0n/github-nvim-theme'
+    if has('nvim')
+        Plug 'rebelot/kanagawa.nvim'
+    endif
 " }}}
 
 " HTML/HAML {{{
