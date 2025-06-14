@@ -210,7 +210,7 @@ call plug#begin()
 
         " before using to login
         " :Copilot auth
-        Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'on': ['CopilotChat', 'CopilotChatOpen', 'CopilotChatToggle'] }
+        Plug 'olimorris/codecompanion.nvim', { 'on': ['CodeCompanionCmd', 'CodeCompanionActions', 'CodeCompanionChat'] }
 
         Plug 'nvim-telescope/telescope.nvim'
         Plug 'nvim-pack/nvim-spectre'
