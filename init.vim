@@ -235,6 +235,7 @@ call plug#begin()
 
 " Colorschemes {{{
     Plug 'gko/vim-reset'
+    Plug 'gko/oldbook-theme'
     Plug 'lifepillar/vim-wwdc17-theme'
     Plug 'devsjc/vim-jb'
     Plug 'daschw/leaf.nvim'
