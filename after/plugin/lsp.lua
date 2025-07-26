@@ -49,7 +49,7 @@ if vim.diagnostic.open_float then
                 end
             end
 
-            vim.diagnostic.open_float({ scope = "line", focusable = false })
+            vim.diagnostic.open_float({ scope = "line", focusable = true })
         end
     })
 end
