@@ -10,8 +10,8 @@ local servers = {             -------------- binaries
     -- 'ts_ls',               -- typescript-language-server
     'intelephense',           -- intelephense
     -- 'pyright',             -- pyright-langserver
-    'pylsp',                  -- pylsp
-    -- 'jedi_language_server',   -- jedi-language-server
+    'ty',                     -- ty
+    'pyrefly',                -- pyrefly
     'html',                   -- vscode-html-language-server
     'cssls',                  -- vscode-css-language-server
     'jsonls',                 -- vscode-json-language-server
