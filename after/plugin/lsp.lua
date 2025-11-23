@@ -28,16 +28,15 @@ local servers = {             -------------- binaries
 }
 
 function lsp_binary_exists(server_config)
-    local valid_config = server_config.document_config and
-        server_config.document_config.default_config and
-        type(server_config.document_config.default_config.cmd) == "table" and
-        #server_config.document_config.default_config.cmd >= 1
+    local valid_config = server_config and
+        type(server_config.cmd) == "table" and
+        #server_config.cmd >= 1
 
     if not valid_config then
         return false
     end
 
-    local binary = server_config.document_config.default_config.cmd[1]
+    local binary = server_config.cmd[1]
     -- print(binary)
 
     return vim.fn.executable(binary) == 1
@@ -151,19 +150,16 @@ function LspEnable()
     })
 
     for _, lsp in ipairs(servers) do
-        -- need to check for setup because some of
-        -- lsp configurations exist but have no setup (i.e. are deprecated)
-        if lspconfig[lsp] and lspconfig[lsp].setup and lsp_binary_exists(lspconfig[lsp]) then
-            lspconfig[lsp].setup {
-                flags = {
-                    debounce_text_changes = 150,
-                },
-                capabilities = capabilities,
-            }
+        -- local ok_inspect, dumped = pcall(vim.inspect, vim.lsp.config[lsp])
+        -- if ok_inspect and dumped then
+        --     vim.api.nvim_out_write("LSP config for " .. lsp .. ":\n" .. dumped .. "\n")
+        -- end
+        if vim.lsp.config[lsp] and lsp_binary_exists(vim.lsp.config[lsp]) then
+            vim.lsp.enable(lsp)
         end
     end
 
-    if vim.fn.bufname("%") ~= "" then
+    if not vim.lsp.get_clients and vim.fn.bufname("%") ~= "" then
         vim.cmd('edit!')
     end
 end
