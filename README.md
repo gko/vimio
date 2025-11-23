@@ -76,24 +76,29 @@ For nvim I use native nvim lsp config. You can find the example config here: [ex
 
 ###### Typescript/Javascript
 
-https://github.com/typescript-language-server/typescript-language-server#installing
+https://github.com/microsoft/typescript-go?tab=readme-ov-file#preview
 
 ###### Go
 
-https://github.com/golang/tools/tree/master/gopls#installation
+https://github.com/golang/tools/blob/master/gopls/doc/index.md#installation
 
 ###### Rust
 
-https://rust-analyzer.github.io/manual.html#installation
+https://rust-analyzer.github.io/book/installation.html
 
 you may need to install:
 
-- rustup https://github.com/rust-lang/rustup#installation
+- rustup https://rust-lang.github.io/rustup/installation/index.html
 - rust-src `rustup component add rust-src`
+
+###### Python
+
+- pyrefly https://pyrefly.org/en/docs/installation/
+- ty https://docs.astral.sh/ty/installation/
 
 ###### Zig
 
-https://github.com/zigtools/zls/wiki/Installation#install-zls
+https://zigtools.org/zls/install/
 
 ###### Scala
 
