@@ -4,6 +4,29 @@ if vim.fn.has('nvim-0.5.0') ~= 1 then
     return
 end
 
+local servers = {             -------------- binaries
+    'gopls',                  -- gopls
+    'tsgo',                   -- tsgo
+    -- 'ts_ls',               -- typescript-language-server
+    'intelephense',           -- intelephense
+    -- 'pyright',             -- pyright-langserver
+    'pylsp',                  -- pylsp
+    -- 'jedi_language_server',   -- jedi-language-server
+    'html',                   -- vscode-html-language-server
+    'cssls',                  -- vscode-css-language-server
+    'jsonls',                 -- vscode-json-language-server
+    'rust_analyzer',          -- rust-analyzer
+    'metals',                 -- metals
+    'ccls',                   -- ccls
+    'kotlin_language_server', -- kotlin-language-server
+    'sourcekit',              -- sourcekit-lsp
+    'ocamlls',                -- ocaml-language-server
+    'dartls',                 -- dart
+    'terraformls',            -- terraform-ls
+    'lua_ls',                 -- lua-language-server
+    'zls'                     -- zls
+}
+
 function lsp_binary_exists(server_config)
     local valid_config = server_config.document_config and
         server_config.document_config.default_config and
@@ -126,28 +149,6 @@ function LspEnable()
             vim.keymap.set('n', '<Esc>', close_all_popups)
         end,
     })
-
-    local servers = {             -------------- binaries
-        'gopls',                  -- gopls
-        'ts_ls',                  -- typescript-language-server
-        'intelephense',           -- intelephense
-        -- 'pyright',             -- pyright-langserver
-        'pylsp',                  -- pylsp
-        -- 'jedi_language_server',   -- jedi-language-server
-        'html',                   -- vscode-html-language-server
-        'cssls',                  -- vscode-css-language-server
-        'jsonls',                 -- vscode-json-language-server
-        'rust_analyzer',          -- rust-analyzer
-        'metals',                 -- metals
-        'ccls',                   -- ccls
-        'kotlin_language_server', -- kotlin-language-server
-        'sourcekit',              -- sourcekit-lsp
-        'ocamlls',                -- ocaml-language-server
-        'dartls',                 -- dart
-        'terraformls',            -- terraform-ls
-        'lua_ls',                 -- lua-language-server
-        'zls'                     -- zls
-    }
 
     for _, lsp in ipairs(servers) do
         -- need to check for setup because some of
