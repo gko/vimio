@@ -165,10 +165,19 @@ function LspEnable()
 end
 
 function LspDisable()
-    vim.lsp.stop_client(vim.lsp.get_active_clients())
+    -- https://github.com/stevearc/aerial.nvim/issues/375#issuecomment-2146721045
+    if vim.lsp.get_clients then
+        -- https://neovim.io/doc/user/lsp.html#lsp-faq
+        vim.iter(vim.lsp.get_clients()):each(function(client)
+            client:stop({ force = true })
+        end)
+    else
+        ---@diagnostic disable-next-line: deprecated
+        vim.lsp.stop_client(vim.lsp.get_active_clients())
 
-    if vim.fn.bufname("%") ~= "" then
-        vim.cmd('edit!')
+        if vim.fn.bufname("%") ~= "" then
+            vim.cmd('edit!')
+        end
     end
 end
 
