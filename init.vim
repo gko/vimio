@@ -365,7 +365,7 @@ call plug#begin()
 " }}}
 
 " JSON {{{
-    Plug 'elzr/vim-json', { 'for': 'json' }
+    Plug 'elzr/vim-json', { 'for': ['json', 'jsonc'] }
 " }}}
 
 " TOML {{{
