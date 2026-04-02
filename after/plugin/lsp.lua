@@ -53,12 +53,58 @@ function close_all_popups()
     end
 end
 
--- Set up lspconfig.
-local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+--- Set up lspconfig.
+local ok_cmp, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+local global_capabilities = vim.lsp.protocol.make_client_capabilities()
 
-if not ok then return end
+if ok_cmp then
+    -- Merge nvim-cmp capabilities into the Neovim defaults globally.
+    -- This ensures any server started via vim.lsp.enable() inherits them.
+    global_capabilities = cmp_nvim_lsp.default_capabilities()
 
-local capabilities = cmp_nvim_lsp.default_capabilities()
+    -- vim.lsp.default_config is 0.10+ only
+    if vim.lsp.default_config then
+        vim.lsp.default_config.capabilities = vim.tbl_deep_extend(
+            "force",
+            vim.lsp.default_config.capabilities or {},
+            global_capabilities
+        )
+    end
+end
+
+local diagnostic_settings = {
+    -- Enable underline, use default values
+    underline = true,
+    -- Enable virtual text, override spacing to 4
+    virtual_text = {
+        spacing = 4,
+        prefix = '~',
+    },
+    -- Use a function to dynamically turn signs off and on using buffer local variables
+    signs = function(bufnr, _)
+        local ok, result = pcall(vim.api.nvim_buf_get_var, bufnr, 'show_signs')
+        -- No buffer local variable set, so just enable by default
+        if not ok then
+            return true
+        end
+        return result
+    end,
+    -- Disable a feature
+    update_in_insert = false,
+}
+
+-- Version Gate for 0.12+ (Diagnostic configuration)
+if vim.fn.has('nvim-0.12') == 1 then
+    vim.diagnostic.config(diagnostic_settings)
+else
+    -- Legacy way: Override the LSP handler (Deprecated in 0.12)
+    -- https://github.com/nvim-lua/diagnostic-nvim/issues/73
+    ---@diagnostic disable-next-line: deprecated
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics,
+        diagnostic_settings
+    )
+end
 
 if vim.diagnostic.open_float then
     -- https://www.reddit.com/r/neovim/comments/sm8c99/comment/i6ec9pw/
@@ -77,35 +123,8 @@ if vim.diagnostic.open_float then
 end
 
 function LspEnable()
-    -- https://github.com/nvim-lua/diagnostic-nvim/issues/73
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics, {
-            -- Enable underline, use default values
-            underline = true,
-            -- Enable virtual text, override spacing to 4
-            virtual_text = {
-                spacing = 4,
-                prefix = '~',
-            },
-            -- Use a function to dynamically turn signs off
-            -- and on, using buffer local variables
-            signs = function(bufnr, client_id)
-                local ok, result = pcall(vim.api.nvim_buf_get_var, bufnr, 'show_signs')
-                -- No buffer local variable set, so just enable by default
-                if not ok then
-                    return true
-                end
-
-                return result
-            end,
-            -- Disable a feature
-            update_in_insert = false,
-        }
-    )
-
     -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
     local ok, lspconfig = pcall(require, 'lspconfig')
-
     if not ok then return end
 
     -- Global mappings.
@@ -166,18 +185,15 @@ end
 
 function LspDisable()
     -- https://github.com/stevearc/aerial.nvim/issues/375#issuecomment-2146721045
-    if vim.lsp.get_clients then
-        -- https://neovim.io/doc/user/lsp.html#lsp-faq
-        vim.iter(vim.lsp.get_clients()):each(function(client)
-            client:stop({ force = true })
-        end)
-    else
-        ---@diagnostic disable-next-line: deprecated
-        vim.lsp.stop_client(vim.lsp.get_active_clients())
+    local get_clients = vim.lsp.get_clients or vim.lsp.get_active_clients
 
-        if vim.fn.bufname("%") ~= "" then
-            vim.cmd('edit!')
-        end
+    -- https://neovim.io/doc/user/lsp.html#lsp-faq
+    for _, client in ipairs(get_clients()) do
+        client:stop({ force = true })
+    end
+
+    if vim.fn.bufname("%") ~= "" then
+        vim.cmd('edit!')
     end
 end
 
