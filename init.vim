@@ -331,6 +331,7 @@ call plug#begin()
                     \ 'less',
                     \ 'scss',
                     \ 'json',
+                    \ 'jsonc',
                     \ 'graphql',
                     \ 'markdown',
                     \ 'vue',
