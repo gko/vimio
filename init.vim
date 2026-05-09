@@ -102,7 +102,7 @@ call plug#begin()
     Plug 'mattn/gist-vim', { 'on': ['Gist'] }
 
     " https://github.com/szw/vim-g/pull/19
-    Plug 'gko/vim-g'
+    Plug 'gko/vim-g', { 'on': ['Google', 'Googlef'] }
     " Plug 'airblade/vim-rooter'
 
     Plug 'pechorin/any-jump.vim'
