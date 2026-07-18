@@ -173,7 +173,8 @@ function LspEnable()
         -- if ok_inspect and dumped then
         --     vim.api.nvim_out_write("LSP config for " .. lsp .. ":\n" .. dumped .. "\n")
         -- end
-        if vim.lsp.config[lsp] and lsp_binary_exists(vim.lsp.config[lsp]) then
+        local config = vim.lsp.config[lsp]
+        if config and (lsp_binary_exists(config) or type(config.cmd) == "function") then
             vim.lsp.enable(lsp)
         end
     end
